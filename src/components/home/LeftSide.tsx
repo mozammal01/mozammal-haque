@@ -9,6 +9,11 @@ import ServIcon from "@/../public/icons/navIcon/services.png";
 import BlogsIcon from "@/../public/icons/navIcon/blogs.png";
 import Image from "next/image";
 
+//
+
+import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarHeader } from "@/components/ui/sidebar";
+
+
 export default function LeftSide() {
   const icons = [
     {
@@ -45,23 +50,43 @@ export default function LeftSide() {
     },
   ];
   return (
-    <div className="flex flex-col gap-4 justify-between items-center h-screen bg-transparent px-4 fixed top-0 left-0 py-10 border-r-8 border-white">
-      <div>
-        <Image src={logo} alt="Home" width={60} height={60} />
-      </div>
-      <div className="flex flex-col gap-2">
-        {icons.map((icon, index) => (
-          <div
-            key={index}
-            className="hover:bg-[#ffc107] hover:text-white transition-all scale-100 hover:scale-120 duration-300 rounded-full p-4"
-          >
-            <Image src={icon.icon} alt={icon.href} width={20} height={20} />
+    <>
+    <Sidebar>
+      <SidebarHeader />
+      <SidebarContent>
+        <SidebarGroup>
+          {icons.map((icon, index) => (
+            <div key={index} className="hover:bg-[#ffc107] hover:text-white transition-all scale-100 hover:scale-120 duration-300 rounded-full p-4">
+              <Image src={icon.icon} alt={icon.href} width={20} height={20} />
+            </div>
+          ))}
+        </SidebarGroup>
+        <SidebarGroup>
+          <div>
+            <Image src={logo} alt="Home" width={60} height={60} />
           </div>
-        ))}
-      </div>
-      <div>
-        <Image src={logo} alt="Home" width={60} height={60} />
-      </div>
-    </div>
+        </SidebarGroup>
+      </SidebarContent>
+      <SidebarFooter />
+    </Sidebar>
+      {/* <div className="flex flex-col gap-4 justify-between items-center h-screen bg-amber-50 px-4 fixed top-0 left-0 py-10 border-r-8 border-white">
+        <div>
+          <Image src={logo} alt="Home" width={60} height={60} />
+        </div>
+        <div className="flex flex-col gap-2">
+          {icons.map((icon, index) => (
+            <div
+              key={index}
+              className="hover:bg-[#ffc107] hover:text-white transition-all scale-100 hover:scale-120 duration-300 rounded-full p-4"
+            >
+              <Image src={icon.icon} alt={icon.href} width={20} height={20} />
+            </div>
+          ))}
+        </div>
+        <div>
+          <Image src={logo} alt="Home" width={60} height={60} />
+        </div>
+      </div> */}
+    </>
   );
 }
