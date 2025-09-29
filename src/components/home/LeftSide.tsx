@@ -9,7 +9,7 @@ import ServIcon from "@/../public/icons/navIcon/services.png";
 import BlogsIcon from "@/../public/icons/navIcon/blogs.png";
 import Image from "next/image";
 
-export default function Navigation() {
+export default function LeftSide() {
   const icons = [
     {
       icon: HomeIcon,
@@ -45,7 +45,7 @@ export default function Navigation() {
     },
   ];
   return (
-    <div className="flex flex-col gap-4 justify-between items-center h-screen bg-transparent px-4 fixed top-0 right-0 py-10 border-l-8 border-white">
+    <div className="flex flex-col gap-4 justify-between items-center h-screen bg-transparent px-4 fixed top-0 left-0 py-10 border-r-8 border-white">
       <div>
         <Image src={logo} alt="Home" width={60} height={60} />
       </div>
