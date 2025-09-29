@@ -51,7 +51,7 @@ export default function LeftSide() {
   ];
   return (
     <>
-    <Sidebar>
+    <Sidebar className="h-screen">
       <SidebarHeader />
       <SidebarContent>
         <SidebarGroup>
