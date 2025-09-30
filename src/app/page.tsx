@@ -3,6 +3,8 @@ import Banner from "@/components/home/Banner";
 import Navigation from "@/components/home/navigation";
 import About from "@/components/home/About";
 import Skills from "@/components/home/Skills";
+import HireMe from "@/components/home/HireMe";
+import Projects from "@/components/home/Projects";
 
 export default function Home() {
   return (
@@ -20,6 +22,8 @@ export default function Home() {
     </div>
     <About />
     <Skills />
+    <HireMe />
+    <Projects />
     </div>
 
   );

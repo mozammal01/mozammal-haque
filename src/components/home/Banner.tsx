@@ -6,7 +6,7 @@ import { Button } from "../ui/button";
 
 export default function Banner() {
   return (
-    <div className="h-screen flex items-center relative lg:justify-end">
+    <div className="h-screen flex items-center relative lg:justify-end" id="home">
       {/* Image */}
       <div className="absolute hidden 2xl:block bottom-0 -left-40">
         <Image src={bannerImage} alt="Banner" width={800} height={500} />

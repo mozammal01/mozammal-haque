@@ -22,12 +22,9 @@ import VercelIcon from "../icons/vercelIcon";
 import { useState } from "react";
 
 export default function Skills() {
-  const [isHovered, setIsHovered] = useState(false);
-  console.log(isHovered);
   const [hoveredId, setHoveredId] = useState(0);
   const handleHover = (id: number) => {
     setHoveredId(id);
-    setIsHovered(true);
   };
   const languages = [
     {
@@ -113,7 +110,7 @@ export default function Skills() {
     },
     {
       id: 12,
-          name: "Bootstrap",
+      name: "Bootstrap",
       img: true,
       icon: <Image src={bootstrapImg} alt="Bootstrap" width={100} height={100} />,
     },
@@ -180,7 +177,7 @@ export default function Skills() {
               onMouseEnter={() => handleHover(skill.id)}
               onMouseLeave={() => handleHover(0)}
               key={index}
-              className="flex flex-col justify-center items-center mx-auto gap-2 bg-amber-50 rounded p-10 w-[250px] h-[250px] hover:scale-105 hover:shadow-lg duration-300"
+              className="flex flex-col justify-center items-center mx-auto gap-2 bg-amber-50 rounded p-10 w-[250px] h-[250px] hover:scale-105 hover:shadow-md shadow-primary duration-300"
             >
               {hoveredId === skill.id ? (
                 <div className="scale-120 duration-300 flex flex-col justify-center items-center">
@@ -189,7 +186,7 @@ export default function Skills() {
                 </div>
               ) : (
                 <div className="flex flex-col justify-center items-center">
-                  {skill.icon} 
+                  {skill.icon}
                   <span className="text-2xl font-bold text-black duration-300">{skill.name}</span>
                 </div>
               )}

@@ -1,3 +1,4 @@
+"use client";
 import logo from "@/../public/logo/logo.png";
 import ProjIcon from "@/../public/icons/navIcon/projects.png";
 import HomeIcon from "@/../public/icons/navIcon/home.png";
@@ -8,8 +9,14 @@ import ContIcon from "@/../public/icons/navIcon/contact.png";
 import ServIcon from "@/../public/icons/navIcon/services.png";
 import BlogsIcon from "@/../public/icons/navIcon/blogs.png";
 import Image from "next/image";
+import { useEffect } from "react";
 
 export default function Navigation() {
+  useEffect(() => {
+    const home = document.getElementById("skills") as HTMLElement;
+    console.log(home);
+  }, []);
+
   const icons = [
     {
       icon: HomeIcon,
@@ -19,14 +26,6 @@ export default function Navigation() {
       icon: AboutIcon,
       href: "/about",
     },
-    // {
-    //   icon: EduIcon,
-    //   href: "/edu",
-    // },
-    // {
-    //   icon: PortIcon,
-    //   href: "/portfolio",
-    // },
     {
       icon: ProjIcon,
       href: "/projects",
@@ -45,7 +44,9 @@ export default function Navigation() {
     },
   ];
   return (
-    <div className="flex flex-col gap-4 justify-between items-center h-screen bg-transparent px-4 fixed top-0 right-0 py-10 border-l-8 border-white">
+    <div
+      className={`flex flex-col gap-4 justify-between items-center h-screen bg-transparent px-4 fixed top-0 right-0 py-10 border-l-8 border-white `}
+    >
       <div>
         <Image src={logo} alt="Home" width={60} height={60} />
       </div>
