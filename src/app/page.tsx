@@ -1,7 +1,8 @@
 import Banner from "@/components/home/Banner";
-import LeftSide from "@/components/home/LeftSide";
+// import LeftSide from "@/components/home/LeftSide";
 import Navigation from "@/components/home/navigation";
 import About from "@/components/home/About";
+import Skills from "@/components/home/Skills";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       </div>
     </div>
     <About />
+    <Skills />
     </div>
 
   );
