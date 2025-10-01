@@ -19,3 +19,12 @@ export interface Project {
   sourceCode: string;
   visitNow: string;
 }
+
+export interface Service {
+  id: number;
+  name: string;
+  description: string;
+  category: string;
+  icon: string;
+  iconImage: StaticImageData;
+}
