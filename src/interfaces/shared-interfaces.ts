@@ -10,6 +10,7 @@ export interface AnimatedButtonProps {
   primary?: boolean;
   text: string;
   href: string;
+  className?: string;
 }
 
 export interface Project {

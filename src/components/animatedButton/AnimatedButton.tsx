@@ -1,9 +1,9 @@
 import { AnimatedButtonProps } from "@/interfaces/shared-interfaces";
 import Link from "next/link";
 
-export default function AnimatedButton({ outline, primary, text, href }: AnimatedButtonProps) {
+export default function AnimatedButton({ outline, primary, text, href, className }: AnimatedButtonProps) {
   const renderButtonPrimary = () => (
-    <button className="relative px-6 py-2 text-white bg-primary overflow-hidden group">
+    <button className={`relative px-6 py-2 text-white bg-primary overflow-hidden group ${className}`}>
       {text}
       <span className="absolute left-0 bottom-0 h-[4px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
       <span className="absolute right-0 top-0 h-[4px] w-0 bg-white transition-all duration-300 group-hover:w-full delay-300"></span>
@@ -13,7 +13,7 @@ export default function AnimatedButton({ outline, primary, text, href }: Animate
   );
 
   const renderButtonOutline = () => (
-    <button className="relative px-6 py-2 bg-white text-primary border border-primary overflow-hidden group">
+    <button className={`relative px-6 py-2 bg-white text-primary border border-primary overflow-hidden group ${className}`}>
       {text}
       <span className="absolute left-0 bottom-0 h-[4px] w-0 bg-primary transition-all duration-300 group-hover:w-full"></span>
       <span className="absolute right-0 top-0 h-[4px] w-0 bg-primary transition-all duration-300 group-hover:w-full delay-300"></span>
