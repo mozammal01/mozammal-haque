@@ -9,57 +9,77 @@ import ContIcon from "@/../public/icons/navIcon/contact.png";
 import ServIcon from "@/../public/icons/navIcon/services.png";
 import BlogsIcon from "@/../public/icons/navIcon/blogs.png";
 import Image from "next/image";
-import { useEffect } from "react";
 import Link from "next/link";
 
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+
 export default function Navigation() {
-  useEffect(() => {
-    const home = document.getElementById("skills") as HTMLElement;
-    console.log(home);
-  }, []);
+  // useEffect(() => {
+  //   const home = document.getElementById("skills") as HTMLElement;
+  //   console.log(home);
+  // }, []);
 
   const icons = [
     {
+      id: 1,
       icon: HomeIcon,
       href: "#home",
+      placeholder: "Home",
     },
     {
+      id: 2,
       icon: AboutIcon,
       href: "#about",
+      placeholder: "About",
     },
     {
+      id: 3,
+      icon: BlogsIcon,
+      href: "#skills",
+      placeholder: "Skills",
+    },
+    {
+      id: 4,
       icon: ProjIcon,
       href: "#projects",
+      placeholder: "Projects",
     },
     {
+      id: 4,
       icon: ServIcon,
       href: "#services",
+      placeholder: "Services",
     },
     {
-      icon: BlogsIcon,
-      href: "#blogs",
-    },
-    {
+      id: 6,
       icon: ContIcon,
       href: "#contact",
+      placeholder: "Contact",
     },
   ];
+
   return (
     <div
-      className={`flex flex-col gap-4 justify-between items-center h-screen bg-transparent px-4 fixed top-0 right-0 py-10 border-l-8 border-white `}
+      className={`md:flex hidden flex-col gap-4 justify-between items-center h-screen bg-transparent px-4 fixed top-0 right-0 py-10 2xl:border-l-8 border-white `}
     >
       <div>
         <Image src={logo} alt="Home" width={60} height={60} />
       </div>
-      <div className="flex flex-col gap-2">
+      <div className="flex flex-col gap-8">
         {icons.map((icon, index) => (
-          <Link
-            href={icon.href}
-            key={index}
-            className="hover:bg-[#ffc107] hover:text-white transition-all scale-100 hover:scale-120 duration-300 rounded-full p-4"
-          >
-            <Image src={icon.icon} alt={icon.href} width={20} height={20} />
-          </Link>
+          <Tooltip key={index}>
+            <TooltipTrigger asChild>
+              <Link
+                href={icon.href}
+                className="hover:bg-[#ffc107] hover:text-white transition-all scale-100 hover:scale-120 duration-300 rounded-full p-4"
+              >
+                <Image src={icon.icon} alt={icon.placeholder} width={20} height={20} />
+              </Link>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>{icon.placeholder}</p>
+            </TooltipContent>
+          </Tooltip>
         ))}
       </div>
       <div>

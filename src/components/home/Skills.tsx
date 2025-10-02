@@ -35,13 +35,17 @@ export default function Skills() {
         <h2 className="text-3xl font-bold text-primary uppercase">Languages</h2>
         <div className="flex flex-col lg:flex-row gap-10">
           {languages.map((language, index) => (
-            <div
+            <motion.div
+              ref={ref}
+              initial={{ opacity: 0, y: 100 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+              transition={{ duration: 0.5, delay: index * 0.3 }}
               key={index}
               className="flex items-center gap-2 bg-amber-50 rounded p-10 xl:w-[500px] w-full hover:scale-105 hover:shadow-smooth duration-300"
             >
               <p className="text-2xl font-bold">{language.name}</p>
               <span className="text-xl font-bold text-primary">({language.level})</span>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
