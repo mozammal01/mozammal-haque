@@ -29,3 +29,11 @@ export interface Service {
   icon: string;
   iconImage: StaticImageData;
 }
+
+export interface Skill {
+  id: number;
+  name: string;
+  img: boolean;
+  icon: StaticImageData | React.ComponentType<IconProps>;
+  className: string;
+}

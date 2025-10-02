@@ -22,7 +22,7 @@ export default function LeftSide() {
     },
     {
       icon: AboutIcon,
-      href: "/about",
+      href: "#about",
     },
     // {
     //   icon: EduIcon,
@@ -34,19 +34,19 @@ export default function LeftSide() {
     // },
     {
       icon: ProjIcon,
-      href: "/projects",
+      href: "#projects",
     },
     {
       icon: ServIcon,
-      href: "/services",
+      href: "#services",
     },
     {
       icon: BlogsIcon,
-      href: "/blogs",
+      href: "#blogs",
     },
     {
       icon: ContIcon,
-      href: "/contact",
+      href: "#contact",
     },
   ];
   return (

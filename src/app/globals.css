@@ -7,6 +7,7 @@
   --color-background: var(--background);
   --shadow-smooth: var(--shadow-smooth);
   --shadow-extra-smooth: var(--shadow-extra-smooth);
+  --animate-spin-slow: var(--animate-spin-slow);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
@@ -54,6 +55,7 @@
   --shadow-smooth: 0 4px 20px rgba(0, 0, 0, 0.1);
   --shadow-extra-smooth: 0 8px 30px rgba(0, 0, 0, 0.08);
   --primary: #ffc107;
+  --animate-spin-slow: spin 3s linear infinite;
   --primary-foreground: oklch(0.985 0 0);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
@@ -119,6 +121,9 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
   }
   body {
     @apply bg-background text-foreground;

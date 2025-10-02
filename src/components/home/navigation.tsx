@@ -10,6 +10,7 @@ import ServIcon from "@/../public/icons/navIcon/services.png";
 import BlogsIcon from "@/../public/icons/navIcon/blogs.png";
 import Image from "next/image";
 import { useEffect } from "react";
+import Link from "next/link";
 
 export default function Navigation() {
   useEffect(() => {
@@ -20,27 +21,27 @@ export default function Navigation() {
   const icons = [
     {
       icon: HomeIcon,
-      href: "/",
+      href: "#home",
     },
     {
       icon: AboutIcon,
-      href: "/about",
+      href: "#about",
     },
     {
       icon: ProjIcon,
-      href: "/projects",
+      href: "#projects",
     },
     {
       icon: ServIcon,
-      href: "/services",
+      href: "#services",
     },
     {
       icon: BlogsIcon,
-      href: "/blogs",
+      href: "#blogs",
     },
     {
       icon: ContIcon,
-      href: "/contact",
+      href: "#contact",
     },
   ];
   return (
@@ -52,12 +53,13 @@ export default function Navigation() {
       </div>
       <div className="flex flex-col gap-2">
         {icons.map((icon, index) => (
-          <div
+          <Link
+            href={icon.href}
             key={index}
             className="hover:bg-[#ffc107] hover:text-white transition-all scale-100 hover:scale-120 duration-300 rounded-full p-4"
           >
             <Image src={icon.icon} alt={icon.href} width={20} height={20} />
-          </div>
+          </Link>
         ))}
       </div>
       <div>

@@ -20,20 +20,20 @@ export default function Footer() {
           <div className="flex flex-col gap-4">
             <h3 className="text-2xl font-bold text-primary uppercase">Sections</h3>
             <div className="flex flex-col gap-2 font-semibold">
+              <Link href="#home" className="hover:text-primary hover:scale-105 duration-300">
+                Home
+              </Link>
               <Link href="#about" className="hover:text-primary hover:scale-105 duration-300">
                 About
+              </Link>
+              <Link href="#skills" className="hover:text-primary hover:scale-105 duration-300">
+                Skills
               </Link>
               <Link href="#projects" className="hover:text-primary hover:scale-105 duration-300">
                 Projects
               </Link>
               <Link href="#services" className="hover:text-primary hover:scale-105 duration-300">
                 Services
-              </Link>
-              <Link href="#skills" className="hover:text-primary hover:scale-105 duration-300">
-                Skills
-              </Link>
-              <Link href="#contact" className="hover:text-primary hover:scale-105 duration-300">
-                Contact
               </Link>
             </div>
           </div>

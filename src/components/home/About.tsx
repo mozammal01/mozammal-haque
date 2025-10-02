@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function About() {
   return (
-    <div className="my-20 lg:flex items-center justify-center container mx-auto px-4">
+    <div id="about" className="my-20 lg:flex items-center justify-center container mx-auto px-4">
       <div className="lg:w-1/2 w-full space-y-6">
         <h3 className="text-3xl font-bold text-primary uppercase">About Me</h3>
         <h2 className="text-5xl font-bold">Who I am ?</h2>
