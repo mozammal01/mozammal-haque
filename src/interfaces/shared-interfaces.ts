@@ -6,11 +6,11 @@ export interface IconProps extends SVGProps<SVGSVGElement> {
 }
 
 export interface AnimatedButtonProps {
-  outline?: boolean;
-  primary?: boolean;
+  variant?: "leftToRight" | "primary" | "outline" | "rightToLeft" | "leftToRightBottom" | "rightToLeftBottom" | "rotateRight" | "rotateLeft" | "upToDown" | "downToUp" | "topToBottom" | "bottomToTop";
   text: string;
   href: string;
   className?: string;
+  target?: string;
 }
 
 export interface Project {

@@ -6,10 +6,10 @@ export default function Footer() {
   return (
     <div className="bg-amber-50 py-10">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between">
+        <div className="flex justify-between flex-col 2xl:flex-row gap-10">
           {/* Left Side */}
           <div className="flex flex-col gap-4">
-            <div className="mx-auto">
+            <div className="min-xl:mx-auto">
               <Image src={logo} alt="logo" width={60} height={60} />
             </div>
             <h3 className="text-2xl font-bold text-primary uppercase">Mozammal Haq</h3>
@@ -57,7 +57,7 @@ export default function Footer() {
               <Link href="mailto:mozammalhaq01@gmail.com" className="hover:text-primary hover:scale-105 duration-300">
                 mozammalhaq01@gmail.com
               </Link>
-              <div className="grid grid-cols-4 gap-2 mt-4">
+              <div className="grid grid-cols-4 gap-2 mt-4 max-xl:mx-10">
                 {social.map((icon) => (
                   <Link
                     key={icon.id}

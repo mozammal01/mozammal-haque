@@ -5,9 +5,9 @@ import Image from "next/image";
 
 export default function ContactInfo() {
   return (
-    <div className="relative w-2/5 rounded-md">
+    <div className="relative w-full xl:w-2/5 rounded-md">
       <Image src={contactBG} alt="Contact" className="h-[454px]" />
-      <div className="flex flex-col gap-8 justify-start absolute top-0 left-0 p-10">
+      <div className="flex flex-col gap-8 justify-start absolute top-0 left-0 sm:p-10 p-2">
         <h3 className="text-xl font-bold text-primary uppercase">Contact Information</h3>
         <p className="text-lg text-gray-500">You can get my contact information here and if you like.</p>
         <div className="mt-16 space-y-4">
@@ -37,21 +37,6 @@ export default function ContactInfo() {
             <span className="font-bold">Dhaka, Bangladesh</span>
           </Link>
         </div>
-        {/* <div className="my-4">
-              <Divider />
-            </div>
-            <div className="flex items-center gap-2">
-              {social.map((icon) => (
-                <Link
-                  key={icon.id}
-                  href={icon.href}
-                  className="bg-primary rounded p-2 hover:bg-primary/90 transition-all duration-300 hover:scale-110"
-                  target="_blank"
-                >
-                  <icon.icon className="text-white" />
-                </Link>
-              ))}
-            </div> */}
       </div>
     </div>
   );
