@@ -25,7 +25,7 @@ export const skills: Skill[] = [
     name: "React",
     img: true,
     icon: reactImg,
-    className: "animate-slow-spin ",
+    className: "animate-slow-spin",
   },
   {
     id: 2,

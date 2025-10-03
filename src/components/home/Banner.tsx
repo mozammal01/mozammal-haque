@@ -4,17 +4,17 @@ import bannerImage from "@/../public/me/yellow-hoodie.png";
 import { TypeAnimation } from "react-type-animation";
 import AnimatedButton from "../animatedButton/AnimatedButton";
 import ZoomOutMotion from "../animation/ZoomOutMotion";
-import ShutterMotion from "../animation/ShutterMotion";
+import ShutterCloseMotion from "../animation/ShutterCloseMotion";
 
 export default function Banner() {
   return (
     <div className="h-screen flex items-center relative lg:justify-end" id="home">
       {/* Image */}
       <ZoomOutMotion className="absolute hidden 2xl:block bottom-0 -left-40">
-        <Image src={bannerImage} alt="Banner" width={800} height={500} />
+        <Image src={bannerImage} alt="Banner" width={800} height={500} className="" />
       </ZoomOutMotion>
       {/* Text */}
-      <ShutterMotion className="flex flex-col gap-4 2xl:w-1/2 space-y-4">
+      <ShutterCloseMotion className="flex flex-col gap-4 2xl:w-1/2 space-y-4">
         <h3 className="text-3xl font-bold text-primary uppercase">Hi There ,</h3>
         <h1 className="text-6xl font-bold">I am Mozammal Haq</h1>
         <div className="md:block hidden">
@@ -36,7 +36,7 @@ export default function Banner() {
           text="My Resume"
           href="https://drive.google.com/file/d/1RsoK-SaMvjAXV7So2w7KzjzKfIs9JvyU/view"
         />
-      </ShutterMotion>
+      </ShutterCloseMotion>
     </div>
   );
 }

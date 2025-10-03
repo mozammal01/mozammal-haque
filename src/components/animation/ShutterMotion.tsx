@@ -8,9 +8,9 @@ export default function ShutterMotion({ children, className }: { children: React
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 100, clipPath: "inset(100% 0 0 0)" }}
-      animate={isInView ? { opacity: 1, y: 0, clipPath: "inset(0 0 0 0)" } : { opacity: 0, y: 100, clipPath: "inset(100% 0 0 0)" }}
-      transition={{ duration: 0.8, delay: 0.4 }}
+      initial={{ opacity: 0, y: 0, clipPath: "inset(100% 0 0 0)" }}
+      animate={isInView ? { opacity: 1, y: 0, clipPath: "inset(0 0 0 0)" } : { opacity: 0, y: 0, clipPath: "inset(100% 0 0 0)" }}
+      transition={{ duration: 1.2, delay: 0.8 }}
       className={className + " pb-10"}
     >
       {children}
