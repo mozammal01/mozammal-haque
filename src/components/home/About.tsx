@@ -1,11 +1,13 @@
 import Image from "next/image";
 import aboutImage from "@/../public/me/black-t-shirt.png";
 import AnimatedButton from "../animatedButton/AnimatedButton";
+import LeftSliderMotion from "../animation/LeftSliderMotion";
+import ZoomOutMotion from "../animation/ZoomOutMotion";
 
 export default function About() {
   return (
     <div id="about" className="my-20 lg:flex items-center justify-center container mx-auto px-4">
-      <div className="lg:w-1/2 w-full space-y-6">
+      <LeftSliderMotion className="lg:w-1/2 w-full space-y-6">
         <h3 className="text-3xl font-bold text-primary uppercase">About Me</h3>
         <h2 className="text-5xl font-bold">Who I am ?</h2>
         <h2 className="text-3xl font-bold">I am a JR. Web Developer</h2>
@@ -29,10 +31,10 @@ export default function About() {
             target="_blank"
           />
         </div>
-      </div>
-      <div className="w-1/2 hidden lg:block">
+      </LeftSliderMotion>
+      <ZoomOutMotion className="w-1/2 hidden lg:block">
         <Image src={aboutImage} alt="About" width={800} height={500} />
-      </div>
+      </ZoomOutMotion>
     </div>
   );
 }
