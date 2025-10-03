@@ -6,20 +6,41 @@ export interface IconProps extends SVGProps<SVGSVGElement> {
 }
 
 export interface AnimatedButtonProps {
-  variant?: "leftToRight" | "primary" | "outline" | "rightToLeft" | "leftToRightBottom" | "rightToLeftBottom" | "rotateRight" | "rotateLeft" | "upToDown" | "downToUp" | "topToBottom" | "bottomToTop";
+  variant?:
+    | "leftToRight"
+    | "primary"
+    | "outline"
+    | "rightToLeft"
+    | "leftToRightBottom"
+    | "rightToLeftBottom"
+    | "rotateRight"
+    | "rotateLeft"
+    | "upToDown"
+    | "downToUp"
+    | "topToBottom"
+    | "bottomToTop";
   text: string;
   href: string;
   className?: string;
   target?: string;
 }
 
-export interface Project {
+export interface Feature {
+  id: number;
+  content: string;
+}
+
+export interface ProjectDetailsProps {
   id: number;
   name: string;
   image: StaticImageData;
   sourceCode: string;
   visitNow: string;
+  description: string;
+  features?: Feature[];
 }
+
+export type Project = ProjectDetailsProps;
 
 export interface Service {
   id: number;

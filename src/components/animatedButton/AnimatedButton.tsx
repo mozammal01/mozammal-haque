@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function AnimatedButton({ variant, text, href, className ,target}: AnimatedButtonProps) {
   const renderButtonPrimary = () => (
     <Link href={href} target={target}>
-      <button className={`relative px-6 py-2 text-white bg-primary overflow-hidden group ${className}`}>
+      <button className={`relative px-6 py-2 text-white bg-primary overflow-hidden group ${className} cursor-pointer`}>
         {text}
         <span className="absolute left-0 bottom-0 h-[4px] w-0 bg-white transition-all duration-300 group-hover:w-full"></span>
         <span className="absolute right-0 top-0 h-[4px] w-0 bg-white transition-all duration-300 group-hover:w-full delay-300"></span>
@@ -16,7 +16,7 @@ export default function AnimatedButton({ variant, text, href, className ,target}
 
   const renderButtonOutline = () => (
     <Link href={href} target={target}>
-      <button className={`relative px-6 py-2 bg-white text-primary border border-primary overflow-hidden group ${className}`}>
+      <button className={`relative px-6 py-2 bg-white text-primary border border-primary overflow-hidden group ${className} cursor-pointer`}>
         {text}
         <span className="absolute left-0 bottom-0 h-[4px] w-0 bg-primary transition-all duration-300 group-hover:w-full"></span>
         <span className="absolute right-0 top-0 h-[4px] w-0 bg-primary transition-all duration-300 group-hover:w-full delay-300"></span>
@@ -28,7 +28,7 @@ export default function AnimatedButton({ variant, text, href, className ,target}
 
   const renderButtonLeftToRightBottom = () => (
     <section>
-      <Link href={href} target={target} className="relative bg-white rounded-lg border-2 border-primary text-primary py-3 px-5 group">
+      <Link href={href} target={target} className="relative bg-white rounded-lg border-2 border-primary text-primary py-3 px-5 group cursor-pointer">
         <span className="absolute w-0 h-1 group-hover:w-full transition-all ease-out duration-500 bg-primary left-0 top-14"></span>
         <span className="relative">{text}</span>
       </Link>
@@ -37,7 +37,7 @@ export default function AnimatedButton({ variant, text, href, className ,target}
   
   const renderButtonRightToLeftBottom = () => (
     <section>
-      <Link href={href} target={target} className="relative bg-white rounded-lg border-2 border-primary text-primary py-3 px-5 group">
+      <Link href={href} target={target} className="relative bg-white rounded-lg border-2 border-primary text-primary py-3 px-5 group cursor-pointer">
         <span className="absolute w-0 h-1 group-hover:w-full transition-all ease-out duration-500 bg-primary right-0 top-14"></span>
         <span className="relative">{text}</span>
       </Link>
@@ -46,7 +46,7 @@ export default function AnimatedButton({ variant, text, href, className ,target}
 
   const renderButtonLeftToRight = () => (
     <section>
-      <Link href={href} target={target} className="relative bg-white rounded border-2 hover:text-white duration-500 border-primary text-primary py-3 px-5 group">
+      <Link href={href} target={target} className="relative bg-white rounded border-2 hover:text-white duration-500 border-primary text-primary py-3 px-5 group cursor-pointer">
         <span className="absolute w-0 h-full group-hover:w-full transition-all ease-out duration-500 bg-primary left-0 top-0"></span>
         <span className="relative">{text}</span>
       </Link>
@@ -55,7 +55,7 @@ export default function AnimatedButton({ variant, text, href, className ,target}
 
   const renderButtonRightToLeft = () => (
     <section>
-      <Link href={href} target={target} className="relative bg-white rounded border-2 hover:text-white duration-500 border-primary text-primary py-3 px-5 group">
+      <Link href={href} target={target} className="relative bg-white rounded border-2 hover:text-white duration-500 border-primary text-primary py-3 px-5 group cursor-pointer">
         <span className="absolute w-0 h-full group-hover:w-full transition-all ease-out duration-500 bg-primary right-0 top-0"></span>
         <span className="relative">{text}</span>
       </Link>
@@ -64,7 +64,7 @@ export default function AnimatedButton({ variant, text, href, className ,target}
 
   const renderButtonTopToBottom = () => (
     <section>
-      <Link href={href} target={target} className="relative bg-white rounded border-2 hover:text-white duration-500 border-primary text-primary py-3 px-5 group">
+      <Link href={href} target={target} className="relative bg-white rounded border-2 hover:text-white duration-500 border-primary text-primary py-3 px-5 group cursor-pointer">
         <span className="absolute w-full h-0 group-hover:h-full transition-all ease-out duration-300 bg-primary top-0 left-0"></span>
         <span className="relative">{text}</span>
       </Link>
@@ -73,7 +73,7 @@ export default function AnimatedButton({ variant, text, href, className ,target}
   
   const renderButtonBottomToTop = () => (
     <section>
-      <Link href={href} target={target} className="relative bg-white rounded border-2 hover:text-white duration-500 border-primary text-primary py-3 px-5 group">
+      <Link href={href} target={target} className="relative bg-white rounded border-2 hover:text-white duration-500 border-primary text-primary py-3 px-5 group cursor-pointer">
         <span className="absolute w-full h-0 group-hover:h-full transition-all ease-out duration-300 bg-primary bottom-0 left-0"></span>
         <span className="relative">{text}</span>
       </Link>
@@ -83,7 +83,7 @@ export default function AnimatedButton({ variant, text, href, className ,target}
   const renderButtonRotateRight = () => (
     <section className="w-full flex">
       <Link  href={href} target={target}
-      className="relative bg-white rounded-lg overflow-hidden border-2 border-primary text-primary   duration-500 hover:text-white py-2.5 px-5 group">
+      className="relative bg-white rounded-lg overflow-hidden border-2 border-primary text-primary   duration-500 hover:text-white py-2.5 px-5 group cursor-pointer">
       <span className="absolute w-64 h-64 mt-12 group-hover:rotate-45 group-hover:-mt-24 transition-all ease-linear duration-500 bg-primary right-0 top-0"></span>
       <span className="relative">{text}</span>
     </Link>
@@ -93,7 +93,7 @@ export default function AnimatedButton({ variant, text, href, className ,target}
   const renderButtonRotateLeft = () => (
     <section className="w-full flex">
       <Link  href={href} target={target}
-      className="relative bg-white rounded-lg overflow-hidden border-2 border-primary text-primary   duration-500 hover:text-white py-2.5 px-5 group">
+      className="relative bg-white rounded-lg overflow-hidden border-2 border-primary text-primary   duration-500 hover:text-white py-2.5 px-5 group cursor-pointer">
       <span className="absolute w-64 h-64 mt-12 group-hover:-rotate-45 group-hover:-mt-24 transition-all ease-linear duration-500 bg-primary left-0 top-0"></span>
       <span className="relative">{text}</span>
     </Link>

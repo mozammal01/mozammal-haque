@@ -1,5 +1,5 @@
 import { projects } from "@/data/projects";
-import ProjectCard from "../projectCard/ProjectCard";
+import ProjectCard from "../projects/ProjectCard";
 import LeftSliderMotion from "../animation/LeftSliderMotion";
 
 export default function Projects() {
