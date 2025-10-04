@@ -8,7 +8,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       <div className="bg-black hover:shadow-md shadow-primary md:h-[360px] h-[260px] md:w-[550px] w-[310px] rounded-lg absolute top-4 left-6 hover:opacity-100 opacity-0 duration-500 flex flex-col gap-4 items-center justify-center">
         <h3 className="text-3xl font-bold text-primary">{project.name}</h3>
         <div className="flex items-center justify-center gap-4">
-          <AnimatedButton variant="outline" text="Source Code" href={project.sourceCode} />
+          <AnimatedButton target="_blank" variant="outline" text="Source Code" href={project.sourceCode} />
           <AnimatedButton variant="primary" text="View Details" href={`/projects/${project.id}`} />
         </div>
       </div>

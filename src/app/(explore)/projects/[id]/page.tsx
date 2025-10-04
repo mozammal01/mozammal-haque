@@ -1,4 +1,5 @@
 import ProjectDetailsComponent from "@/components/projects/ProjectDetails";
+import DetailsHeader from "@/components/detailsHeader/DetailsHeader";
 import { projects } from "@/data/projects";
 import Link from "next/link";
 
@@ -22,7 +23,7 @@ export default function ProjectDetails({ params }: { params: { id: string } }) {
 
   return (
     <div>
-      <h2 className="text-4xl font-bold text-white flex items-center justify-center h-[600px]">Here is the details of {project.name}</h2>
+      <DetailsHeader title={project.name} subtitle={project.description} />
       <ProjectDetailsComponent project={project} />
     </div>
   );

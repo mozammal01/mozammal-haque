@@ -1,17 +1,13 @@
 import { ProjectDetailsProps } from "@/interfaces/shared-interfaces";
 import AnimatedButton from "../animatedButton/AnimatedButton";
+import { InteractiveHoverButton } from "../ui/interactive-hover-button";
 
 export default function ProjectDetailsComponent({ project }: { project: ProjectDetailsProps }) {
-  const { features, description, sourceCode, visitNow } = project;
+  const { features, sourceCode, visitNow } = project;
   return (
     <div className="container mx-auto px-4 my-10">
       <div className="flex justify-between items-start gap-10">
         <div className="space-y-6">
-          <div className="bg-white p-6 rounded-lg shadow-lg">
-            <h3 className="text-xl font-semibold mb-3 text-gray-800">Project Description</h3>
-            <p className="text-gray-600 leading-relaxed">{description}</p>
-          </div>
-
           {features && features.length > 0 && (
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-semibold mb-4 text-gray-800">Key Features</h3>
@@ -30,7 +26,7 @@ export default function ProjectDetailsComponent({ project }: { project: ProjectD
         </div>
 
         <div className="flex flex-col space-y-4 w-2/10 items-center justify-center cursor-pointer">
-          <AnimatedButton variant="primary" text="Live Site" href={visitNow} />
+          <InteractiveHoverButton href={visitNow}>Live Site</InteractiveHoverButton>
           <AnimatedButton variant="outline" text="Source Code" href={sourceCode} />
         </div>
       </div>

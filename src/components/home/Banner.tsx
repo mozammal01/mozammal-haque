@@ -5,6 +5,8 @@ import { TypeAnimation } from "react-type-animation";
 import AnimatedButton from "../animatedButton/AnimatedButton";
 import ZoomOutMotion from "../animation/ZoomOutMotion";
 import ShutterCloseMotion from "../animation/ShutterCloseMotion";
+import { TypingAnimation } from "../ui/typing-animation";
+import { TextAnimate } from "../ui/text-animate";
 
 export default function Banner() {
   return (
@@ -15,8 +17,14 @@ export default function Banner() {
       </ZoomOutMotion>
       {/* Text */}
       <ShutterCloseMotion className="flex flex-col gap-4 2xl:w-1/2 space-y-4">
-        <h3 className="text-3xl font-bold text-primary uppercase">Hi There ,</h3>
-        <h1 className="text-6xl font-bold">I am Mozammal Haq</h1>
+        <h3 className="text-3xl font-bold text-primary uppercase">
+          <TypingAnimation>Hi There ,</TypingAnimation>
+        </h3>
+        <h1 className="text-6xl font-bold">
+          <TextAnimate animation="blurInUp" by="character" once>
+            I am Mozammal Haq
+          </TextAnimate>
+        </h1>
         <div className="md:block hidden">
           <TypeAnimation
             sequence={["Front End Development", 1000, "Full Stack Developer", 1000, "Mearn Stack Developer", 1000]}
@@ -27,10 +35,11 @@ export default function Banner() {
             repeat={Infinity}
           />
         </div>
-        <p className="text-lg w-4/5 font-semibold">
+        <TextAnimate animation="slideUp" by="word"  className="text-lg w-4/5 font-semibold">
           Passionate junior web developer skilled in React, Next.js, TypeScript, and Tailwind. Focused on creating responsive, modern, and
           user-friendly websites with clean code, seamless performance, and creative problem-solving.
-        </p>
+        </TextAnimate>
+
         <AnimatedButton
           variant="topToBottom"
           text="My Resume"

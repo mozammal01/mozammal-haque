@@ -1,6 +1,6 @@
 import carShop from "@/../public/projects/car-shop.png";
 import tasteNest from "@/../public/projects/taste-nest.png";
-import todoList from "@/../public/projects/car-shop.png";
+import educationManagement from "@/../public/projects/education-management.png";
 import weatherApp from "@/../public/projects/taste-nest.png";
 export const projects = [
   {
@@ -91,28 +91,28 @@ export const projects = [
   },
   {
     id: 3,
-    name: "Todo List",
-    image: todoList,
-    sourceCode: "https://github.com/mozammal01/Todo-List",
-    visitNow: "https://github.com/mozammal01/Todo-List",
+    name: "Education Management",
+    image: educationManagement,
+    sourceCode: "https://github.com/mozammal01/Education-Management",
+    visitNow: "https://github.com/mozammal01/Education-Management",
     description:
-      "A modern and intuitive todo list application that helps users organize their daily tasks efficiently. Features include task creation, editing, deletion, and completion tracking with a clean, user-friendly interface.",
+      "A modern and intuitive education management application that helps users organize their daily tasks efficiently. Features include task creation, editing, deletion, and completion tracking with a clean, user-friendly interface.",
     features: [
       {
         id: 1,
-        content: "Add, edit, and delete tasks with real-time updates.",
+        content: "Add, edit, and delete students with real-time updates.",
       },
       {
         id: 2,
-        content: "Mark tasks as complete or incomplete with visual indicators.",
+        content: "Mark students as complete or incomplete with visual indicators.",
       },
       {
         id: 3,
-        content: "Organize tasks by categories or priorities.",
+        content: "Organize students by categories or priorities.",
       },
       {
         id: 4,
-        content: "Search and filter tasks for easy management.",
+        content: "Search and filter students for easy management.",
       },
       {
         id: 5,
@@ -120,7 +120,7 @@ export const projects = [
       },
       {
         id: 6,
-        content: "Local storage to persist tasks between sessions.",
+        content: "Local storage to persist students between sessions.",
       },
     ],
   },

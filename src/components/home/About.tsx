@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import aboutImage from "@/../public/me/black-t-shirt.png";
 import AnimatedButton from "../animatedButton/AnimatedButton";
@@ -21,6 +22,7 @@ export default function About() {
             CSS. Now i am proficient in HTML, CSS, JavaScript, and familiar with React, NextJS, Node.js, expressJS, mongoDB.
           </p>
         </div>
+        
         <div className="flex gap-4">
           <AnimatedButton variant="rightToLeft" text="My Skills" href="#skills" />
 
