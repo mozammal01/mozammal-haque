@@ -38,9 +38,17 @@ export interface ProjectDetailsProps {
   visitNow: string;
   description: string;
   features?: Feature[];
+  images1?: StaticImageData[];
+  images2?: StaticImageData[];
 }
 
 export type Project = ProjectDetailsProps;
+
+export interface ImageSliderProps {
+  images1?: StaticImageData[];
+  images2?: StaticImageData[];
+  name: string;
+}
 
 export interface Service {
   id: number;

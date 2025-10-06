@@ -1,16 +1,19 @@
+"use client";
 import { ProjectDetailsProps } from "@/interfaces/shared-interfaces";
 import AnimatedButton from "../animatedButton/AnimatedButton";
 import { InteractiveHoverButton } from "../ui/interactive-hover-button";
+import ImageSlider from "./ImageSlider";
+
 
 export default function ProjectDetailsComponent({ project }: { project: ProjectDetailsProps }) {
-  const { features, sourceCode, visitNow } = project;
+  const { features, sourceCode, visitNow, images1, images2, name } = project;
   return (
     <div className="container mx-auto px-4 my-10">
       <div className="flex justify-between items-start gap-10">
         <div className="space-y-6">
           {features && features.length > 0 && (
-            <div className="bg-white p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-semibold mb-4 text-gray-800">Key Features</h3>
+            <div className="bg-white p-6 rounded-lg">
+              <h3 className="text-3xl font-bold mb-4 text-gray-800 ">Key Features</h3>
               <div className="space-y-3">
                 {features.map((feature) => (
                   <div key={feature.id} className="flex items-start space-x-3 ">
@@ -26,10 +29,14 @@ export default function ProjectDetailsComponent({ project }: { project: ProjectD
         </div>
 
         <div className="flex flex-col space-y-4 w-2/10 items-center justify-center cursor-pointer">
-          <InteractiveHoverButton href={visitNow}>Live Site</InteractiveHoverButton>
-          <AnimatedButton variant="outline" text="Source Code" href={sourceCode} />
+          <InteractiveHoverButton target="_blank" href={visitNow}>
+            Live Site
+          </InteractiveHoverButton>
+          <AnimatedButton variant="outline" text="Source Code" target="_blank" href={sourceCode} />
         </div>
       </div>
+
+      <ImageSlider images1={images1 || []} images2={images2 || []} name={name} />
     </div>
   );
 }

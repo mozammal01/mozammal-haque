@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
-export function InteractiveHoverButton({ children, className, href, ...props }: React.ButtonHTMLAttributes<HTMLButtonElement> & { href?: string }) {
+export function InteractiveHoverButton({ children, className, href, target, ...props }: React.ButtonHTMLAttributes<HTMLButtonElement> & { href?: string, target?: string }) {
   return (
     <button
       className={cn(
@@ -12,7 +12,7 @@ export function InteractiveHoverButton({ children, className, href, ...props }: 
       )}
       {...props}
     >
-      <Link href={href || ""}>
+      <Link target={target} href={href || ""}>
         <div className="flex items-center gap-2">
           <div className="bg-primary h-2 w-2 rounded transition-all duration-300 group-hover:scale-[100.8]"></div>
           <span className="inline-block transition-all duration-300 group-hover:translate-x-12 group-hover:opacity-0">{children}</span>
