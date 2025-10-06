@@ -44,7 +44,7 @@ export default function Banner() {
           target="_blank"
           variant="topToBottom"
           text="My Resume"
-          href="https://drive.google.com/file/d/1FpzYpKqGsVwhaE1BQzFuuR7YsJXTT5SC/view"
+          href="https://drive.google.com/file/d/1JXgJwpPaL8zN6Wb6G-DYOyAfIBF24jPS/view?usp=drive_link"
         />
       </ShutterCloseMotion>
     </div>

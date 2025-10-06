@@ -3,12 +3,21 @@ import { ProjectDetailsProps } from "@/interfaces/shared-interfaces";
 import AnimatedButton from "../animatedButton/AnimatedButton";
 import { InteractiveHoverButton } from "../ui/interactive-hover-button";
 import ImageSlider from "./ImageSlider";
-import ShutterMotion from "../animation/ShutterMotion";
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 export default function ProjectDetailsComponent({ project }: { project: ProjectDetailsProps }) {
   const { features, sourceCode, visitNow, images1, images2, name } = project;
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
-    <ShutterMotion className="container mx-auto px-4 my-10">
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 100 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+      transition={{ duration: 0.5, delay: 0.2 }}
+      className="container mx-auto px-4 my-10"
+    >
       <div className="lg:flex justify-between items-start gap-10">
         <div className="space-y-6">
           {features && features.length > 0 && (
@@ -37,6 +46,6 @@ export default function ProjectDetailsComponent({ project }: { project: ProjectD
       </div>
 
       <ImageSlider images1={images1 || []} images2={images2 || []} name={name} />
-    </ShutterMotion>
+    </motion.div>
   );
 }

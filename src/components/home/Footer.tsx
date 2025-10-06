@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="flex justify-between flex-col 2xl:flex-row gap-10">
           {/* Left Side */}
 
-          <LeftSliderMotion className="flex flex-col gap-4">
+          <LeftSliderMotion className="flex flex-col gap-4 px-4">
             <div className="min-xl:mx-auto">
               <Image src={logo} alt="logo" width={60} height={60} />
             </div>
@@ -20,7 +20,7 @@ export default function Footer() {
             <p>© 2025 Mozammal Haque</p>
           </LeftSliderMotion>
           {/* Left Middle Side */}
-          <ShutterMotion className="flex flex-col gap-4">
+          <ShutterMotion className="flex flex-col gap-4 px-4">
             <h3 className="text-2xl font-bold text-primary uppercase">Sections</h3>
             <div className="flex flex-col gap-2 font-semibold">
               <Link href="#home" className="hover:text-primary hover:scale-105 duration-300">
@@ -41,7 +41,7 @@ export default function Footer() {
             </div>
           </ShutterMotion>
           {/* Right Middle Side */}
-          <ShutterMotion className="flex flex-col gap-4">
+          <ShutterMotion className="flex flex-col gap-4 px-4">
             <h3 className="text-2xl font-bold text-primary uppercase">Services</h3>
             <div className="flex flex-col gap-2 font-semibold">
               <p>Web Development</p>
