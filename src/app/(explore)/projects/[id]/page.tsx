@@ -11,7 +11,7 @@ export default function ProjectDetails({ params }: { params: { id: string } }) {
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-white mb-4">Project Not Found</h1>
+          <h6 className="text-4xl font-bold text-white mb-4">Project Not Found</h6>
           <p className="text-gray-300 mb-8">The project you&apos;re looking for doesn&apos;t exist.</p>
           <Link href="/projects" className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg transition-colors">
             Back to Projects

@@ -43,7 +43,7 @@ export default function Banner() {
         <AnimatedButton
           variant="topToBottom"
           text="My Resume"
-          href="https://drive.google.com/file/d/1RsoK-SaMvjAXV7So2w7KzjzKfIs9JvyU/view"
+          href="https://drive.google.com/file/d/1FpzYpKqGsVwhaE1BQzFuuR7YsJXTT5SC/view"
         />
       </ShutterCloseMotion>
     </div>
