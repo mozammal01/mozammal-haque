@@ -12,12 +12,9 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import { AnimatedThemeToggler } from "../ui/animated-theme-toggler";
 
 export default function Navigation() {
-  // useEffect(() => {
-  //   const home = document.getElementById("skills") as HTMLElement;
-  //   console.log(home);
-  // }, []);
 
   const icons = [
     {
@@ -82,8 +79,9 @@ export default function Navigation() {
           </Tooltip>
         ))}
       </div>
-      <div>
-        <Image src={logo} alt="Home" width={60} height={60} />
+      <div className="hover:bg-primary size-10 inline-flex items-center justify-center transition-all scale-100 hover:scale-110 duration-300 rounded-full">
+        <AnimatedThemeToggler />
+        {/* <ThemeToggle /> */}
       </div>
     </div>
   );

@@ -1,8 +1,9 @@
 import carShop from "@/../public/projects/car-shop.png";
 import tasteNest from "@/../public/projects/taste-nest.png";
 import educationManagement from "@/../public/projects/education-management.png";
-import weatherApp from "@/../public/projects/taste-nest.png";
-// 
+import jahirTailor from "@/../public/projects/jahir-tailor.png";
+import awesomeRestaurant from "@/../public/projects/awesome-restaurant.png";
+//
 import carBanner from "@/../public/projects/car-shop/banner.png";
 import carFooter from "@/../public/projects/car-shop/Footer.png";
 import carAllBrands from "@/../public/projects/car-shop/allBrands.png";
@@ -19,7 +20,7 @@ import carFeedback from "@/../public/projects/car-shop/feedback.png";
 import carPopularCar from "@/../public/projects/car-shop/popularCar.png";
 import carSellCar from "@/../public/projects/car-shop/sellCar.png";
 import carServices from "@/../public/projects/car-shop/services.png";
-// 
+//
 import nestBanner from "@/../public/projects/taste-nest/banner.png";
 import nestAbout from "@/../public/projects/taste-nest/about.png";
 import nestCategories from "@/../public/projects/taste-nest/categories.png";
@@ -31,7 +32,7 @@ import nestNews from "@/../public/projects/taste-nest/news.png";
 import nestNewsEnding from "@/../public/projects/taste-nest/newsEnding.png";
 import nestOrderFood from "@/../public/projects/taste-nest/orderFood.png";
 import nestReserveTable from "@/../public/projects/taste-nest/reserveTable.png";
-// 
+//
 import eduBanner from "@/../public/projects/education-management/banner.png";
 import eduRFTpopup from "@/../public/projects/education-management/RFTpopup.png";
 import eduAdminAllUsers from "@/../public/projects/education-management/adminAllUsers.png";
@@ -61,6 +62,60 @@ import eduTeacherDashboard from "@/../public/projects/education-management/teach
 import eduTeacherMyClass from "@/../public/projects/education-management/teacherMyClass.png";
 import eduTeacherProfile from "@/../public/projects/education-management/teacherProfile.png";
 import eduTeacherSignup from "@/../public/projects/education-management/teacherSignup.png";
+//
+import jahirAbout from "@/../public/projects/jahir-tailor/about.png";
+import jahirAboutBN from "@/../public/projects/jahir-tailor/aboutBN.png";
+import jahirBanner from "@/../public/projects/jahir-tailor/banner.png";
+import jahirBannerBN from "@/../public/projects/jahir-tailor/bannerBN.png";
+import jahirBlogs from "@/../public/projects/jahir-tailor/blogs.png";
+import jahirContactFooterBN from "@/../public/projects/jahir-tailor/contact-footerBN.png";
+import jahirContact from "@/../public/projects/jahir-tailor/contact.png";
+import jahirFooter from "@/../public/projects/jahir-tailor/footer.png";
+import jahirForgetPass from "@/../public/projects/jahir-tailor/forgetPass.png";
+import jahirForgetPassBN from "@/../public/projects/jahir-tailor/forgetPassBN.png";
+import jahirGalleryBlogsBN from "@/../public/projects/jahir-tailor/gallery-blogsBN.png";
+import jahirGallery from "@/../public/projects/jahir-tailor/gallery.png";
+import jahirGalleryEffect from "@/../public/projects/jahir-tailor/galleryEffect.png";
+import jahirLanguageSwitcher from "@/../public/projects/jahir-tailor/languageSwitcher.png";
+import jahirProcessServicesBN from "@/../public/projects/jahir-tailor/process-servicesBN.png";
+import jahirProcess from "@/../public/projects/jahir-tailor/process.png";
+import jahirResetPass from "@/../public/projects/jahir-tailor/resetPass.png";
+import jahirResetPassBN from "@/../public/projects/jahir-tailor/resetPassBN.png";
+import jahirServices from "@/../public/projects/jahir-tailor/services.png";
+import jahirSignin from "@/../public/projects/jahir-tailor/signin.png";
+import jahirSigninBN from "@/../public/projects/jahir-tailor/signinBN.png";
+import jahirSignup from "@/../public/projects/jahir-tailor/signup.png";
+import jahirSignupBN from "@/../public/projects/jahir-tailor/signupBN.png";
+//
+import awesomeErrorPage from "@/../public/projects/awesome-restaurent/ErrorPage.png";
+import awesomeAddItem from "@/../public/projects/awesome-restaurent/addItem.png";
+import awesomeAddToCart from "@/../public/projects/awesome-restaurent/addToCart.png";
+import awesomeAdminDashboard from "@/../public/projects/awesome-restaurent/adminDashboard.png";
+import awesomeAllUsers from "@/../public/projects/awesome-restaurent/allUsers.png";
+import awesomeBanner from "@/../public/projects/awesome-restaurent/banner.png";
+import awesomeBgFixed from "@/../public/projects/awesome-restaurent/bg-fixed.png";
+import awesomeCallUs from "@/../public/projects/awesome-restaurent/callUs.png";
+import awesomeDeleteUser from "@/../public/projects/awesome-restaurent/deleteUser.png";
+import awesomeDeletedUser from "@/../public/projects/awesome-restaurent/deletedUser.png";
+import awesomeFeedback from "@/../public/projects/awesome-restaurent/feedback.png";
+import awesomeFooter from "@/../public/projects/awesome-restaurent/footer.png";
+import awesomeLogin from "@/../public/projects/awesome-restaurent/login.png";
+import awesomeLoginAlert from "@/../public/projects/awesome-restaurent/loginAlert.png";
+import awesomeMakeAdmin from "@/../public/projects/awesome-restaurent/makeAdmin.png";
+import awesomeManageItem from "@/../public/projects/awesome-restaurent/manageItem.png";
+import awesomeMenu from "@/../public/projects/awesome-restaurent/menu.png";
+import awesomeMyCart from "@/../public/projects/awesome-restaurent/myCart.png";
+import awesomeOrderDetails from "@/../public/projects/awesome-restaurent/orderDetails.png";
+import awesomeOrderDishes from "@/../public/projects/awesome-restaurent/orderDishes.png";
+import awesomeOrderHeading from "@/../public/projects/awesome-restaurent/orderHeading.png";
+import awesomePayment from "@/../public/projects/awesome-restaurent/payment.png";
+import awesomePaymentDone from "@/../public/projects/awesome-restaurent/paymentDone.png";
+import awesomePaymentHistory from "@/../public/projects/awesome-restaurent/paymentHistory.png";
+import awesomePopular from "@/../public/projects/awesome-restaurent/popular.png";
+import awesomeSignup from "@/../public/projects/awesome-restaurent/signup.png";
+import awesomeUpdateItem from "@/../public/projects/awesome-restaurent/updateItem.png";
+
+//
 
 export const projects = [
   // Car Shop
@@ -114,7 +169,17 @@ export const projects = [
         content: "Includes company info, quick links, FAQs, contact info, and social media integration.",
       },
     ],
-    images1: [carBanner, carFooter, carAllBrands, carAllBrandsHeader, carAllVehicles, carAllVehiclesHeader, carBlogs, carBuyOrSell, carDetails],
+    images1: [
+      carBanner,
+      carFooter,
+      carAllBrands,
+      carAllBrandsHeader,
+      carAllVehicles,
+      carAllVehiclesHeader,
+      carBlogs,
+      carBuyOrSell,
+      carDetails,
+    ],
     images2: [carDetailsHeader, carFinder, carContact, carFeedback, carPopularCar, carSellCar, carServices],
   },
   // Taste Nest
@@ -152,7 +217,7 @@ export const projects = [
         content: "Responsive design optimized for all devices and screen sizes.",
       },
     ],
-    images1: [nestBanner, nestAbout, nestCategories, nestCheif, nestDishes, nestFeedback, ],
+    images1: [nestBanner, nestAbout, nestCategories, nestCheif, nestDishes, nestFeedback],
     images2: [nestMenu, nestNews, nestNewsEnding, nestOrderFood, nestReserveTable],
   },
   // Education Management
@@ -190,47 +255,179 @@ export const projects = [
         content: "Local storage to persist students between sessions.",
       },
     ],
-    images1: [eduBanner, eduRFTpopup, eduAdminAllUsers, eduAdminPendingClass, eduAdminProfile, eduAdminRFT, eduAdminTotalClass, eduAdminTotalInrollment, eduAllCourses, eduBecomeInstructor, eduCourseEnroll, eduCourses, eduEnrollPayment, eduFeedback, eduFooter],
-    images2: [eduLearnMore, eduRequestForTeacher, eduServices, eduSignin, eduSignup, eduStudentFeedback, eduStudentMyEnroll, eduStudentPaymentHistory, eduStudentProfile, eduTeacherAddClass, eduTeacherDashboard, eduTeacherMyClass, eduTeacherProfile, eduTeacherSignup],
+    images1: [
+      eduBanner,
+      eduRFTpopup,
+      eduAdminAllUsers,
+      eduAdminPendingClass,
+      eduAdminProfile,
+      eduAdminRFT,
+      eduAdminTotalClass,
+      eduAdminTotalInrollment,
+      eduAllCourses,
+      eduBecomeInstructor,
+      eduCourseEnroll,
+      eduCourses,
+      eduEnrollPayment,
+      eduFeedback,
+      eduFooter,
+    ],
+    images2: [
+      eduLearnMore,
+      eduRequestForTeacher,
+      eduServices,
+      eduSignin,
+      eduSignup,
+      eduStudentFeedback,
+      eduStudentMyEnroll,
+      eduStudentPaymentHistory,
+      eduStudentProfile,
+      eduTeacherAddClass,
+      eduTeacherDashboard,
+      eduTeacherMyClass,
+      eduTeacherProfile,
+      eduTeacherSignup,
+    ],
   },
-  // 
+  // Jahir Tailor
   {
     id: 4,
-    name: "Weather App",
-    image: weatherApp,
-    sourceCode: "https://github.com/mozammal01/Weather-App",
-    visitNow: "https://weather-app-ten-liart.vercel.app/",
+    name: "Jahir Tailor",
+    image: jahirTailor,
+    sourceCode: "https://github.com/mozammal01/Jahir-Tailor",
+    visitNow: "https://jahir-tailor.vercel.app/",
     description:
-      "A comprehensive weather application that provides real-time weather information, forecasts, and weather alerts. Users can check current conditions, hourly forecasts, and extended weather predictions for any location worldwide.",
+      "Jahir Tailor is a modern and intuitive tailor shop website that helps users explore, search, and discover tailor services. It features detailed tailor information, ratings, reviews, and personalized recommendations.",
     features: [
       {
         id: 1,
-        content: "Real-time weather data for current conditions including temperature, humidity, and wind speed.",
+        content: "Browse tailor services by category, price, and availability with advanced filtering options.",
       },
       {
         id: 2,
-        content: "Hourly and daily weather forecasts with detailed predictions.",
+        content: "Detailed tailor pages with service information, pricing, and user reviews.",
       },
       {
         id: 3,
-        content: "Location-based weather with automatic GPS detection and manual city search.",
+        content: "Search functionality to find specific tailor services, materials, or styles.",
       },
       {
         id: 4,
-        content: "Weather maps and radar visualization for precipitation and storm tracking.",
+        content: "Personalized recommendations based on viewing history and preferences.",
       },
       {
         id: 5,
-        content: "Weather alerts and notifications for severe weather conditions.",
+        content: "User ratings and reviews system for community engagement.",
       },
       {
         id: 6,
-        content: "Beautiful UI with weather-themed backgrounds and animations.",
+        content: "Responsive design optimized for all devices and screen sizes.",
       },
       {
         id: 7,
-        content: "Responsive design optimized for mobile and desktop devices.",
+        content: "Includes company info, quick links, FAQs, contact info, and social media integration.",
       },
+    ],
+    images1: [
+      jahirAbout,
+      jahirAboutBN,
+      jahirBanner,
+      jahirBannerBN,
+      jahirBlogs,
+      jahirContactFooterBN,
+      jahirContact,
+      jahirFooter,
+      jahirForgetPass,
+      jahirForgetPassBN,
+      jahirGalleryBlogsBN,
+      jahirGallery,
+      jahirGalleryEffect,
+    ],
+    images2: [
+      jahirLanguageSwitcher,
+      jahirProcessServicesBN,
+      jahirProcess,
+      jahirResetPass,
+      jahirResetPassBN,
+      jahirServices,
+      jahirSignin,
+      jahirSigninBN,
+      jahirSignup,
+      jahirSignupBN,
+    ],
+  },
+  // AweSome Restaurant
+  {
+    id: 5,
+    name: "AweSome Restaurant",
+    image: awesomeRestaurant,
+    sourceCode: "https://github.com/mozammal01/awesome-restaurent-client",
+    visitNow: "https://awesome-retaurent.web.app/",
+    description:
+      "AweSome Restaurant is a modern and intuitive restaurant website that helps users explore, search, and discover restaurant services. It features detailed restaurant information, ratings, reviews, and personalized recommendations.",
+    features: [
+      {
+        id: 1,
+        content: "Browse restaurant services by category, price, and availability with advanced filtering options.",
+      },
+      {
+        id: 2,
+        content: "Detailed restaurant pages with service information, pricing, and user reviews.",
+      },
+      {
+        id: 3,
+        content: "Search functionality to find specific restaurant services, materials, or styles.",
+      },
+      {
+        id: 4,
+        content: "Personalized recommendations based on viewing history and preferences.",
+      },
+      {
+        id: 5,
+        content: "User ratings and reviews system for community engagement.",
+      },
+      {
+        id: 6,
+        content: "Responsive design optimized for all devices and screen sizes.",
+      },
+      {
+        id: 7,
+        content: "Includes company info, quick links, FAQs, contact info, and social media integration.",
+      },
+    ],
+    images1: [
+      awesomeErrorPage,
+      awesomeAddItem,
+      awesomeAddToCart,
+      awesomeAdminDashboard,
+      awesomeAllUsers,
+      awesomeBanner,
+      awesomeBgFixed,
+      awesomeCallUs,
+      awesomeDeleteUser,
+      awesomeDeletedUser,
+      awesomeFeedback,
+      awesomeFooter,
+      awesomeLogin,
+      awesomeLoginAlert,
+    ],
+    images2: [
+      awesomePopular,
+      awesomeSignup,
+      awesomeUpdateItem,
+      awesomeMakeAdmin,
+      awesomeManageItem,
+      awesomeMenu,
+      awesomeMyCart,
+      awesomeOrderDetails,
+      awesomeOrderDishes,
+      awesomeOrderHeading,
+      awesomePayment,
+      awesomePaymentDone,
+      awesomePaymentHistory,
+      awesomePopular,
+      awesomeSignup,
+      awesomeUpdateItem,
     ],
   },
 ];

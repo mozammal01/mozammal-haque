@@ -4,8 +4,11 @@ import aboutImage from "@/../public/me/black-t-shirt.png";
 import AnimatedButton from "../animatedButton/AnimatedButton";
 import LeftSliderMotion from "../animation/LeftSliderMotion";
 import ZoomOutMotion from "../animation/ZoomOutMotion";
+import { useTheme } from "next-themes";
 
 export default function About() {
+  const { theme } = useTheme();
+  console.log(theme);
   return (
     <div id="about" className="my-20 lg:flex items-center justify-center container mx-auto px-4">
       <LeftSliderMotion className="lg:w-1/2 w-full space-y-6">

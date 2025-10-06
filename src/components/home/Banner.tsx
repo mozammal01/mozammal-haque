@@ -10,7 +10,7 @@ import { TextAnimate } from "../ui/text-animate";
 
 export default function Banner() {
   return (
-    <div className="h-screen flex items-center relative lg:justify-end" id="home">
+    <div className="h-screen flex items-center relative lg:justify-end text-black " id="home">
       {/* Image */}
       <ZoomOutMotion className="absolute hidden 2xl:block bottom-0 -left-40">
         <Image src={bannerImage} alt="Banner" width={800} height={500} className="" />
