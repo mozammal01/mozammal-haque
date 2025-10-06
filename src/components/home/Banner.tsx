@@ -41,6 +41,7 @@ export default function Banner() {
         </TextAnimate>
 
         <AnimatedButton
+          target="_blank"
           variant="topToBottom"
           text="My Resume"
           href="https://drive.google.com/file/d/1FpzYpKqGsVwhaE1BQzFuuR7YsJXTT5SC/view"
