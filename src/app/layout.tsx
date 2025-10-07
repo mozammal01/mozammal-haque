@@ -1,9 +1,7 @@
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import LeftSideBar from "@/components/home/LeftSide";
 import type { Metadata } from "next";
+import { ThemeProvider } from "next-themes";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "next-themes";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

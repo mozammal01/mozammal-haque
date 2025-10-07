@@ -6,7 +6,7 @@ import ShutterMotion from "../animation/ShutterMotion";
 import FooterContact from "../footerContact/FooterContact";
 export default function Footer() {
   return (
-    <div className="bg-amber-50 py-10">
+    <div className="bg-amber-50 py-10 dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="flex justify-between flex-col 2xl:flex-row gap-10">
           {/* Left Side */}
@@ -20,7 +20,7 @@ export default function Footer() {
             <p>© 2025 Mozammal Haque</p>
           </LeftSliderMotion>
           {/* Left Middle Side */}
-          <ShutterMotion className="flex flex-col gap-4 px-4">
+          <ShutterMotion className="flex flex-col gap-4 px-4 ">
             <h3 className="text-2xl font-bold text-primary uppercase">Sections</h3>
             <div className="flex flex-col gap-2 font-semibold">
               <Link href="#home" className="hover:text-primary hover:scale-105 duration-300">

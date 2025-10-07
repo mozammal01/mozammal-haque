@@ -13,7 +13,7 @@ export default function Banner() {
     <div className="h-screen flex items-center relative lg:justify-end text-black " id="home">
       {/* Image */}
       <ZoomOutMotion className="absolute hidden 2xl:block bottom-0 -left-40">
-        <Image src={bannerImage} alt="Banner" width={800} height={500} className="" />
+        <Image src={bannerImage} alt="Banner" width={800} height={500} />
       </ZoomOutMotion>
       {/* Text */}
       <ShutterCloseMotion className="flex flex-col gap-4 2xl:w-1/2 space-y-4">

@@ -15,7 +15,6 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip
 import { AnimatedThemeToggler } from "../ui/animated-theme-toggler";
 
 export default function Navigation() {
-
   const icons = [
     {
       id: 1,
@@ -55,33 +54,42 @@ export default function Navigation() {
     },
   ];
 
+  const isHome = icons.find((icon) => icon.href === "#home");
+
+  if (isHome) {
+    console.log("This is home");
+  }
+
   return (
-    <div
-      className={`md:flex hidden flex-col gap-4 justify-between items-center h-screen bg-transparent px-4 fixed top-0 right-0 py-10 2xl:border-l-8 border-white `}
-    >
-      <div>
-        <Image src={logo} alt="Home" width={60} height={60} />
-      </div>
-      <div className="flex flex-col gap-8">
-        {icons.map((icon, index) => (
-          <Tooltip key={index}>
-            <TooltipTrigger asChild>
-              <Link
-                href={icon.href}
-                className="hover:bg-[#ffc107] hover:text-white transition-all scale-100 hover:scale-120 duration-300 rounded-full p-4"
-              >
-                <Image src={icon.icon} alt={icon.placeholder} width={20} height={20} />
-              </Link>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>{icon.placeholder}</p>
-            </TooltipContent>
-          </Tooltip>
-        ))}
-      </div>
-      <div className="hover:bg-primary size-10 inline-flex items-center justify-center transition-all scale-100 hover:scale-110 duration-300 rounded-full">
-        <AnimatedThemeToggler />
-        {/* <ThemeToggle /> */}
+    <div className="relative">
+      <div
+        className={`md:flex hidden flex-col gap-4 justify-between items-center h-screen px-4 top-0 right-0 py-10 fixed bg-black/15 dark:bg-white/50` }
+      >
+      {/* <div className="dark:bg-amber-50 bg-black opacity-40 absolute top-0 left-0 w-full h-full"></div> */}
+        <div>
+          <Image src={logo} alt="Home" width={60} height={60} />
+        </div>
+        <div className="flex flex-col gap-8">
+          {icons.map((icon, index) => (
+            <Tooltip key={index}>
+              <TooltipTrigger asChild>
+                <Link
+                  href={icon.href}
+                  className="hover:bg-[#ffc107] hover:text-white transition-all scale-100 hover:scale-120 duration-300 rounded-full p-4"
+                >
+                  <Image src={icon.icon} alt={icon.placeholder} width={20} height={20} />
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>{icon.placeholder}</p>
+              </TooltipContent>
+            </Tooltip>
+          ))}
+        </div>
+        <div className="hover:bg-primary size-10 inline-flex items-center justify-center transition-all scale-100 hover:scale-110 duration-300 rounded-full">
+          <AnimatedThemeToggler className={`text-black`} />
+          {/* <ThemeToggle /> */}
+        </div>
       </div>
     </div>
   );

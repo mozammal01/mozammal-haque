@@ -6,8 +6,8 @@ import Image from "next/image";
 export default function ContactInfo() {
   return (
     <div className="relative w-full xl:w-2/5 rounded-md">
-      <Image src={contactBG} alt="Contact" className="h-[454px]" />
-      <div className="flex flex-col gap-8 justify-start absolute top-0 left-0 sm:p-10 p-2 py-10">
+      <Image src={contactBG} alt="Contact" className="h-[454px] object-cover dark:invert -pb-10" />
+      <div className="flex flex-col gap-8 justify-start absolute top-0 left-0 sm:p-10 p-2">
         <h3 className="text-xl font-bold text-primary uppercase">Contact Information</h3>
         <p className="text-lg text-gray-500">You can get my contact information here and if you like.</p>
         <div className="mt-16 space-y-4">

@@ -16,20 +16,18 @@ export default function ProjectDetailsComponent({ project }: { project: ProjectD
       initial={{ opacity: 0, y: 100 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
       transition={{ duration: 0.5, delay: 0.2 }}
-      className="container mx-auto px-4 my-10"
+      className="container mx-auto px-4 py-10 "
     >
       <div className="lg:flex justify-between items-start gap-10">
         <div className="space-y-6">
           {features && features.length > 0 && (
-            <div className="bg-white p-6 rounded-lg">
-              <h3 className="text-3xl font-bold mb-4 text-gray-800 ">Key Features</h3>
+            <div className="p-6 rounded-lg">
+              <h3 className="text-3xl font-bold mb-4">Key Features</h3>
               <div className="space-y-3">
                 {features.map((feature) => (
                   <div key={feature.id} className="flex items-start space-x-3 ">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-gray-600 font-semibold hover:text-primary duration-300 transition-all scale-95 cursor-pointer hover:scale-100">
-                      {feature.content}
-                    </p>
+                    <p className="font-semibold hover:text-primary duration-300 transition-all scale-95 cursor-pointer hover:scale-100">{feature.content}</p>
                   </div>
                 ))}
               </div>

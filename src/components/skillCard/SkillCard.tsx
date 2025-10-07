@@ -22,7 +22,7 @@ export default function SkillCard({ filteredSkills }: { filteredSkills: Skill[] 
           onMouseEnter={() => handleHover(skill.id)}
           onMouseLeave={() => handleHover(0)}
           key={index}
-          className="flex flex-col justify-center items-center mx-auto gap-2 bg-amber-50 rounded p-10 w-[250px] h-[250px] transition-all hover:scale-105 hover:shadow-smooth duration-300 ease-in-out"
+          className="flex flex-col justify-center items-center mx-auto gap-2 bg-amber-50 dark:bg-gray-900 rounded p-10 w-[250px] h-[250px] transition-all hover:scale-105 hover:shadow-smooth duration-300 ease-in-out"
         >
           <div className="flex flex-col justify-center items-center relative overflow-hidden h-[250px] w-[250px]">
             <motion.div
@@ -47,7 +47,7 @@ export default function SkillCard({ filteredSkills }: { filteredSkills: Skill[] 
               transition={{
                 duration: 0.3,
               }}
-              className="text-2xl font-bold text-black absolute bottom-0"
+              className="text-2xl font-bold text-black dark:text-white absolute bottom-0"
             >
               {skill.name}
             </motion.span>

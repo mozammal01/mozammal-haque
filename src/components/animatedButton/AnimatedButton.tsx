@@ -33,9 +33,9 @@ export default function AnimatedButton({ variant, text, href, className, target 
       <Link
         href={href}
         target={target}
-        className="relative bg-white rounded-lg border-2 border-primary text-primary py-3 px-5 group cursor-pointer"
+        className="relative bg-white dark:bg-primary dark:text-white dark:hover:text-primary rounded-lg border-2 border-primary text-primary py-3 px-5 group cursor-pointer"
       >
-        <span className="absolute w-0 h-1 group-hover:w-full transition-all ease-out duration-500 bg-primary left-0 top-14"></span>
+        <span className="absolute w-0 h-1 group-hover:w-full transition-all ease-out duration-500 bg-primary dark:bg-white left-0 top-14"></span>
         <span className="relative">{text}</span>
       </Link>
     </section>
@@ -46,9 +46,9 @@ export default function AnimatedButton({ variant, text, href, className, target 
       <Link
         href={href}
         target={target}
-        className="relative bg-white rounded-lg border-2 border-primary text-primary py-3 px-5 group cursor-pointer"
+        className="relative bg-white dark:bg-primary dark:text-white dark:hover:text-primary rounded-lg border-2 border-primary text-primary py-3 px-5 group cursor-pointer"
       >
-        <span className="absolute w-0 h-1 group-hover:w-full transition-all ease-out duration-500 bg-primary right-0 top-14"></span>
+        <span className="absolute w-0 h-1 group-hover:w-full transition-all ease-out duration-500 bg-primary dark:bg-white right-0 top-14"></span>
         <span className="relative">{text}</span>
       </Link>
     </section>
@@ -59,9 +59,9 @@ export default function AnimatedButton({ variant, text, href, className, target 
       <Link
         href={href}
         target={target}
-        className="relative bg-white rounded border-2 hover:text-white duration-500 border-primary text-primary py-3 px-5 group cursor-pointer"
+        className="relative bg-white dark:bg-primary dark:text-white dark:hover:text-primary rounded border-2 hover:text-white duration-500 border-primary text-primary py-3 px-5 group cursor-pointer"
       >
-        <span className="absolute w-0 h-full group-hover:w-full transition-all ease-out duration-500 bg-primary left-0 top-0"></span>
+        <span className="absolute w-0 h-full group-hover:w-full transition-all ease-out duration-500 bg-primary dark:bg-white left-0 top-0"></span>
         <span className="relative">{text}</span>
       </Link>
     </section>
@@ -72,9 +72,9 @@ export default function AnimatedButton({ variant, text, href, className, target 
       <Link
         href={href}
         target={target}
-        className="relative bg-white rounded border-2 hover:text-white duration-500 border-primary text-primary py-3 px-5 group cursor-pointer"
+        className="relative bg-white dark:bg-primary dark:text-white dark:hover:text-primary rounded border-2 hover:text-white duration-500 border-primary text-primary py-3 px-5 group cursor-pointer"
       >
-        <span className="absolute w-0 h-full group-hover:w-full transition-all ease-out duration-500 bg-primary right-0 top-0"></span>
+        <span className="absolute w-0 h-full group-hover:w-full transition-all ease-out duration-500 bg-primary dark:bg-white right-0 top-0"></span>
         <span className="relative">{text}</span>
       </Link>
     </section>
@@ -85,9 +85,9 @@ export default function AnimatedButton({ variant, text, href, className, target 
       <Link
         href={href}
         target={target}
-        className="relative bg-white rounded border-2 hover:text-white duration-500 border-primary text-primary py-3 px-5 group cursor-pointer"
+        className="relative bg-white dark:bg-primary dark:text-white dark:hover:text-primary rounded border-2 hover:text-white duration-500 border-primary text-primary py-3 px-5 group cursor-pointer"
       >
-        <span className="absolute w-full h-0 group-hover:h-full transition-all ease-out duration-300 bg-primary top-0 left-0"></span>
+        <span className="absolute w-full h-0 group-hover:h-full transition-all ease-out duration-300 bg-primary dark:bg-white top-0 left-0"></span>
         <span className="relative">{text}</span>
       </Link>
     </section>
@@ -98,9 +98,9 @@ export default function AnimatedButton({ variant, text, href, className, target 
       <Link
         href={href}
         target={target}
-        className="relative bg-white rounded border-2 hover:text-white duration-500 border-primary text-primary py-3 px-5 group cursor-pointer"
+        className="relative bg-white dark:bg-primary dark:text-white rounded border-2 hover:text-white duration-500 border-primary text-primary py-3 px-5 group cursor-pointer"
       >
-        <span className="absolute w-full h-0 group-hover:h-full transition-all ease-out duration-300 bg-primary bottom-0 left-0"></span>
+        <span className="absolute w-full h-0 group-hover:h-full transition-all ease-out duration-300 bg-primary dark:bg-white bottom-0 left-0"></span>
         <span className="relative">{text}</span>
       </Link>
     </section>
@@ -111,9 +111,9 @@ export default function AnimatedButton({ variant, text, href, className, target 
       <Link
         href={href}
         target={target}
-        className="relative bg-white rounded-lg overflow-hidden border-2 border-primary text-primary   duration-500 hover:text-white py-2.5 px-5 group cursor-pointer"
+        className="relative bg-white dark:bg-primary dark:text-white dark:hover:text-primary rounded-lg overflow-hidden border-2 border-primary text-primary   duration-500 hover:text-white py-2.5 px-5 group cursor-pointer"
       >
-        <span className="absolute w-64 h-64 mt-12 group-hover:rotate-45 group-hover:-mt-24 transition-all ease-linear duration-500 bg-primary right-0 top-0"></span>
+        <span className="absolute w-64 h-64 mt-12 group-hover:rotate-45 group-hover:-mt-24 transition-all ease-linear duration-500 bg-primary dark:bg-white right-0 top-0"></span>
         <span className="relative">{text}</span>
       </Link>
     </section>
@@ -124,9 +124,9 @@ export default function AnimatedButton({ variant, text, href, className, target 
       <Link
         href={href}
         target={target}
-        className="relative bg-white rounded-lg overflow-hidden border-2 border-primary text-primary   duration-500 hover:text-white py-2.5 px-5 group cursor-pointer"
+        className="relative bg-white dark:bg-primary dark:text-white dark:hover:text-primary rounded-lg overflow-hidden border-2 border-primary text-primary   duration-500 hover:text-white py-2.5 px-5 group cursor-pointer"
       >
-        <span className="absolute w-64 h-64 mt-12 group-hover:-rotate-45 group-hover:-mt-24 transition-all ease-linear duration-500 bg-primary left-0 top-0"></span>
+        <span className="absolute w-64 h-64 mt-12 group-hover:-rotate-45 group-hover:-mt-24 transition-all ease-linear duration-500 bg-primary dark:bg-white left-0 top-0"></span>
         <span className="relative">{text}</span>
       </Link>
     </section>
@@ -151,7 +151,7 @@ export default function AnimatedButton({ variant, text, href, className, target 
 // {/* <section className="w-full h-screen flex items-center justify-center gap-10">
 //   {/* Left to Right */}
 
-//     <a href="#" className="relative bg-white rounded-lg border-2 border-blue-500 text-blue-500 py-3 px-5 group">
+//     <a href="#" className="relative bg-white dark:bg-primary dark:text-white rounded-lg border-2 border-blue-500 text-blue-500 py-3 px-5 group">
 //       <span className="absolute w-0 h-1 group-hover:w-full transition-all ease-out duration-500 bg-blue-500 left-0 top-14"></span>
 //       <span className="relative">Left to Right</span>
 //     </a>

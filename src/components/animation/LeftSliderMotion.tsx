@@ -12,7 +12,7 @@ export default function LeftSliderMotion({ children, className }: { children: Re
       animate={isInView ? { opacity: 1, x: 0, clipPath: "inset(0 0 0 0)" } : { opacity: 0, x: 0, clipPath: "inset(0 100% 0 0)" }}
       style={{}}
       transition={{ duration: 1.4, delay: 0.8 }}
-      className={className + " pb-10"}
+      className={className + ""}
     >
       {children}
     </motion.div>

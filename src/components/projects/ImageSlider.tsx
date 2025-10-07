@@ -69,7 +69,7 @@ export default function ImageSlider({ images1, images2, name }: ImageSliderProps
                 exit={{ opacity: 0, scale: 0.8, rotate: 90 }}
                 transition={{ duration: 0.3, delay: 0.2 }}
                 onClick={() => setIsOpen1(false)}
-                className="fixed cursor-pointer z-60 top-5 right-10 bg-white rounded-full p-2 hover:bg-gray-100 transition-colors duration-200"
+                className="fixed cursor-pointer z-60 top-5 right-10 bg-white text-black hover:bg-amber-50 rounded-full p-2  transition-colors duration-200"
               >
                 <X />
               </motion.div>

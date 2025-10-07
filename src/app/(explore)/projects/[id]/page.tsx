@@ -24,7 +24,9 @@ export default function ProjectDetails({ params }: { params: { id: string } }) {
   return (
     <div>
       <DetailsHeader title={project.name} subtitle={project.description} />
-      <ProjectDetailsComponent project={project} />
+      <div className="bg-background-secondary text-foreground">
+        <ProjectDetailsComponent project={project} />
+      </div>
     </div>
   );
 }
