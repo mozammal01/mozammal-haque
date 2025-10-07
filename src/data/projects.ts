@@ -87,7 +87,6 @@ import jahirSigninBN from "@/../public/projects/jahir-tailor/signinBN.png";
 import jahirSignup from "@/../public/projects/jahir-tailor/signup.png";
 import jahirSignupBN from "@/../public/projects/jahir-tailor/signupBN.png";
 //
-import awesomeErrorPage from "@/../public/projects/awesome-restaurent/ErrorPage.png";
 import awesomeAddItem from "@/../public/projects/awesome-restaurent/addItem.png";
 import awesomeAddToCart from "@/../public/projects/awesome-restaurent/addToCart.png";
 import awesomeAdminDashboard from "@/../public/projects/awesome-restaurent/adminDashboard.png";
@@ -396,7 +395,6 @@ export const projects = [
       },
     ],
     images1: [
-      awesomeErrorPage,
       awesomeAddItem,
       awesomeAddToCart,
       awesomeAdminDashboard,
@@ -410,14 +408,14 @@ export const projects = [
       awesomeFooter,
       awesomeLogin,
       awesomeLoginAlert,
+      awesomeManageItem,
+      awesomeMenu,
     ],
     images2: [
       awesomePopular,
       awesomeSignup,
       awesomeUpdateItem,
       awesomeMakeAdmin,
-      awesomeManageItem,
-      awesomeMenu,
       awesomeMyCart,
       awesomeOrderDetails,
       awesomeOrderDishes,
