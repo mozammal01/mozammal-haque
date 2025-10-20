@@ -3,8 +3,8 @@ import DetailsHeader from "@/components/detailsHeader/DetailsHeader";
 import { projects } from "@/data/projects";
 import Link from "next/link";
 
-export default function ProjectDetails({ params }: { params: { id: string } }) {
-  const { id } = params;
+export default async function ProjectDetails({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
   const project = projects.find((project) => project.id === parseInt(id));
 
   if (!project) {
