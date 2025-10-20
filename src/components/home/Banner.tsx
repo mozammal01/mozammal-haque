@@ -21,7 +21,7 @@ export default function Banner() {
           <TypingAnimation>Hi There ,</TypingAnimation>
         </h3>
         <h1 className="text-6xl font-bold">
-          <TextAnimate animation="blurInUp" by="character" once>
+          <TextAnimate animation="slideLeft" by="character" once>
             I am Mozammal Haq
           </TextAnimate>
         </h1>
@@ -35,7 +35,7 @@ export default function Banner() {
             repeat={Infinity}
           />
         </div>
-        <TextAnimate animation="slideUp" by="word"  className="text-lg w-4/5 font-semibold">
+        <TextAnimate animation="slideLeft" by="word"  className="text-lg w-4/5 font-semibold">
           Passionate junior web developer skilled in React, Next.js, TypeScript, and Tailwind. Focused on creating responsive, modern, and
           user-friendly websites with clean code, seamless performance, and creative problem-solving.
         </TextAnimate>

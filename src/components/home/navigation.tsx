@@ -1,5 +1,6 @@
 "use client";
-import logo from "@/../public/logo/logo.png";
+import logoWhite from "@/../public/logo/logo-white.png";
+import logoBlack from "@/../public/logo/logo-black.png";
 import ProjIcon from "@/../public/icons/navIcon/projects.png";
 import HomeIcon from "@/../public/icons/navIcon/home.png";
 // import EduIcon from "@/../public/icons/navIcon/education.png";
@@ -63,11 +64,16 @@ export default function Navigation() {
   return (
     <div className="relative">
       <div
-        className={`md:flex hidden flex-col gap-4 justify-between items-center h-screen px-4 top-0 right-0 py-10 fixed bg-black/15 dark:bg-white/50` }
+        className={`md:flex hidden flex-col gap-4 justify-between items-center h-screen px-4 top-0 right-0 py-10 fixed bg-black/15 dark:bg-white/50`}
       >
-      {/* <div className="dark:bg-amber-50 bg-black opacity-40 absolute top-0 left-0 w-full h-full"></div> */}
+        {/* <div className="dark:bg-amber-50 bg-black opacity-40 absolute top-0 left-0 w-full h-full"></div> */}
         <div>
-          <Image src={logo} alt="Home" width={60} height={60} />
+          <div className="dark:hidden">
+            <Image src={logoWhite} alt="Home" width={60} height={60} />
+          </div>
+          <div className="hidden dark:block">
+            <Image src={logoBlack} alt="Home" width={60} height={60} />
+          </div>
         </div>
         <div className="flex flex-col gap-8">
           {icons.map((icon, index) => (

@@ -53,7 +53,7 @@ export const skills: Skill[] = [
     name: "Shadcn",
     img: false,
     icon: ShadcnIcon,
-    className: "",
+    className: "dark:text-white",
   },
   {
     id: 6,

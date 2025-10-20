@@ -1,5 +1,5 @@
 import MernIcon from "@/../public/services/mearn-stack.png";
-import FullStackGif from "@/../public/services/full-stack.gif";
+import FullStackGif from "@/../public/services/output-onlinegiftools.gif";
 import FrontendIcon from "@/../public/services/frontend.png";
 
 export const services = [
