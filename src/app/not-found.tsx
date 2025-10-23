@@ -5,7 +5,7 @@ export default function NotFound() {
   return (
     <div className="flex items-center justify-center h-screen bg-white">
       <div>
-        <Image src={errorImg} alt="404" width={800} height={1000} />
+        <Image src={errorImg} alt="404 Error - Page Not Found" width={800} height={1000} />
       </div>
 
       <div className="flex flex-col items-center justify-center gap-8">

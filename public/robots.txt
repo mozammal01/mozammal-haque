@@ -1,0 +1,10 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://mozammalhaq.com
+
+# Sitemaps
+Sitemap: https://mozammalhaq.com/sitemap.xml
+

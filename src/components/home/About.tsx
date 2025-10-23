@@ -3,16 +3,12 @@ import Image from "next/image";
 import aboutImage from "@/../public/me/black-t-shirt.png";
 import AnimatedButton from "../animatedButton/AnimatedButton";
 import ZoomOutMotion from "../animation/ZoomOutMotion";
-import { useTheme } from "next-themes";
 import { TextAnimate } from "../ui/text-animate";
 
 export default function About() {
-  const { theme } = useTheme();
-  console.log(theme);
   return (
     <div id="about" className="my-20 lg:flex items-center justify-center container mx-auto px-4">
       <div className="lg:w-1/2 w-full space-y-6 text-foreground">
-        {/* <TextAnimate animation="slideLeft" by="character" once> */}
         <TextAnimate animation="slideLeft" by="character" delay={0.1} once className="text-3xl font-bold text-primary uppercase">
           About Me
         </TextAnimate>
@@ -33,7 +29,7 @@ export default function About() {
           </TextAnimate>
         </div>
 
-        <div className="flex gap-4 my-4">
+        <div className="flex gap-4 mt-12">
           <AnimatedButton variant="rightToLeft" text="My Skills" href="#skills" />
 
           <AnimatedButton
@@ -43,10 +39,9 @@ export default function About() {
             target="_blank"
           />
         </div>
-        {/* </TextAnimate> */}
       </div>
       <ZoomOutMotion className="w-1/2 hidden lg:block">
-        <Image src={aboutImage} alt="About" width={800} height={500} />
+        <Image src={aboutImage} alt="Mozammal Haq - Web Developer Portrait" width={800} height={500} />
       </ZoomOutMotion>
     </div>
   );

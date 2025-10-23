@@ -2,6 +2,20 @@ import ShutterMotion from "@/components/animation/ShutterMotion";
 import DetailsHeader from "@/components/detailsHeader/DetailsHeader";
 import ProjectCard from "@/components/projects/ProjectCard";
 import { projects } from "@/data/projects";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects Portfolio",
+  description:
+    "Explore my portfolio of web development projects including full-stack applications, e-commerce platforms, education management systems, and more. Built with React, Next.js, Node.js, Express.js, and MongoDB.",
+  keywords: ["web development projects", "portfolio", "React projects", "Next.js projects", "MERN stack projects", "full-stack projects"],
+  openGraph: {
+    title: "Projects Portfolio - Mozammal Haq",
+    description:
+      "Explore my portfolio of web development projects including full-stack applications built with React, Next.js, and MERN stack.",
+    images: ["/projects/awesome-restaurant.png"],
+  },
+};
 
 export default function Projects() {
   return (

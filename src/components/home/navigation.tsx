@@ -3,10 +3,8 @@ import logoWhite from "@/../public/logo/logo-white.png";
 import logoBlack from "@/../public/logo/logo-black.png";
 import ProjIcon from "@/../public/icons/navIcon/projects.png";
 import HomeIcon from "@/../public/icons/navIcon/home.png";
-// import EduIcon from "@/../public/icons/navIcon/education.png";
 import AboutIcon from "@/../public/icons/navIcon/about.png";
 import ContIcon from "@/../public/icons/navIcon/contact.png";
-// import PortIcon from "@/../public/icons/navIcon/portfolio.png";
 import ServIcon from "@/../public/icons/navIcon/services.png";
 import BlogsIcon from "@/../public/icons/navIcon/blogs.png";
 import Image from "next/image";
@@ -42,7 +40,7 @@ export default function Navigation() {
       placeholder: "Projects",
     },
     {
-      id: 4,
+      id: 5,
       icon: ServIcon,
       href: "#services",
       placeholder: "Services",
@@ -55,18 +53,11 @@ export default function Navigation() {
     },
   ];
 
-  const isHome = icons.find((icon) => icon.href === "#home");
-
-  if (isHome) {
-    console.log("This is home");
-  }
-
   return (
     <div className="relative">
       <div
         className={`md:flex hidden flex-col gap-4 justify-between items-center h-screen px-4 top-0 right-0 py-10 fixed bg-black/15 dark:bg-white/50`}
       >
-        {/* <div className="dark:bg-amber-50 bg-black opacity-40 absolute top-0 left-0 w-full h-full"></div> */}
         <div>
           <div className="dark:hidden">
             <Image src={logoWhite} alt="Home" width={60} height={60} />
@@ -94,7 +85,6 @@ export default function Navigation() {
         </div>
         <div className="hover:bg-primary size-10 inline-flex items-center justify-center transition-all scale-100 hover:scale-110 duration-300 rounded-full">
           <AnimatedThemeToggler className={`text-black`} />
-          {/* <ThemeToggle /> */}
         </div>
       </div>
     </div>

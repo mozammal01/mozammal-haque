@@ -12,8 +12,8 @@ export default function Banner() {
   return (
     <div className="h-screen flex items-center relative lg:justify-end text-black " id="home">
       {/* Image */}
-      <ZoomOutMotion className="absolute hidden 2xl:block bottom-0 -left-40">
-        <Image src={bannerImage} alt="Banner" width={800} height={500} />
+      <ZoomOutMotion className="absolute hidden 2xl:block bottom-0 left-0">
+        <Image src={bannerImage} alt="Mozammal Haq - Full Stack Web Developer" width={800} height={500} priority />
       </ZoomOutMotion>
       {/* Text */}
       <ShutterCloseMotion className="flex flex-col gap-4 2xl:w-1/2 space-y-4">
@@ -35,7 +35,7 @@ export default function Banner() {
             repeat={Infinity}
           />
         </div>
-        <TextAnimate animation="slideLeft" by="word"  className="text-lg w-4/5 font-semibold">
+        <TextAnimate animation="slideLeft" by="word" className="text-lg w-4/5 font-semibold">
           Passionate junior web developer skilled in React, Next.js, TypeScript, and Tailwind. Focused on creating responsive, modern, and
           user-friendly websites with clean code, seamless performance, and creative problem-solving.
         </TextAnimate>

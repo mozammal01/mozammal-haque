@@ -13,7 +13,7 @@ export default function Footer() {
 
           <LeftSliderMotion className="flex flex-col gap-4 px-4">
             <div className="min-xl:mx-auto">
-              <Image src={logo} alt="logo" width={60} height={60} />
+              <Image src={logo} alt="Mozammal Haq Logo - Full Stack Web Developer" width={60} height={60} />
             </div>
             <h3 className="text-2xl font-bold text-primary uppercase">Mozammal Haq</h3>
             <h4 className="text-lg font-semibold uppercase">Web Developer</h4>
