@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { renderToString } from "react-dom/server";
 
 interface Icon {
   x: number;
@@ -13,7 +12,7 @@ interface Icon {
 }
 
 interface IconCloudProps {
-  icons?: React.ReactNode[];
+  icons?: string[]; // Changed to string[] for SVG strings or image URLs
   images?: string[];
 }
 
@@ -55,37 +54,30 @@ export function IconCloud({ icons, images }: IconCloudProps) {
       const offCtx = offscreen.getContext("2d");
 
       if (offCtx) {
-        if (images) {
-          // Handle image URLs directly
-          const img = new Image();
-          img.crossOrigin = "anonymous";
-          img.src = items[index] as string;
-          img.onload = () => {
-            offCtx.clearRect(0, 0, offscreen.width, offscreen.height);
+        // Handle image URLs and SVG data URLs
+        const img = new Image();
+        img.crossOrigin = "anonymous";
+        img.src = item as string;
 
-            // Create circular clipping path
-            offCtx.beginPath();
-            offCtx.arc(20, 20, 20, 0, Math.PI * 2);
-            offCtx.closePath();
-            offCtx.clip();
+        img.onload = () => {
+          offCtx.clearRect(0, 0, offscreen.width, offscreen.height);
 
-            // Draw the image
-            offCtx.drawImage(img, 0, 0, 40, 40);
+          // Create circular clipping path
+          offCtx.beginPath();
+          offCtx.arc(20, 20, 20, 0, Math.PI * 2);
+          offCtx.closePath();
+          offCtx.clip();
 
-            imagesLoadedRef.current[index] = true;
-          };
-        } else {
-          // Handle SVG icons
-          offCtx.scale(0.4, 0.4);
-          const svgString = renderToString(item as React.ReactElement);
-          const img = new Image();
-          img.src = "data:image/svg+xml;base64," + btoa(svgString);
-          img.onload = () => {
-            offCtx.clearRect(0, 0, offscreen.width, offscreen.height);
-            offCtx.drawImage(img, 0, 0);
-            imagesLoadedRef.current[index] = true;
-          };
-        }
+          // Draw the image
+          offCtx.drawImage(img, 0, 0, 40, 40);
+
+          imagesLoadedRef.current[index] = true;
+        };
+
+        img.onerror = () => {
+          // If image fails to load, mark as loaded anyway to prevent blocking
+          imagesLoadedRef.current[index] = true;
+        };
       }
       return offscreen;
     });
