@@ -56,7 +56,7 @@ export default function Navigation() {
   return (
     <div className="relative">
       <div
-        className={`md:flex hidden flex-col gap-4 justify-between items-center h-screen px-4 top-0 right-0 py-10 fixed bg-black/15 dark:bg-white/50`}
+        className={`md:flex hidden flex-col gap-4 justify-between items-center h-screen px-4 top-0 right-0 py-10 fixed bg-black/15 dark:bg-white/50 z-50`}
       >
         <div>
           <div className="dark:hidden">
