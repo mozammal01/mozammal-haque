@@ -16,11 +16,11 @@ export default function Banner() {
         <Image src={bannerImage} alt="Mozammal Haq - Full Stack Web Developer" width={800} height={500} priority />
       </ZoomOutMotion>
       {/* Text */}
-      <ShutterCloseMotion className="flex flex-col gap-4 2xl:w-1/2 space-y-4">
-        <h3 className="text-3xl font-bold text-primary uppercase">
+      <ShutterCloseMotion className="flex flex-col gap-4 2xl:w-1/2 space-y-4 px-4">
+        <h3 className="xl:text-3xl text-2xl font-bold text-primary uppercase">
           <TypingAnimation>Hi There ,</TypingAnimation>
         </h3>
-        <h1 className="2xl:text-6xl lg:text-5xl text-4xl font-bold">
+        <h1 className="2xl:text-6xl lg:text-5xl md:text-4xl text-3xl font-bold">
           <TextAnimate animation="slideLeft" by="character" once>
             I am Mozammal Haq
           </TextAnimate>

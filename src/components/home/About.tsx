@@ -9,13 +9,13 @@ export default function About() {
   return (
     <div id="about" className="my-20 lg:flex items-center justify-center container mx-auto px-4">
       <div className="lg:w-1/2 w-full space-y-6 text-foreground">
-        <TextAnimate animation="slideLeft" by="character" delay={0.1} once className="text-3xl font-bold text-primary uppercase">
+        <TextAnimate animation="slideLeft" by="character" delay={0.1} once className="xl:text-3xl text-2xl font-bold text-primary uppercase">
           About Me
         </TextAnimate>
-        <TextAnimate animation="slideLeft" by="character" once delay={0.2} className="text-5xl font-bold">
+        <TextAnimate animation="slideLeft" by="character" once delay={0.2} className="2xl:text-5xl md:text-4xl text-3xl font-bold">
           Who I am ?
         </TextAnimate>
-        <TextAnimate animation="slideLeft" by="character" delay={0.3} once className="text-3xl font-bold">
+        <TextAnimate animation="slideLeft" by="character" delay={0.3} once className="xl:text-3xl text-2xl font-bold">
           I am a JR. Web Developer
         </TextAnimate>
         <div className="text-lg w-4/5 space-y-4">
