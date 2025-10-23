@@ -1,6 +1,7 @@
 import { Service } from "@/interfaces/shared-interfaces";
 import Image from "next/image";
 import ShutterMotion from "../animation/ShutterMotion";
+import { TextAnimate } from "../ui/text-animate";
 
 export default function ServiceCard({ service }: { service: Service }) {
   return (
@@ -10,7 +11,11 @@ export default function ServiceCard({ service }: { service: Service }) {
         <h2 className="text-2xl font-bold text-primary text-center my-4">
           {service.icon} {service.name}
         </h2>
-        <p className="text-lg text-gray-500 dark:text-gray-200 text-center w-4/5 mx-auto font-semibold">{service.description}</p>
+        <div className="text-lg text-gray-500 dark:text-gray-200 text-center w-4/5 mx-auto font-semibold">
+          <TextAnimate animation="slideLeft" by="word" delay={0.5}>
+            {`${service.description}`}
+          </TextAnimate>
+        </div>
       </ShutterMotion>
     </div>
   );

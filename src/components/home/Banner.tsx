@@ -20,7 +20,7 @@ export default function Banner() {
         <h3 className="text-3xl font-bold text-primary uppercase">
           <TypingAnimation>Hi There ,</TypingAnimation>
         </h3>
-        <h1 className="text-6xl font-bold">
+        <h1 className="2xl:text-6xl lg:text-5xl text-4xl font-bold">
           <TextAnimate animation="slideLeft" by="character" once>
             I am Mozammal Haq
           </TextAnimate>
