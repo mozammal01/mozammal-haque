@@ -57,10 +57,6 @@ export interface Service {
   category: string;
   icon: string;
   iconImage: StaticImageData;
-  detail1: string;
-  detail2: string;
-  detail3: string;
-  detail4?: string | undefined;
 }
 
 export interface Skill {
