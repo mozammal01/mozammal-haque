@@ -3,56 +3,13 @@ import logoWhite from "@/../public/logo/logo-white.png";
 import logoBlack from "@/../public/logo/logo-black.png";  
 import Image from "next/image";
 import Link from "next/link";
+import { navItems } from "@/data/navItems";
 
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { AnimatedThemeToggler } from "../ui/animated-theme-toggler";
-import { House, Mail, User } from "lucide-react";
-import { Brain } from "lucide-react";
-
-import { Folder } from "lucide-react";
-
-import { Server } from "lucide-react";
 import { TextAnimate } from "../ui/text-animate";
 
 export default function Navigation() {
-  const icons = [
-    {
-      id: 1,
-      icon: <House size={25} />,
-      href: "#home",
-      placeholder: "Home",
-    },
-    {
-      id: 2,
-      icon: <User size={25} />,
-      href: "#about",
-      placeholder: "About",
-    },
-    {
-      id: 3,
-      icon: <Brain size={25} />,
-      href: "#skills",
-      placeholder: "Skills",
-    },
-    {
-      id: 4,
-      icon: <Folder size={25} />,
-      href: "#projects",
-      placeholder: "Projects",
-    },
-    {
-      id: 5,
-      icon: <Server size={25} />,
-      href: "#services",
-      placeholder: "Services",
-    },
-    {
-      id: 6,
-      icon: <Mail size={25} />,
-      href: "#contact",
-      placeholder: "Contact",
-    },
-  ];
 
   return (
     <div className="relative">
@@ -68,7 +25,7 @@ export default function Navigation() {
           </div>
         </Link>
         <div className="flex flex-col gap-8">
-          {icons.map((icon, index) => (
+          {navItems.map((icon, index) => (
             <Tooltip key={index}>
               <TooltipTrigger asChild>
                 <Link

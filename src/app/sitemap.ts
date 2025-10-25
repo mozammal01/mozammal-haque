@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { projects } from "@/data/projects";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://mozammalhaq.com";
+  const baseUrl = "https://mozammal01.vercel.app";
 
   // Static pages
   const staticPages = [

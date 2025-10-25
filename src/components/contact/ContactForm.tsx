@@ -5,7 +5,7 @@ import { Textarea } from "../ui/textarea";
 
 export default function ContactForm() {
   return (
-    <div className="xl:p-10 p-4 rounded-md space-y-4 w-full xl:w-3/5">
+    <div className="xl:p-10 p-4 rounded-md space-y-4 w-full xl:w-3/5 max-xl:py-10">
       <div className="flex flex-col gap-8 justify-center items-center w-full text-black">
         <div className="grid grid-cols-2 gap-6 w-full">
           <Input

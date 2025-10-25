@@ -7,6 +7,7 @@ import Projects from "@/components/home/Projects";
 import Services from "@/components/home/Services";
 import Contact from "@/components/home/Contact";
 import Footer from "@/components/home/Footer";
+import MobileNavbar from "@/components/navbarComponent/NavbarForMobile";
 
 export default function Home() {
   const jsonLd = {
@@ -43,9 +44,9 @@ export default function Home() {
     },
     sameAs: [
       // Add your social media links here
-      // "https://github.com/yourusername",
-      // "https://linkedin.com/in/yourusername",
-      // "https://twitter.com/yourusername"
+      "https://github.com/mozammal01",
+      "https://linkedin.com/in/mozammal-haq-24902a2a7",
+      "https://x.com/MozammalHaq01"
     ],
   };
 
@@ -55,6 +56,9 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <div>
+        <div className="block md:hidden">
+          <MobileNavbar />
+        </div>
         <div
           className="grid grid-cols-12 object-cover w-full"
           style={{ backgroundImage: "url('/background/background.png')", backgroundSize: "cover", backgroundPosition: "center" }}

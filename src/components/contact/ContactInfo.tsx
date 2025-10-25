@@ -16,14 +16,14 @@ export default function ContactInfo() {
               <Mail size={20} className="text-white" />
             </div>
             <span className="">Email: </span>
-            <span className="sm:font-bold font-semibold">mozammalhaq01@gmail.com</span>
+            <span className="sm:font-bold font-semibold hover:text-primary hover:scale-105 duration-300">mozammalhaq01@gmail.com</span>
           </Link>
           <Link href="tel:+8801846581810" target="_blank" className="text-lg flex items-center gap-2">
             <div className="bg-primary rounded p-2">
               <Phone size={20} className="text-white" />
             </div>
             <span>Phone: </span>
-            <span className="sm:font-bold font-semibold">+8801846581810</span>
+            <span className="sm:font-bold font-semibold hover:text-primary hover:scale-105 duration-300">+8801846581810</span>
           </Link>
           <Link
             href="https://www.google.com/maps/place/Dhaka/@23.7809757,90.337288,12z/data=!3m1!4b1!4m6!3m5!1s0x3755b8b087026b81:0x8fa563bbdd5904c2!8m2!3d23.804093!4d90.4152376!16zL20vMGZuYjQ?entry=ttu&g_ep=EgoyMDI1MDkyOC4wIKXMDSoASAFQAw%3D%3D"
@@ -34,7 +34,7 @@ export default function ContactInfo() {
               <MapPin size={20} className="text-white" />
             </div>
             <span>Address: </span>
-            <span className="sm:font-bold font-semibold">Dhaka, Bangladesh</span>
+            <span className="sm:font-bold font-semibold hover:text-primary hover:scale-105 duration-300">Dhaka, Bangladesh</span>
           </Link>
         </div>
       </div>
