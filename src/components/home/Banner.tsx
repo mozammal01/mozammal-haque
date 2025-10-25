@@ -1,12 +1,12 @@
 "use client";
 import Image from "next/image";
 import bannerImage from "@/../public/me/yellow-hoodie.png";
-import { TypeAnimation } from "react-type-animation";
 import AnimatedButton from "../animatedButton/AnimatedButton";
 import ZoomOutMotion from "../animation/ZoomOutMotion";
 import ShutterCloseMotion from "../animation/ShutterCloseMotion";
 import { TypingAnimation } from "../ui/typing-animation";
 import { TextAnimate } from "../ui/text-animate";
+import { WordRotate } from "../ui/word-rotate";
 
 export default function Banner() {
   return (
@@ -25,16 +25,9 @@ export default function Banner() {
             I am Mozammal Haq
           </TextAnimate>
         </h1>
-        <div className="md:block hidden">
-          <TypeAnimation
-            sequence={["Front End Development", 1000, "Full Stack Developer", 1000, "Mearn Stack Developer", 1000]}
-            wrapper="span"
-            speed={50}
-            className="text-primary font-bold uppercase"
-            style={{ fontSize: "2em", display: "inline-block", width: "100%" }}
-            repeat={Infinity}
-          />
-        </div>
+
+        <WordRotate className="xl:text-4xl md:text-3xl text-2xl font-bold text-primary uppercase" words={["Front End Developer", "Full Stack Developer", "Mearn Stack Developer"]} duration={1500} />
+
         <TextAnimate animation="slideLeft" by="word" className="text-lg w-4/5 font-semibold">
           Passionate junior web developer skilled in React, Next.js, TypeScript, and Tailwind. Focused on creating responsive, modern, and
           user-friendly websites with clean code, seamless performance, and creative problem-solving.
