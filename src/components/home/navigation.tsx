@@ -12,6 +12,7 @@ import { Brain } from "lucide-react";
 import { Folder } from "lucide-react";
 
 import { Server } from "lucide-react";
+import { TextAnimate } from "../ui/text-animate";
 
 export default function Navigation() {
   const icons = [
@@ -72,13 +73,15 @@ export default function Navigation() {
               <TooltipTrigger asChild>
                 <Link
                   href={icon.href}
-                  className="hover:bg-[#ffc107] hover:text-white transition-all scale-100 hover:scale-120 duration-300 rounded-full p-4 dark:text-black text-white font-extrabold"
+                  className="hover:bg-[#ffc107] hover:text-black dark:hover:text-white transition-all scale-100 hover:scale-120 duration-300 rounded-full p-4 dark:text-black text-white font-extrabold"
                 >
                   {icon.icon}
                 </Link>
               </TooltipTrigger>
               <TooltipContent>
-                <p>{icon.placeholder}</p>
+                <TextAnimate animation="slideLeft" by="word">
+                  {icon.placeholder}
+                </TextAnimate>
               </TooltipContent>
             </Tooltip>
           ))}

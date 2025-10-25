@@ -21,12 +21,12 @@ export default function Footer() {
               <HyperText>Mozammal Haq</HyperText>
             </h3>
             <h4 className="text-lg font-semibold uppercase">
-              <TextAnimate animation="slideLeft" by="word" delay={0.5}>
+              <TextAnimate animation="slideLeft" by="word" delay={0.2}>
                 Web Developer
               </TextAnimate>
             </h4>
             <div>
-              <TextAnimate animation="slideLeft" by="word" delay={0.5}>
+              <TextAnimate animation="slideLeft" by="word" delay={0.3}>
                 © 2025 Mozammal Haque
               </TextAnimate>
             </div>
@@ -36,27 +36,27 @@ export default function Footer() {
             <h3 className="text-2xl font-bold text-primary uppercase">Sections</h3>
             <div className="flex flex-col gap-2 font-semibold">
               <Link href="#home" className="hover:text-primary hover:scale-105 duration-300">
-                <TextAnimate animation="slideLeft" by="word" delay={0.5}>
+                <TextAnimate animation="slideLeft" by="word" delay={0.6}>
                   Home
                 </TextAnimate>
               </Link>
               <Link href="#about" className="hover:text-primary hover:scale-105 duration-300">
-                <TextAnimate animation="slideLeft" by="word" delay={0.5}>
+                <TextAnimate animation="slideLeft" by="word" delay={0.8}>
                   About
                 </TextAnimate>
               </Link>
               <Link href="#skills" className="hover:text-primary hover:scale-105 duration-300">
-                <TextAnimate animation="slideLeft" by="word" delay={0.5}>
+                <TextAnimate animation="slideLeft" by="word" delay={1}>
                   Skills
                 </TextAnimate>
               </Link>
               <Link href="#projects" className="hover:text-primary hover:scale-105 duration-300">
-                <TextAnimate animation="slideLeft" by="word" delay={0.5}>
+                <TextAnimate animation="slideLeft" by="word" delay={1.2}>
                   Projects
                 </TextAnimate>
               </Link>
               <Link href="#services" className="hover:text-primary hover:scale-105 duration-300">
-                <TextAnimate animation="slideLeft" by="word" delay={0.5}>
+                <TextAnimate animation="slideLeft" by="word" delay={1.4}>
                   Services
                 </TextAnimate>
               </Link>
@@ -66,16 +66,16 @@ export default function Footer() {
           <ShutterMotion className="flex flex-col gap-4 px-4">
             <h3 className="text-2xl font-bold text-primary uppercase">Services</h3>
             <div className="flex flex-col gap-2 font-semibold">
-              <TextAnimate animation="slideLeft" by="word" delay={0.5}>
+              <TextAnimate animation="slideLeft" by="line" delay={1.5}>
                 Web Development
               </TextAnimate>
-              <TextAnimate animation="slideLeft" by="word" delay={0.5}>
+              <TextAnimate animation="slideLeft" by="line" delay={1.7}>
                 Front End Development
               </TextAnimate>
-              <TextAnimate animation="slideLeft" by="word" delay={0.5}>
+              <TextAnimate animation="slideLeft" by="line" delay={1.9}>
                 Back End Development
               </TextAnimate>
-              <TextAnimate animation="slideLeft" by="word" delay={0.5}>
+              <TextAnimate animation="slideLeft" by="line" delay={2.1}>
                 Full Stack Development
               </TextAnimate>
             </div>
