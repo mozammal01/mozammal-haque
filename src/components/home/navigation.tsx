@@ -1,6 +1,5 @@
 "use client";
-import logoWhite from "@/../public/logo/logo-white.png";
-import logoBlack from "@/../public/logo/logo-black.png";  
+import logo from "@/../public/logo/logo.png";
 import Image from "next/image";
 import Link from "next/link";
 import { navItems } from "@/data/navItems";
@@ -10,19 +9,13 @@ import { AnimatedThemeToggler } from "../ui/animated-theme-toggler";
 import { TextAnimate } from "../ui/text-animate";
 
 export default function Navigation() {
-
   return (
     <div className="relative">
       <div
-        className={`md:flex hidden flex-col gap-4 justify-between items-center h-screen px-4 top-0 right-0 py-10 fixed bg-black/15 dark:bg-white/50 z-50`}
+        className={`md:flex hidden flex-col gap-4 justify-between items-center h-screen px-4 top-0 right-0 py-10 fixed bg-black/40 dark:bg-white/60 z-50`}
       >
         <Link href="#home">
-          <div className="dark:hidden">
-            <Image src={logoWhite} alt="Home" width={60} height={60} />
-          </div>
-          <div className="hidden dark:block">
-            <Image src={logoBlack} alt="Home" width={60} height={60} />
-          </div>
+          <Image src={logo} alt="Home" width={60} height={60} />
         </Link>
         <div className="flex flex-col gap-8">
           {navItems.map((icon, index) => (

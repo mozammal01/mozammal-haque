@@ -66,16 +66,16 @@ export default function Footer() {
           <ShutterMotion className="flex flex-col gap-4 px-4">
             <h3 className="text-2xl font-bold text-primary uppercase">Services</h3>
             <div className="flex flex-col gap-2 font-semibold">
-              <TextAnimate animation="slideLeft" by="line" delay={1.5}>
+              <TextAnimate animation="slideLeft" by="line" delay={1.4}>
                 Web Development
               </TextAnimate>
-              <TextAnimate animation="slideLeft" by="line" delay={1.7}>
+              <TextAnimate animation="slideLeft" by="line" delay={1.6}>
                 Front End Development
               </TextAnimate>
-              <TextAnimate animation="slideLeft" by="line" delay={1.9}>
+              <TextAnimate animation="slideLeft" by="line" delay={1.8}>
                 Back End Development
               </TextAnimate>
-              <TextAnimate animation="slideLeft" by="line" delay={2.1}>
+              <TextAnimate animation="slideLeft" by="line" delay={2}>
                 Full Stack Development
               </TextAnimate>
             </div>
