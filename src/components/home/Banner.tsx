@@ -26,7 +26,7 @@ export default function Banner() {
           </TextAnimate>
         </h1>
 
-        <WordRotate className="xl:text-4xl md:text-3xl text-2xl font-bold text-primary uppercase" words={["Front End Developer", "Full Stack Developer", "Mearn Stack Developer"]} duration={1500} />
+        <WordRotate className="xl:text-4xl md:text-3xl text-2xl font-bold text-primary uppercase" words={["Front End Developer", "Full Stack Developer", "Mern Stack Developer"]} duration={1500} />
 
         <TextAnimate animation="slideLeft" by="word" className="text-lg w-4/5 font-semibold">
           Passionate junior web developer skilled in React, Next.js, TypeScript, and Tailwind. Focused on creating responsive, modern, and

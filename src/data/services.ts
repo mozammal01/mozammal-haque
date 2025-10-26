@@ -1,4 +1,4 @@
-import MernIcon from "@/../public/services/mearn-stack.png";
+import MernIcon from "@/../public/services/mern-stack.png";
 import FullStackGif from "@/../public/services/output-onlinegiftools.gif";
 import FrontendIcon from "@/../public/services/frontend.png";
 
