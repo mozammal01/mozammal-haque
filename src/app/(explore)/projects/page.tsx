@@ -1,7 +1,6 @@
-import ShutterMotion from "@/components/animation/ShutterMotion";
 import DetailsHeader from "@/components/detailsHeader/DetailsHeader";
-import ProjectCard from "@/components/projects/ProjectCard";
-import { projects } from "@/data/projects";
+import Projects from "@/components/home/Projects";
+import ProjectSummary from "@/components/projects/ProjectSummary";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -17,17 +16,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Projects() {
+export default function ProjectsPage() {
   return (
     <div>
       <DetailsHeader title="All Projects" />
       {/* All Projects */}
-      <div className="container mx-auto px-4 my-10">
-        <ShutterMotion className="grid grid-cols-1 2xl:grid-cols-2 gap-10">
-          {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-        </ShutterMotion>
+      <div className="container mx-auto px-4 my-20">
+        <ProjectSummary />
+        <Projects />
       </div>
     </div>
   );

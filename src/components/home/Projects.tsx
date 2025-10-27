@@ -7,11 +7,12 @@ import { InteractiveHoverButton } from "../ui/interactive-hover-button";
 
 export default function Projects() {
   const pathname = usePathname();
-  const filteredProjects = projects.slice(0, pathname === "/" ? 2 : 4);
+  const projectLength = projects.length;
+  const filteredProjects = projects.slice(0, pathname === "/" ? 2 : projectLength);
   return (
-    <div id="projects" className="my-20 container mx-auto px-4">
+    <div className="my-20 container mx-auto px-4">
       {pathname === "/" && (
-        <div className="flex items-center justify-between mb-20">
+        <div id="projects" className="flex items-center justify-between mb-20">
           <h2 className="text-3xl font-bold text-primary uppercase">Projects</h2>
           <InteractiveHoverButton href="/projects">View All</InteractiveHoverButton>
         </div>
