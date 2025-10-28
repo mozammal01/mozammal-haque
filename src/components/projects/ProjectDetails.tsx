@@ -5,9 +5,10 @@ import { InteractiveHoverButton } from "../ui/interactive-hover-button";
 import ImageSlider from "./ImageSlider";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import Technologies from "./Technologies";
 
 export default function ProjectDetailsComponent({ project }: { project: ProjectDetailsProps }) {
-  const { features, sourceCode, visitNow, images1, images2, name } = project;
+  const { features, sourceCode, visitNow, images1, images2, name, filteredSkills } = project;
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   return (
@@ -44,6 +45,7 @@ export default function ProjectDetailsComponent({ project }: { project: ProjectD
       </div>
 
       <ImageSlider images1={images1 || []} images2={images2 || []} name={name} />
+      <Technologies filteredSkills={filteredSkills || []} />
     </motion.div>
   );
 }

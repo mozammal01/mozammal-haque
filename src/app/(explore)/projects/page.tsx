@@ -1,6 +1,5 @@
 import DetailsHeader from "@/components/detailsHeader/DetailsHeader";
 import Projects from "@/components/home/Projects";
-import ProjectSummary from "@/components/projects/ProjectSummary";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -22,7 +21,6 @@ export default function ProjectsPage() {
       <DetailsHeader title="All Projects" />
       {/* All Projects */}
       <div className="container mx-auto px-4 my-20">
-        <ProjectSummary />
         <Projects />
       </div>
     </div>

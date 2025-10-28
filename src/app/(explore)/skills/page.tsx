@@ -3,7 +3,6 @@ import DetailsHeader from "@/components/detailsHeader/DetailsHeader";
 import Skills from "@/components/home/Skills";
 import { SmoothCursor } from "@/components/ui/smooth-cursor";
 import { Metadata } from "next";
-
 export const metadata: Metadata = {
   title: "Technical Skills & Expertise",
   description:
@@ -25,7 +24,7 @@ export const metadata: Metadata = {
 };
 
 export default function SkillsPage() {
-  const images = [
+  const images= [
     "https://res.cloudinary.com/mozammal01/image/upload/v1759567662/skills/nextjs_tutftu.png",
     "https://res.cloudinary.com/mozammal01/image/upload/v1759567663/skills/tailwindcss_mixpse.png",
     "https://res.cloudinary.com/mozammal01/image/upload/v1759567663/skills/mongodb_yzchbx.png",
@@ -43,9 +42,22 @@ export default function SkillsPage() {
     "https://res.cloudinary.com/mozammal01/image/upload/v1759567661/skills/firebase_u4aiia.png",
     "https://res.cloudinary.com/mozammal01/image/upload/v1759568451/swiper-logo_hfijfk.svg",
     "https://res.cloudinary.com/mozammal01/image/upload/v1759568452/vite_jkaj6z.svg",
-    "https://res.cloudinary.com/mozammal01/image/upload/v1759568452/svg_xml_base64_PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGFyaWEtbGFiZWw9IlZlcmNlbCBsb2dvbWFyayIgaGVpZ2h0PSIyMiIgcm9sZT0iaW1nIiBzdHlsZT0id2lkdGg6YXV0bztvdmVyZmxvdzp2aXNpYmxlIiB2aWV3Qm94PSIwIDAgNzQgNjQiPjx_sl8pcw.svg",
-    "https://res.cloudinary.com/mozammal01/image/upload/v1759568451/svg_xml_base64_PHN2ZyBhcmlhLWxhYmVsPSJkYWlzeVVJIGxvZ29tYXJrIiB4PSI3NSIgeT0iNzUiIHdpZHRoPSI0NTAiIGhlaWdodD0iNDUwIiB2aWV3Qm94PSIwIDAgNDUwIDQ1MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBkYXR_fvivwp.svg",
-    "https://res.cloudinary.com/mozammal01/image/upload/v1759568452/svg_xml_base64_PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTYgMjU2IiBjbGFzcz0ic2l6ZS01Ij48cmVjdCB3aWR0aD0iMjU2IiBoZWlnaHQ9IjI1NiIgZmlsbD0ibm9uZSIvPjxsaW5lIHgxPSIyMDgiIHkxPSIxMjgiIHgyPSI_hvi7xv.svg",
+    "https://res.cloudinary.com/mozammal01/image/upload/v1759568452/vercel_sl8pcw.svg",
+    "https://res.cloudinary.com/mozammal01/image/upload/v1761630850/eslint_fjvqow.png",
+    "https://res.cloudinary.com/mozammal01/image/upload/v1761630850/framerMotion_j2cmja.png",
+    "https://res.cloudinary.com/mozammal01/image/upload/v1761630851/vite_s16wvp.png",
+    "https://res.cloudinary.com/mozammal01/image/upload/v1761630850/lucideReact_ejjiic.png",
+    "https://res.cloudinary.com/mozammal01/image/upload/v1761630850/sweetAlert_o09wss.png",
+    "https://res.cloudinary.com/mozammal01/image/upload/v1761630850/nextjs_qd9ndr.png",
+    "https://res.cloudinary.com/mozammal01/image/upload/v1761630850/magicUI_o9tjyx.png",
+    "https://res.cloudinary.com/mozammal01/image/upload/v1761630849/heroUI_pkh25n.png",
+    "https://res.cloudinary.com/mozammal01/image/upload/v1761630849/daisyUI_b42kkz.png",
+    "https://res.cloudinary.com/mozammal01/image/upload/v1761630849/icons8_hum5th.png",
+    "https://res.cloudinary.com/mozammal01/image/upload/v1761630849/reactForm_vpmcpg.png",
+    "https://res.cloudinary.com/mozammal01/image/upload/v1761630848/shadcn_tgea8y.png",
+    "https://res.cloudinary.com/mozammal01/image/upload/v1761630849/swiper_ccnktq.png",
+    "https://res.cloudinary.com/mozammal01/image/upload/v1761630849/reactDom_j6jlki.png",
+    "https://res.cloudinary.com/mozammal01/image/upload/v1761631061/vercel_ioc7x3.png"
   ];
 
   return (

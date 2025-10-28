@@ -114,7 +114,19 @@ import awesomePopular from "@/../public/projects/awesome-restaurent/popular.png"
 import awesomeSignup from "@/../public/projects/awesome-restaurent/signup.png";
 import awesomeUpdateItem from "@/../public/projects/awesome-restaurent/updateItem.png";
 
+import { Skill } from "@/interfaces/shared-interfaces";
+import { skills } from "./skillsData";
+
 //
+const carShopSkills: Skill[] = skills.filter((skill: Skill) => skill.name === "NextJS" || skill.name === "Typescript" || skill.name === "Shadcn" || skill.name === "Vercel"|| skill.name === "TailwindCSS"|| skill.name === "Lucide React" || skill.name === "Framer Motion" || skill.name === "Formik" || skill.name === "CSS3" || skill.name === "HTML5" || skill.name === "Swiper"|| skill.name === "ESLint" || skill.name === "Icon8" || skill.name === "Git");
+const tasteNestSkills: Skill[] = skills.filter((skill: Skill) => skill.name === "NextJS" || skill.name === "Typescript" || skill.name === "Shadcn" || skill.name === "Vercel"|| skill.name === "TailwindCSS"|| skill.name === "Lucide React" || skill.name === "Framer Motion" || skill.name === "Formik" || skill.name === "CSS3" || skill.name === "HTML5" || skill.name === "Swiper"|| skill.name === "ESLint" || skill.name === "Icon8" || skill.name === "Git");
+
+const educationManagementSkills: Skill[] = skills.filter((skill: Skill) => skill.name === "React" || skill.name === "JavaScript" ||skill.name === "Stripe" ||skill.name === "SweetAlert" ||skill.name === "React Dom" || skill.name=== "NodeJS" || skill.name=== "MongoDB" || skill.name === "Vercel"|| skill.name === "TailwindCSS"|| skill.name === "Lucide React" || skill.name === "Framer Motion" || skill.name === "CSS3" || skill.name === "React Hook Form" || skill.name === "HTML5" || skill.name === "Swiper"|| skill.name === "ESLint" || skill.name === "Icon8" || skill.name === "Git" || skill.name === "Firebase");
+
+const jahirTailorSkills: Skill[] = skills.filter((skill: Skill) => skill.name === "React" || skill.name === "JavaScript" || skill.name === "Shadcn" || skill.name === "Vercel"|| skill.name === "TailwindCSS"|| skill.name === "Lucide React" || skill.name === "Framer Motion" || skill.name === "Formik" || skill.name === "CSS3" || skill.name === "HTML5" || skill.name === "Swiper"|| skill.name === "ESLint" || skill.name === "Icon8" || skill.name === "Git" || skill.name === "Firebase");
+
+const awesomeRestaurantSkills: Skill[] = skills.filter((skill: Skill) => skill.name === "React" || skill.name === "JavaScript" || skill.name === "Shadcn" || skill.name === "Vercel"|| skill.name === "TailwindCSS"|| skill.name === "Lucide React" || skill.name === "Framer Motion" || skill.name === "Formik" || skill.name === "CSS3" || skill.name === "HTML5" || skill.name === "Swiper"|| skill.name === "ESLint" || skill.name === "Icon8" || skill.name === "Git" || skill.name === "Firebase" );
+
 
 export const projects = [
   // Car Shop
@@ -180,6 +192,7 @@ export const projects = [
       carDetails,
     ],
     images2: [carDetailsHeader, carFinder, carContact, carFeedback, carPopularCar, carSellCar, carServices],
+    filteredSkills : carShopSkills,
   },
   // Taste Nest
   {
@@ -218,6 +231,7 @@ export const projects = [
     ],
     images1: [nestBanner, nestAbout, nestCategories, nestCheif, nestDishes, nestFeedback],
     images2: [nestMenu, nestNews, nestNewsEnding, nestOrderFood, nestReserveTable],
+    filteredSkills : tasteNestSkills,
   },
   // Education Management
   {
@@ -287,6 +301,7 @@ export const projects = [
       eduTeacherProfile,
       eduTeacherSignup,
     ],
+    filteredSkills : educationManagementSkills,
   },
   // Jahir Tailor
   {
@@ -354,6 +369,7 @@ export const projects = [
       jahirSignup,
       jahirSignupBN,
     ],
+    filteredSkills : jahirTailorSkills,
   },
   // AweSome Restaurant
   {
@@ -427,5 +443,6 @@ export const projects = [
       awesomeSignup,
       awesomeUpdateItem,
     ],
+    filteredSkills : awesomeRestaurantSkills,
   },
 ];

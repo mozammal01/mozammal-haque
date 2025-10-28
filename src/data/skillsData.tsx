@@ -1,7 +1,3 @@
-import DaisyIcon from "@/components/icons/daisyIcon";
-import ShadcnIcon from "@/components/icons/shadcnIcon";
-import SwiperIcon from "@/components/icons/swiperIcon";
-import VercelIcon from "@/components/icons/vercelIcon";
 import { Skill } from "@/interfaces/shared-interfaces";
 import firebaseImg from "@/../public/skills/firebase.png";
 import formikImg from "@/../public/skills/formik.png";
@@ -18,140 +14,200 @@ import jsImg from "@/../public/skills/js.png";
 import materialUiImg from "@/../public/skills/material.png";
 import mongoDbImg from "@/../public/skills/mongodb.png";
 import nodeJsImg from "@/../public/skills/nodejs.png";
-
+import shadcnImg from "@/../public/skills/shadcn.png";
+import vercelImg from "@/../public/skills/vercel.png";
+import swiperImg from "@/../public/skills/swiper.png";
+import daisyUiImg from "@/../public/skills/daisyUI.png";
+import framerMotionImg from "@/../public/skills/framerMotion.png";
+import heroUIImg from "@/../public/skills/heroUI.png";
+import magicUIImg from "@/../public/skills/magicUI.png";
+import reactFormImg from "@/../public/skills/reactForm.png";
+import viteImg from "@/../public/skills/vite.png";
+import sweetAlertImg from "@/../public/skills/sweetAlert.png";
+import reactDomImg from "@/../public/skills/reactDom.png";
+import eslintImg from "@/../public/skills/eslint.png";
+import icons8Img from "@/../public/skills/icons8.png";
+import lucideReactImg from "@/../public/skills/lucideReact.png";
+import stripeImg from "@/../public/skills/stripe.png";
 export const skills: Skill[] = [
   {
     id: 1,
     name: "React",
-    img: true,
     icon: reactImg,
     className: "animate-slow-spin",
   },
   {
     id: 2,
     name: "NextJS",
-    img: true,
     icon: nextjsImg,
     className: "",
   },
   {
     id: 3,
     name: "Typescript",
-    img: true,
     icon: typescriptImg,
     className: "",
   },
   {
     id: 4,
     name: "JavaScript",
-    img: true,
     icon: jsImg,
     className: "",
   },
   {
     id: 5,
-    name: "Shadcn",
-    img: false,
-    icon: ShadcnIcon,
-    className: "dark:text-white",
+    name: "Stripe",
+    icon: stripeImg,
+    className: "",
   },
   {
     id: 6,
-    name: "Vercel",
-    img: false,
-    icon: VercelIcon,
-    className: "",
-  },
-  {
-    id: 7,
-    name: "Swiper",
-    img: false,
-    icon: SwiperIcon,
-    className: "",
-  },
-  {
-    id: 8,
-    name: "Firebase",
-    img: true,
-    icon: firebaseImg,
-    className: "",
-  },
-  {
-    id: 9,
-    name: "Formik",
-    img: true,
-    icon: formikImg,
-    className: "",
-  },
-
-  {
-    id: 10,
     name: "TailwindCSS",
-    img: true,
     icon: tailwindImg,
     className: "",
   },
   {
+    id: 7,
+    name: "Shadcn",
+    icon: shadcnImg,
+    className: "dark:invert",
+  },
+  {
+    id: 8,
+    name: "Magic UI",
+    icon: magicUIImg,
+    className: "",
+  },
+  {
+    id: 9,
+    name: "Hero UI",
+    icon: heroUIImg,
+    className: "",
+  },
+  {
+    id: 10,
+    name: "Vercel",
+    icon: vercelImg,
+    className: "dark:invert w-[200px] h-[80px]",
+  },
+  {
     id: 11,
-    name: "CSS3",
-    img: true,
-    icon: cssImg,
+    name: "Framer Motion",
+    icon: framerMotionImg,
     className: "",
   },
   {
     id: 12,
-    name: "HTML5",
-    img: true,
-    icon: htmlImg,
-    className: "",
-  },
-  {
-    id: 13,
-    name: "Bootstrap",
-    img: true,
-    icon: bootstrapImg,
-    className: "",
-  },
-  {
-    id: 14,
     name: "Figma",
-    img: true,
     icon: figmaImg,
     className: "",
   },
   {
-    id: 15,
+    id: 13,
     name: "Git",
-    img: true,
     icon: gitImg,
     className: "",
   },
   {
-    id: 16,
+    id: 14,
     name: "Material UI",
-    img: true,
     icon: materialUiImg,
     className: "",
   },
   {
-    id: 17,
+    id: 15,
     name: "MongoDB",
-    img: true,
     icon: mongoDbImg,
     className: "",
   },
   {
-    id: 18,
+    id: 16,
     name: "NodeJS",
-    img: true,
     icon: nodeJsImg,
     className: "",
   },
   {
+    id: 17,
+    name: "Swiper",
+    icon: swiperImg,
+    className: "",
+  },
+  {
+    id: 18,
+    name: "Firebase",
+    icon: firebaseImg,
+    className: "",
+  },
+  {
     id: 19,
+    name: "Formik",
+    icon: formikImg,
+    className: "",
+  },
+  {
+    id: 20,
+    name: "Vite",
+    icon: viteImg,
+    className: "",
+  },
+  {
+    id: 21,
+    name: "SweetAlert",
+    icon: sweetAlertImg,
+    className: "",
+  },
+  {
+    id: 22,
+    name: "React Dom",
+    icon: reactDomImg,
+    className: "",
+  },
+  {
+    id: 23,
+    name: "React Hook Form",
+    icon: reactFormImg,
+    className: "",
+  },
+  {
+    id: 24,
+    name: "CSS3",
+    icon: cssImg,
+    className: "",
+  },
+  {
+    id: 25,
+    name: "HTML5",
+    icon: htmlImg,
+    className: "",
+  },
+  {
+    id: 26,
+    name: "Bootstrap",
+    icon: bootstrapImg,
+    className: "",
+  },
+  {
+    id: 27,
     name: "DaisyUI",
-    img: false,
-    icon: DaisyIcon,
+    icon: daisyUiImg,
+    className: "",
+  },
+  {
+    id: 28,
+    name: "ESLint",
+    icon: eslintImg,
+    className: "",
+  },
+  {
+    id: 29,
+    name: "Icon8",
+    icon: icons8Img,
+    className: "",
+  },
+  {
+    id: 30,
+    name: "Lucide React",
+    icon: lucideReactImg,
     className: "",
   },
 ];

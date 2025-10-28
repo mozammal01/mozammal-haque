@@ -3,25 +3,21 @@ import Image, { StaticImageData } from "next/image";
 import React, { useState } from "react";
 import ManyCardMotion from "../animation/ManyCardMotion";
 import { Skill } from "@/interfaces/shared-interfaces";
-
-import { IconProps } from "@/interfaces/shared-interfaces";
 import { motion } from "framer-motion";
-import { useRef } from "react";
 
 export default function SkillCard({ filteredSkills }: { filteredSkills: Skill[] }) {
-  const ref = useRef(null);
   const [hoveredId, setHoveredId] = useState(0);
   const handleHover = (id: number) => {
     setHoveredId(id);
   };
   return (
-    <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-10">
-      {filteredSkills.map((skill, index) => (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-10">
+      {filteredSkills.map((skill) => (
         <ManyCardMotion
-          index={index}
+          index={skill.id - 1}
           onMouseEnter={() => handleHover(skill.id)}
           onMouseLeave={() => handleHover(0)}
-          key={index}
+          key={skill.id}
           className="flex flex-col justify-center items-center mx-auto gap-2 bg-amber-50 dark:bg-gray-900 rounded p-10 w-[250px] h-[250px] transition-all hover:scale-105 hover:shadow-smooth duration-300 ease-in-out"
         >
           <div className="flex flex-col justify-center items-center relative overflow-hidden h-[250px] w-[250px]">
@@ -31,11 +27,7 @@ export default function SkillCard({ filteredSkills }: { filteredSkills: Skill[] 
               }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
-              {skill.img ? (
                 <Image src={skill.icon as StaticImageData} alt={skill.name} width={100} height={100} className={skill.className || ""} />
-              ) : (
-                React.createElement(skill.icon as React.ComponentType<IconProps>, { size: 100 })
-              )}
             </motion.div>
 
             <motion.span

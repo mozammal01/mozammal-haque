@@ -14,11 +14,11 @@ export default function ContactInfo() {
             Contact Information
           </TextAnimate>
         </h3>
-        <p className="text-lg text-gray-500">
+        <div className="text-lg text-gray-500">
           <TextAnimate animation="slideLeft" by="word" delay={1.5} once>
             You can get my contact information here and if you like.
           </TextAnimate>
-        </p>
+        </div>
         <div className="mt-16 space-y-4">
           <Link href="mailto:mozammalhaq01@gmail.com" target="_blank" className="text-lg flex items-center gap-2">
             <div className="bg-primary rounded p-2">

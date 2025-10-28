@@ -40,6 +40,7 @@ export interface ProjectDetailsProps {
   features?: Feature[];
   images1?: StaticImageData[];
   images2?: StaticImageData[];
+  filteredSkills?: Skill[];
 }
 
 export type Project = ProjectDetailsProps;
@@ -62,7 +63,6 @@ export interface Service {
 export interface Skill {
   id: number;
   name: string;
-  img: boolean;
-  icon: StaticImageData | React.ComponentType<IconProps>;
+  icon: StaticImageData;
   className: string;
 }
