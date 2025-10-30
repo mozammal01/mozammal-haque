@@ -87,46 +87,140 @@ import jahirSigninBN from "@/../public/projects/jahir-tailor/signinBN.png";
 import jahirSignup from "@/../public/projects/jahir-tailor/signup.png";
 import jahirSignupBN from "@/../public/projects/jahir-tailor/signupBN.png";
 //
-import awesomeAddItem from "@/../public/projects/awesome-restaurent/addItem.png";
-import awesomeAddToCart from "@/../public/projects/awesome-restaurent/addToCart.png";
-import awesomeAdminDashboard from "@/../public/projects/awesome-restaurent/adminDashboard.png";
-import awesomeAllUsers from "@/../public/projects/awesome-restaurent/allUsers.png";
-import awesomeBanner from "@/../public/projects/awesome-restaurent/banner.png";
-import awesomeBgFixed from "@/../public/projects/awesome-restaurent/bg-fixed.png";
-import awesomeCallUs from "@/../public/projects/awesome-restaurent/callUs.png";
-import awesomeDeleteUser from "@/../public/projects/awesome-restaurent/deleteUser.png";
-import awesomeDeletedUser from "@/../public/projects/awesome-restaurent/deletedUser.png";
-import awesomeFeedback from "@/../public/projects/awesome-restaurent/feedback.png";
-import awesomeFooter from "@/../public/projects/awesome-restaurent/footer.png";
-import awesomeLogin from "@/../public/projects/awesome-restaurent/login.png";
-import awesomeLoginAlert from "@/../public/projects/awesome-restaurent/loginAlert.png";
-import awesomeMakeAdmin from "@/../public/projects/awesome-restaurent/makeAdmin.png";
-import awesomeManageItem from "@/../public/projects/awesome-restaurent/manageItem.png";
-import awesomeMenu from "@/../public/projects/awesome-restaurent/menu.png";
-import awesomeMyCart from "@/../public/projects/awesome-restaurent/myCart.png";
-import awesomeOrderDetails from "@/../public/projects/awesome-restaurent/orderDetails.png";
-import awesomeOrderDishes from "@/../public/projects/awesome-restaurent/orderDishes.png";
-import awesomeOrderHeading from "@/../public/projects/awesome-restaurent/orderHeading.png";
-import awesomePayment from "@/../public/projects/awesome-restaurent/payment.png";
-import awesomePaymentDone from "@/../public/projects/awesome-restaurent/paymentDone.png";
-import awesomePaymentHistory from "@/../public/projects/awesome-restaurent/paymentHistory.png";
-import awesomePopular from "@/../public/projects/awesome-restaurent/popular.png";
-import awesomeSignup from "@/../public/projects/awesome-restaurent/signup.png";
-import awesomeUpdateItem from "@/../public/projects/awesome-restaurent/updateItem.png";
+import awesomeAddItem from "@/../public/projects/awesome-restaurant/addItem.png";
+import awesomeAddToCart from "@/../public/projects/awesome-restaurant/addToCart.png";
+import awesomeAdminDashboard from "@/../public/projects/awesome-restaurant/adminDashboard.png";
+import awesomeAllUsers from "@/../public/projects/awesome-restaurant/allUsers.png";
+import awesomeBanner from "@/../public/projects/awesome-restaurant/banner.png";
+import awesomeBgFixed from "@/../public/projects/awesome-restaurant/bg-fixed.png";
+import awesomeCallUs from "@/../public/projects/awesome-restaurant/callUs.png";
+import awesomeDeleteUser from "@/../public/projects/awesome-restaurant/deleteUser.png";
+import awesomeDeletedUser from "@/../public/projects/awesome-restaurant/deletedUser.png";
+import awesomeFeedback from "@/../public/projects/awesome-restaurant/feedback.png";
+import awesomeFooter from "@/../public/projects/awesome-restaurant/footer.png";
+import awesomeLogin from "@/../public/projects/awesome-restaurant/login.png";
+import awesomeLoginAlert from "@/../public/projects/awesome-restaurant/loginAlert.png";
+import awesomeMakeAdmin from "@/../public/projects/awesome-restaurant/makeAdmin.png";
+import awesomeManageItem from "@/../public/projects/awesome-restaurant/manageItem.png";
+import awesomeMenu from "@/../public/projects/awesome-restaurant/menu.png";
+import awesomeMyCart from "@/../public/projects/awesome-restaurant/myCart.png";
+import awesomeOrderDetails from "@/../public/projects/awesome-restaurant/orderDetails.png";
+import awesomeOrderDishes from "@/../public/projects/awesome-restaurant/orderDishes.png";
+import awesomeOrderHeading from "@/../public/projects/awesome-restaurant/orderHeading.png";
+import awesomePayment from "@/../public/projects/awesome-restaurant/payment.png";
+import awesomePaymentDone from "@/../public/projects/awesome-restaurant/paymentDone.png";
+import awesomePaymentHistory from "@/../public/projects/awesome-restaurant/paymentHistory.png";
+import awesomePopular from "@/../public/projects/awesome-restaurant/popular.png";
+import awesomeSignup from "@/../public/projects/awesome-restaurant/signup.png";
+import awesomeUpdateItem from "@/../public/projects/awesome-restaurant/updateItem.png";
 
 import { Skill } from "@/interfaces/shared-interfaces";
 import { skills } from "./skillsData";
 
 //
-const carShopSkills: Skill[] = skills.filter((skill: Skill) => skill.name === "NextJS" || skill.name === "Typescript" || skill.name === "Shadcn" || skill.name === "Vercel"|| skill.name === "TailwindCSS"|| skill.name === "Lucide React" || skill.name === "Framer Motion" || skill.name === "Formik" || skill.name === "CSS3" || skill.name === "HTML5" || skill.name === "Swiper"|| skill.name === "ESLint" || skill.name === "Icon8" || skill.name === "Git");
-const tasteNestSkills: Skill[] = skills.filter((skill: Skill) => skill.name === "NextJS" || skill.name === "Typescript" || skill.name === "Shadcn" || skill.name === "Vercel"|| skill.name === "TailwindCSS"|| skill.name === "Lucide React" || skill.name === "Framer Motion" || skill.name === "Formik" || skill.name === "CSS3" || skill.name === "HTML5" || skill.name === "Swiper"|| skill.name === "ESLint" || skill.name === "Icon8" || skill.name === "Git");
+const carShopSkills: Skill[] = skills.filter(
+  (skill: Skill) =>
+    skill.name === "NextJS" ||
+    skill.name === "Typescript" ||
+    skill.name === "Shadcn" ||
+    skill.name === "Magic UI" ||
+    skill.name === "Vercel" ||
+    skill.name === "TailwindCSS" ||
+    skill.name === "Lucide React" ||
+    skill.name === "Framer Motion" ||
+    skill.name === "CSS3" ||
+    skill.name === "HTML5" ||
+    skill.name === "Swiper" ||
+    skill.name === "ESLint" ||
+    skill.name === "Icon8" ||
+    skill.name === "Git"
+);
+const tasteNestSkills: Skill[] = skills.filter(
+  (skill: Skill) =>
+    skill.name === "NextJS" ||
+    skill.name === "Typescript" ||
+    skill.name === "Shadcn" ||
+    skill.name === "Vercel" ||
+    skill.name === "TailwindCSS" ||
+    skill.name === "Lucide React" ||
+    skill.name === "Framer Motion" ||
+    skill.name === "Formik" ||
+    skill.name === "CSS3" ||
+    skill.name === "HTML5" ||
+    skill.name === "Swiper" ||
+    skill.name === "ESLint" ||
+    skill.name === "Icon8" ||
+    skill.name === "Git"
+);
 
-const educationManagementSkills: Skill[] = skills.filter((skill: Skill) => skill.name === "React" || skill.name === "JavaScript" ||skill.name === "Stripe" ||skill.name === "SweetAlert" ||skill.name === "React Dom" || skill.name=== "NodeJS" || skill.name=== "MongoDB" || skill.name === "Vercel"|| skill.name === "TailwindCSS"|| skill.name === "Lucide React" || skill.name === "Framer Motion" || skill.name === "CSS3" || skill.name === "React Hook Form" || skill.name === "HTML5" || skill.name === "Swiper"|| skill.name === "ESLint" || skill.name === "Icon8" || skill.name === "Git" || skill.name === "Firebase");
+const jahirTailorSkills: Skill[] = skills.filter(
+  (skill: Skill) =>
+    skill.name === "NextJS" ||
+    skill.name === "Typescript" ||
+    skill.name === "i18next" ||
+    skill.name === "Shadcn" ||
+    skill.name === "Vercel" ||
+    skill.name === "TailwindCSS" ||
+    skill.name === "Lucide React" ||
+    skill.name === "React Hook Form" ||
+    skill.name === "Framer Motion" ||
+    skill.name === "CSS3" ||
+    skill.name === "HTML5" ||
+    skill.name === "Swiper" ||
+    skill.name === "ESLint" ||
+    skill.name === "Icon8" ||
+    skill.name === "Git"
+);
 
-const jahirTailorSkills: Skill[] = skills.filter((skill: Skill) => skill.name === "React" || skill.name === "JavaScript" || skill.name === "Shadcn" || skill.name === "Vercel"|| skill.name === "TailwindCSS"|| skill.name === "Lucide React" || skill.name === "Framer Motion" || skill.name === "Formik" || skill.name === "CSS3" || skill.name === "HTML5" || skill.name === "Swiper"|| skill.name === "ESLint" || skill.name === "Icon8" || skill.name === "Git" || skill.name === "Firebase");
+const educationManagementSkills: Skill[] = skills.filter(
+  (skill: Skill) =>
+    skill.name === "React" ||
+    skill.name === "JavaScript" ||
+    skill.name === "Stripe" ||
+    skill.name === "SweetAlert" ||
+    skill.name === "React Dom" ||
+    skill.name === "NodeJS" ||
+    skill.name === "MongoDB" ||
+    skill.name === "Vercel" ||
+    skill.name === "TailwindCSS" ||
+    skill.name === "Vite" ||
+    skill.name === "DaisyUI" ||
+    skill.name === "Lucide React" ||
+    skill.name === "Framer Motion" ||
+    skill.name === "CSS3" ||
+    skill.name === "React Hook Form" ||
+    skill.name === "HTML5" ||
+    skill.name === "Swiper" ||
+    skill.name === "ESLint" ||
+    skill.name === "Icon8" ||
+    skill.name === "Git" ||
+    skill.name === "Firebase"
+);
 
-const awesomeRestaurantSkills: Skill[] = skills.filter((skill: Skill) => skill.name === "React" || skill.name === "JavaScript" || skill.name === "Shadcn" || skill.name === "Vercel"|| skill.name === "TailwindCSS"|| skill.name === "Lucide React" || skill.name === "Framer Motion" || skill.name === "Formik" || skill.name === "CSS3" || skill.name === "HTML5" || skill.name === "Swiper"|| skill.name === "ESLint" || skill.name === "Icon8" || skill.name === "Git" || skill.name === "Firebase" );
-
+const awesomeRestaurantSkills: Skill[] = skills.filter(
+  (skill: Skill) =>
+    skill.name === "React" ||
+    skill.name === "JavaScript" ||
+    skill.name === "Stripe" ||
+    skill.name === "SweetAlert" ||
+    skill.name === "React Dom" ||
+    skill.name === "NodeJS" ||
+    skill.name === "MongoDB" ||
+    skill.name === "Vercel" ||
+    skill.name === "TailwindCSS" ||
+    skill.name === "Vite" ||
+    skill.name === "React Hook Form" ||
+    skill.name === "DaisyUI" ||
+    skill.name === "Lucide React" ||
+    skill.name === "Framer Motion" ||
+    skill.name === "CSS3" ||
+    skill.name === "HTML5" ||
+    skill.name === "Swiper" ||
+    skill.name === "ESLint" ||
+    skill.name === "Icon8" ||
+    skill.name === "Git" ||
+    skill.name === "Firebase"
+);
 
 export const projects = [
   // Car Shop
@@ -192,7 +286,7 @@ export const projects = [
       carDetails,
     ],
     images2: [carDetailsHeader, carFinder, carContact, carFeedback, carPopularCar, carSellCar, carServices],
-    filteredSkills : carShopSkills,
+    filteredSkills: carShopSkills,
   },
   // Taste Nest
   {
@@ -231,7 +325,7 @@ export const projects = [
     ],
     images1: [nestBanner, nestAbout, nestCategories, nestCheif, nestDishes, nestFeedback],
     images2: [nestMenu, nestNews, nestNewsEnding, nestOrderFood, nestReserveTable],
-    filteredSkills : tasteNestSkills,
+    filteredSkills: tasteNestSkills,
   },
   // Education Management
   {
@@ -301,7 +395,7 @@ export const projects = [
       eduTeacherProfile,
       eduTeacherSignup,
     ],
-    filteredSkills : educationManagementSkills,
+    filteredSkills: educationManagementSkills,
   },
   // Jahir Tailor
   {
@@ -369,17 +463,17 @@ export const projects = [
       jahirSignup,
       jahirSignupBN,
     ],
-    filteredSkills : jahirTailorSkills,
+    filteredSkills: jahirTailorSkills,
   },
   // AweSome Restaurant
   {
     id: 5,
-    name: "AweSome Restaurant",
+    name: "Awesome Restaurant",
     image: awesomeRestaurant,
     sourceCode: "https://github.com/mozammal01/awesome-restaurent-client",
     visitNow: "https://awesome-retaurent.web.app/",
     description:
-      "AweSome Restaurant is a modern and intuitive restaurant website that helps users explore, search, and discover restaurant services. It features detailed restaurant information, ratings, reviews, and personalized recommendations.",
+      "Awesome Restaurant is a modern and intuitive restaurant website that helps users explore, search, and discover restaurant services. It features detailed restaurant information, ratings, reviews, and personalized recommendations.",
     features: [
       {
         id: 1,
@@ -443,6 +537,6 @@ export const projects = [
       awesomeSignup,
       awesomeUpdateItem,
     ],
-    filteredSkills : awesomeRestaurantSkills,
+    filteredSkills: awesomeRestaurantSkills,
   },
 ];

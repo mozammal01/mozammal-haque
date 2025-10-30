@@ -29,6 +29,7 @@ import eslintImg from "@/../public/skills/eslint.png";
 import icons8Img from "@/../public/skills/icons8.png";
 import lucideReactImg from "@/../public/skills/lucideReact.png";
 import stripeImg from "@/../public/skills/stripe.png";
+import i18nextImg from "@/../public/skills/i18n.png";
 export const skills: Skill[] = [
   {
     id: 1,
@@ -210,4 +211,10 @@ export const skills: Skill[] = [
     icon: lucideReactImg,
     className: "",
   },
+  {
+    id: 31,
+    name: "i18next",
+    icon: i18nextImg,
+    className: "",
+  }
 ];
