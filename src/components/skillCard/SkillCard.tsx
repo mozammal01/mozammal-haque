@@ -1,20 +1,23 @@
 "use client";
 import Image, { StaticImageData } from "next/image";
-import React, { useState } from "react";
-import ManyCardMotion from "../animation/ManyCardMotion";
+import React, { useRef, useState } from "react";
 import { Skill } from "@/interfaces/shared-interfaces";
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 
 export default function SkillCard({ filteredSkills }: { filteredSkills: Skill[] }) {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   const [hoveredId, setHoveredId] = useState(0);
   const handleHover = (id: number) => {
     setHoveredId(id);
   };
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-10">
+    <div ref={ref} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-10">
       {filteredSkills.map((skill) => (
-        <ManyCardMotion
-          index={skill.id - 1}
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+          transition={{ duration: 0.5, delay: skill.id * 0.1 }}
           onMouseEnter={() => handleHover(skill.id)}
           onMouseLeave={() => handleHover(0)}
           key={skill.id}
@@ -44,7 +47,7 @@ export default function SkillCard({ filteredSkills }: { filteredSkills: Skill[] 
               {skill.name}
             </motion.span>
           </div>
-        </ManyCardMotion>
+        </motion.div>
       ))}
     </div>
   );

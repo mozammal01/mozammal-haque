@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { ThemeProvider } from "next-themes";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Loading from "./loading";
@@ -87,7 +86,7 @@ export const metadata: Metadata = {
     apple: "/logo/logo-white.png",
   },
   manifest: "/manifest.json",
-};  
+};
 
 export default function RootLayout({
   children,
@@ -99,9 +98,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Navigation />
         <MobileNavbar />
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
-          <Loading>{children}</Loading>
-        </ThemeProvider>
+        <Loading>{children}</Loading>
       </body>
     </html>
   );
