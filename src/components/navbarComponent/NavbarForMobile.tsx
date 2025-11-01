@@ -1,16 +1,26 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 // import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { AnimatedThemeToggler } from "../ui/animated-theme-toggler";
 import { navItems } from "@/data/navItems";
 import AnimatedToggle from "./ToggleButton";
+import { usePathname } from "next/navigation";
 
 export default function MobileNavbar() {
   const [open, setOpen] = useState(false);
-
+  const [isHome, setIsHome] = useState(false);
+  const location = usePathname();
+  useEffect(() => {
+    if (location === "/") {
+      setIsHome(true);
+    } else {
+      setIsHome(false);
+    }
+  }, [location]);
   return (
+    <div className="block md:hidden">
     <nav className="fixed top-0 left-0 w-full bg-white/40 dark:bg-black/40 backdrop-blur-md shadow-sm z-50">
       <div className="flex flex-row-reverse items-center justify-between px-4 py-3">
         {/* Logo */}
@@ -37,13 +47,14 @@ export default function MobileNavbar() {
         <ul className="flex flex-col p-2 py-6">
           {navItems.map((item) => (
             <li key={item.id}>
-              <Link href={item.href} onClick={() => setOpen(false)} className="block hover:bg-primary rounded-md p-2  hover:font-extrabold scale-100 hover:scale-102 transition-all duration-300 ease-in-out">
+              <Link href={isHome ? item.hrefAnchor : item.hrefLink} onClick={() => setOpen(false)} className="block hover:bg-primary rounded-md p-2  hover:font-extrabold scale-100 hover:scale-102 transition-all duration-300 ease-in-out">
                 {item.placeholder}
               </Link>
             </li>
           ))}
         </ul>
-      </div>
-    </nav>
+        </div>
+      </nav>
+    </div>
   );
 }

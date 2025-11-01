@@ -1,5 +1,4 @@
 import Banner from "@/components/home/Banner";
-import Navigation from "@/components/home/navigation";
 import About from "@/components/home/About";
 import Skills from "@/components/home/Skills";
 import HireMe from "@/components/home/HireMe";
@@ -7,7 +6,6 @@ import Projects from "@/components/home/Projects";
 import Services from "@/components/home/Services";
 import Contact from "@/components/home/Contact";
 import Footer from "@/components/home/Footer";
-import MobileNavbar from "@/components/navbarComponent/NavbarForMobile";
 
 export default function Home() {
   const jsonLd = {
@@ -46,7 +44,7 @@ export default function Home() {
       // Add your social media links here
       "https://github.com/mozammal01",
       "https://linkedin.com/in/mozammal-haq-24902a2a7",
-      "https://x.com/MozammalHaq01"
+      "https://x.com/MozammalHaq01",
     ],
   };
 
@@ -56,19 +54,11 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <div>
-        <div className="block md:hidden">
-          <MobileNavbar />
-        </div>
         <div
-          className="grid grid-cols-12 object-cover w-full"
+          className="object-cover w-full"
           style={{ backgroundImage: "url('/background/background.png')", backgroundSize: "cover", backgroundPosition: "center" }}
         >
-          <div className="col-span-11">
-            <Banner />
-          </div>
-          <div className="col-span-1">
-            <Navigation />
-          </div>
+          <Banner />
         </div>
         <About />
         <Skills />

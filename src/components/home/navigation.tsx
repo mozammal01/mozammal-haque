@@ -7,30 +7,41 @@ import { navItems } from "@/data/navItems";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { AnimatedThemeToggler } from "../ui/animated-theme-toggler";
 import { TextAnimate } from "../ui/text-animate";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function Navigation() {
+  const [isHome, setIsHome] = useState(false);
+  const location = usePathname();
+  useEffect(() => {
+    if (location === "/") {
+      setIsHome(true);
+    } else {
+      setIsHome(false);
+    }
+  }, [location]);
   return (
     <div className="relative">
       <div
-        className={`md:flex hidden flex-col gap-4 justify-between items-center h-screen px-4 top-0 right-0 py-10 fixed bg-black/40 dark:bg-white/60 z-50`}
+        className={`md:flex hidden flex-col gap-4 justify-between items-center h-screen px-4 top-0 right-0 py-10 fixed bg-black/40 dark:bg-white/70 z-50`}
       >
         <Link href="#home">
           <Image src={logo} alt="Home" width={60} height={60} />
         </Link>
         <div className="flex flex-col gap-8">
-          {navItems.map((icon, index) => (
+          {navItems.map((navItem, index) => (
             <Tooltip key={index}>
               <TooltipTrigger asChild>
                 <Link
-                  href={icon.href}
+                  href={isHome ? navItem.hrefAnchor : navItem.hrefLink}
                   className="hover:bg-[#ffc107] hover:text-black dark:hover:text-white transition-all scale-100 hover:scale-120 duration-300 rounded-full p-4 dark:text-black text-white font-extrabold"
                 >
-                  {icon.icon}
+                  {navItem.icon}
                 </Link>
               </TooltipTrigger>
               <TooltipContent>
                 <TextAnimate animation="slideLeft" by="word">
-                  {icon.placeholder}
+                  {navItem.placeholder}
                 </TextAnimate>
               </TooltipContent>
             </Tooltip>

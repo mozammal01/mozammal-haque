@@ -22,7 +22,7 @@ export default function Banner() {
         </h3>
         <h1 className="2xl:text-6xl lg:text-5xl md:text-4xl text-3xl font-bold">
           <TextAnimate animation="slideLeft" by="character" once>
-            I am Mozammal Haq
+            I am Mozammal Haque
           </TextAnimate>
         </h1>
 
