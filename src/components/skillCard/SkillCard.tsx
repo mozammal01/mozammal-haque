@@ -30,7 +30,7 @@ export default function SkillCard({ filteredSkills }: { filteredSkills: Skill[] 
               }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
             >
-                <Image src={skill.icon as StaticImageData} alt={skill.name} width={100} height={100} className={skill.className || ""} />
+              <Image src={skill.icon as StaticImageData} alt={skill.name} width={100} height={100} className={skill.className || ""} />
             </motion.div>
 
             <motion.span
