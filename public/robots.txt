@@ -3,8 +3,8 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://mozammalhaq.com
+Host: https://mozammal01.vercel.app/
 
 # Sitemaps
-Sitemap: https://mozammalhaq.com/sitemap.xml
+Sitemap: https://mozammal01.vercel.app/sitemap.xml
 
