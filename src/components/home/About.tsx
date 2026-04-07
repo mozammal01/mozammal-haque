@@ -9,23 +9,23 @@ export default function About() {
   return (
     <div id="about" className="my-20 lg:flex items-center justify-center container mx-auto px-4">
       <div className="lg:w-1/2 w-full space-y-6 text-foreground">
-        <TextAnimate animation="slideLeft" by="character" delay={0.1} once className="xl:text-3xl text-2xl font-bold text-primary uppercase">
+        <TextAnimate animation="slideLeft" by="word" delay={0.1} once className="xl:text-3xl text-2xl font-bold text-primary uppercase">
           About Me
         </TextAnimate>
-        <TextAnimate animation="slideLeft" by="character" once delay={0.2} className="2xl:text-5xl md:text-4xl text-3xl font-bold">
+        <TextAnimate animation="slideLeft" by="word" once delay={0.2} className="2xl:text-5xl md:text-4xl text-3xl font-bold">
           Who I am ?
         </TextAnimate>
-        <TextAnimate animation="slideLeft" by="character" delay={0.3} once className="xl:text-3xl text-2xl font-bold">
+        <TextAnimate animation="slideLeft" by="word" delay={0.3} once className="xl:text-3xl text-2xl font-bold">
           I am a JR. Web Developer
         </TextAnimate>
         <div className="text-lg w-4/5 space-y-4">
-          <TextAnimate animation="slideLeft" by="character" delay={0.5} once>
+          <TextAnimate animation="slideLeft" by="word" delay={0.5} once>
             Hello, My name is Mozammal Haque. I am 18 years old. I live in Bangladesh. I am graduated from Government Adomjeenagar MW
             collage in Narayongonj,Bangladesh
           </TextAnimate>
-          <TextAnimate animation="slideLeft" by="character" delay={0.7} once>
+          <TextAnimate animation="slideLeft" by="word" delay={0.7} once>
             My interest in web development started in 2023 when I decided to do web development as my career— First i started with HTML &
-            CSS. Now i am proficient in HTML, CSS, JavaScript, and familiar with React, NextJS, Node.js, expressJS, mongoDB.
+            CSS. Now i am proficient in JavaScript, React, NextJS, Node.js, expressJS, Prisma etc.
           </TextAnimate>
         </div>
 

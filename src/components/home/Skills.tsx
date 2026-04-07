@@ -3,13 +3,27 @@ import { skills } from "@/data/skillsData";
 import SkillCard from "../skillCard/SkillCard";
 import { InteractiveHoverButton } from "../ui/interactive-hover-button";
 import { usePathname } from "next/navigation";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export default function Skills() {
   const ref = useRef(null);
   const pathname = usePathname();
   const isSkillsPage = pathname === "/skills";
-  const filteredSkills = isSkillsPage ? skills : skills.slice(0, 5);
+  const [skillCount, setSkillCount] = useState(5);
+  useEffect(() => {
+    const updateCount = () => {
+      if (window.innerWidth >= 1280) { // xl breakpoint
+        setSkillCount(4);
+      } else {
+        setSkillCount(5);
+      }
+    };
+    updateCount();
+    window.addEventListener("resize", updateCount);
+    return () => window.removeEventListener("resize", updateCount);
+  }, []);
+
+  const filteredSkills = isSkillsPage ? skills : skills.slice(0, skillCount);
 
   return (
     <div id="skills" ref={ref} className="my-40 container mx-auto px-4">
