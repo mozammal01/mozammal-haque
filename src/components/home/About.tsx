@@ -35,7 +35,7 @@ export default function About() {
           <AnimatedButton
             variant="leftToRight"
             text="My Resume"
-            href="https://drive.google.com/file/d/1N-9i3sdRz2sqKUOVK3rnvSCBNPxhJcDa/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1t5FfFip6L1gjDRJNiaFnI2PF_4sHvBty/view"
             target="_blank"
           />
         </div>
