@@ -70,6 +70,7 @@ export function SmoothCursor({
   const lastUpdateTime = useRef(Date.now());
   const previousAngle = useRef(0);
   const accumulatedRotation = useRef(0);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const cursorX = useSpring(0, springConfig);
   const cursorY = useSpring(0, springConfig);
@@ -121,11 +122,11 @@ export function SmoothCursor({
 
         scale.set(0.95);
 
-        const timeout = setTimeout(() => {
+        if (timeoutRef.current) clearTimeout(timeoutRef.current);
+        timeoutRef.current = setTimeout(() => {
           scale.set(1);
+          timeoutRef.current = null;
         }, 150);
-
-        return () => clearTimeout(timeout);
       }
     };
 

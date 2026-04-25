@@ -25,7 +25,7 @@ export function IconCloud({ icons, images }: IconCloudProps) {
   const [iconPositions, setIconPositions] = useState<Icon[]>([]);
   const [isDragging, setIsDragging] = useState(false);
   const [lastMousePos, setLastMousePos] = useState({ x: 0, y: 0 });
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const mousePosRef = useRef({ x: 0, y: 0 });
   const [targetRotation, setTargetRotation] = useState<{
     x: number;
     y: number;
@@ -176,7 +176,7 @@ export function IconCloud({ icons, images }: IconCloudProps) {
     if (rect) {
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
-      setMousePos({ x, y });
+      mousePosRef.current = { x, y };
     }
 
     if (isDragging) {
@@ -208,8 +208,8 @@ export function IconCloud({ icons, images }: IconCloudProps) {
       const centerX = canvas.width / 2;
       const centerY = canvas.height / 2;
       const maxDistance = Math.sqrt(centerX * centerX + centerY * centerY);
-      const dx = mousePos.x - centerX;
-      const dy = mousePos.y - centerY;
+      const dx = mousePosRef.current.x - centerX;
+      const dy = mousePosRef.current.y - centerY;
       const distance = Math.sqrt(dx * dx + dy * dy);
       const speed = 0.003 + (distance / maxDistance) * 0.01;
 
@@ -281,7 +281,7 @@ export function IconCloud({ icons, images }: IconCloudProps) {
         cancelAnimationFrame(animationFrameRef.current);
       }
     };
-  }, [icons, images, iconPositions, isDragging, mousePos, targetRotation]);
+  }, [icons, images, iconPositions, isDragging, targetRotation]);
 
   return (
     <canvas
