@@ -11,7 +11,7 @@ This portfolio highlights my journey, technical expertise, and the work I’m mo
 ---
 
 ## 🧑‍💻 About Me
-Hi! I’m **[Your Name]**, a passionate **Frontend Web Developer** focused on creating modern, responsive, and user-friendly web applications.  
+Hi! I’m **Mozammal Haque**, a passionate **Frontend Web Developer** focused on creating modern, responsive, and user-friendly web applications.  
 I love turning creative ideas into functional digital experiences using the latest web technologies.
 
 ---

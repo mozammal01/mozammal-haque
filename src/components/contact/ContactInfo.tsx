@@ -26,7 +26,7 @@ export default function ContactInfo() {
             </div>
             <span className="">Email: </span>
             <span className="sm:font-bold font-semibold hover:text-primary hover:scale-105 duration-300">
-              <TextAnimate animation="slideLeft" by="word" delay={3} once>
+              <TextAnimate animation="slideLeft" by="word" delay={2.5} once>
                 mozammalhaq01@gmail.com
               </TextAnimate>
             </span>
@@ -37,7 +37,7 @@ export default function ContactInfo() {
             </div>
             <span>Phone: </span>
             <span className="sm:font-bold font-semibold hover:text-primary hover:scale-105 duration-300">
-              <TextAnimate animation="slideLeft" by="word" delay={3.5} once>
+              <TextAnimate animation="slideLeft" by="word" delay={3} once>
                 +8801846581810
               </TextAnimate>
             </span>
@@ -52,7 +52,7 @@ export default function ContactInfo() {
             </div>
             <span>Address: </span>
             <span className="sm:font-bold font-semibold hover:text-primary hover:scale-105 duration-300">
-              <TextAnimate animation="slideLeft" by="word" delay={4} once>
+              <TextAnimate animation="slideLeft" by="word" delay={3.5} once>
                 Dhaka, Bangladesh
               </TextAnimate>
             </span>

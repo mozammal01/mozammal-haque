@@ -4,6 +4,7 @@ import "./globals.css";
 import Loading from "./loading";
 import Navigation from "@/components/home/navigation";
 import MobileNavbar from "@/components/navbarComponent/NavbarForMobile";
+import SmoothScroll from "@/components/animation/SmoothScroll";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -96,9 +97,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Navigation />
-        <MobileNavbar />
-        <Loading>{children}</Loading>
+        <SmoothScroll>
+          <Navigation />
+          <MobileNavbar />
+          <Loading>{children}</Loading>
+        </SmoothScroll>
       </body>
     </html>
   );

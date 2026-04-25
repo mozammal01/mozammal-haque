@@ -10,15 +10,15 @@ export default function Footer() {
   return (
     <div className="bg-amber-50 py-10 dark:bg-gray-900">
       <div className="container mx-auto px-4">
-        <div className="flex justify-between flex-col 2xl:flex-row gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Left Side */}
 
           <LeftSliderMotion className="flex flex-col gap-4 px-4">
-            <div className="min-xl:mx-auto">
+            <div className="">
               <Image src={logo} alt="Mozammal Haq Logo - Full Stack Web Developer" width={60} height={60} />
             </div>
             <h3 className="text-2xl font-bold text-primary uppercase">
-              <HyperText>Mozammal Haq</HyperText>
+              <HyperText className="text-3xl">Mozammal Haq</HyperText>
             </h3>
             <h4 className="text-lg font-semibold uppercase">
               <TextAnimate animation="slideLeft" by="word" delay={0.2}>
