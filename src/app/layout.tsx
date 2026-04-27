@@ -89,6 +89,8 @@ export const metadata: Metadata = {
   manifest: "/manifest.json",
 };
 
+import { ThemeProvider } from "@/providers/ThemeProvider";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -96,12 +98,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <SmoothScroll>
-          <Navigation />
-          <MobileNavbar />
-          <Loading>{children}</Loading>
-        </SmoothScroll>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`} suppressHydrationWarning>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <SmoothScroll>
+            <Navigation />
+            <MobileNavbar />
+            <Loading>{children}</Loading>
+          </SmoothScroll>
+        </ThemeProvider>
       </body>
     </html>
   );

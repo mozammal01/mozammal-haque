@@ -26,7 +26,7 @@ export default function Navigation() {
         className={`md:flex hidden flex-col gap-4 justify-between items-center h-screen px-4 top-0 right-0 py-10 fixed bg-black/40 dark:bg-white/70 z-50`}
       >
         <Link href="#home">
-          <Image src={logo} alt="Home" width={60} height={60} />
+          <Image src={logo} alt="Home" width={60} height={60} priority />
         </Link>
         <div className="flex flex-col gap-8">
           {navItems.map((navItem, index) => (

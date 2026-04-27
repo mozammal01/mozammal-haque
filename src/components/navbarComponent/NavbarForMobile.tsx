@@ -33,7 +33,7 @@ export default function MobileNavbar() {
             <AnimatedToggle open={open} setOpen={setOpen} />
           </div>
           <Link href="/" className="font-bold text-lg text-gray-900">
-            <Image src="/logo/logo.png" alt="Logo" width={50} height={50} />
+            <Image src="/logo/logo.png" alt="Logo" width={50} height={50} priority />
           </Link>
         </div>
       </div>

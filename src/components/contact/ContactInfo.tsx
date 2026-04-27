@@ -10,12 +10,12 @@ export default function ContactInfo() {
       <Image src={contactBG} alt="Contact" className="h-[454px] object-cover dark:invert -pb-10" />
       <div className="flex flex-col gap-8 justify-start absolute top-0 left-0 md:p-10 p-2">
         <h3 className="text-xl font-bold text-primary uppercase">
-          <TextAnimate animation="slideLeft" by="line" delay={1} once>
+          <TextAnimate animation="slideLeft" by="line" delay={0.1} once>
             Contact Information
           </TextAnimate>
         </h3>
         <div className="text-lg text-gray-500">
-          <TextAnimate animation="slideLeft" by="word" delay={1.5} once>
+          <TextAnimate animation="slideLeft" by="word" delay={0.2} once>
             You can get my contact information here and if you like.
           </TextAnimate>
         </div>
@@ -26,7 +26,7 @@ export default function ContactInfo() {
             </div>
             <span className="">Email: </span>
             <span className="sm:font-bold font-semibold hover:text-primary hover:scale-105 duration-300">
-              <TextAnimate animation="slideLeft" by="word" delay={2.5} once>
+              <TextAnimate animation="slideLeft" by="word" delay={0.3} once>
                 mozammalhaq01@gmail.com
               </TextAnimate>
             </span>
@@ -37,7 +37,7 @@ export default function ContactInfo() {
             </div>
             <span>Phone: </span>
             <span className="sm:font-bold font-semibold hover:text-primary hover:scale-105 duration-300">
-              <TextAnimate animation="slideLeft" by="word" delay={3} once>
+              <TextAnimate animation="slideLeft" by="word" delay={0.4} once>
                 +8801846581810
               </TextAnimate>
             </span>
@@ -52,7 +52,7 @@ export default function ContactInfo() {
             </div>
             <span>Address: </span>
             <span className="sm:font-bold font-semibold hover:text-primary hover:scale-105 duration-300">
-              <TextAnimate animation="slideLeft" by="word" delay={3.5} once>
+              <TextAnimate animation="slideLeft" by="word" delay={0.5} once>
                 Dhaka, Bangladesh
               </TextAnimate>
             </span>

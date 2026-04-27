@@ -21,7 +21,7 @@ export default function About() {
         <div className="text-lg w-4/5 space-y-4">
           <TextAnimate animation="slideLeft" by="word" delay={0.5} once>
             Hello, My name is Mozammal Haque. I am 18 years old. I live in Bangladesh. I am graduated from Government Adomjeenagar MW
-            collage in Narayongonj,Bangladesh
+            college in Narayongonj, Bangladesh
           </TextAnimate>
           <TextAnimate animation="slideLeft" by="word" delay={0.7} once>
             My interest in web development started in 2023 when I decided to do web development as my career— First i started with HTML &
