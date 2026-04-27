@@ -131,6 +131,9 @@
 
   body {
     @apply bg-background text-foreground;
+    &.custom-cursor-active * {
+      cursor: none !important;
+    }
   }
 }
 
