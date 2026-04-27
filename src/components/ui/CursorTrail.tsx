@@ -12,7 +12,7 @@ const CursorTrail = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const mouse = useRef({ x: 0, y: 0 });
   const points = useRef<Point[]>([]);
-  const trailLength = 25;
+  const trailLength = 15;
   const { resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -80,7 +80,6 @@ const CursorTrail = () => {
           const opacity = (1 - i / points.current.length) * 0.25;
           const hue = (Date.now() / 20 + i * 10) % 360;
 
-          // Darker, more saturated colors for light theme/sections
           const saturation = isDark ? 80 : 100;
           const lightness = isDark ? 60 : 40; 
 
@@ -88,7 +87,7 @@ const CursorTrail = () => {
           ctx.moveTo(p1.x, p1.y);
           ctx.lineTo(p2.x, p2.y);
           ctx.strokeStyle = `hsla(${hue}, ${saturation}%, ${lightness}%, ${opacity})`;
-          ctx.lineWidth = (points.current.length - i) * 2.8;
+          ctx.lineWidth = (points.current.length - i) * 2.0; // Reduced width
           ctx.stroke();
         }
 
@@ -100,13 +99,13 @@ const CursorTrail = () => {
           const hue = (Date.now() / 20 + i * 10) % 360;
 
           const saturation = isDark ? 80 : 100;
-          const lightness = isDark ? 75 : 35; // Significant drop in lightness for light theme
+          const lightness = isDark ? 75 : 35; 
 
           ctx.beginPath();
           ctx.moveTo(p1.x, p1.y);
           ctx.lineTo(p2.x, p2.y);
           ctx.strokeStyle = `hsla(${hue}, ${saturation}%, ${lightness}%, ${opacity})`;
-          ctx.lineWidth = (points.current.length - i) * 1.0;
+          ctx.lineWidth = (points.current.length - i) * 0.7; // Reduced width
           ctx.stroke();
         }
       }
