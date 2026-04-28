@@ -8,8 +8,9 @@ import { TextAnimate } from "../ui/text-animate";
 import { HyperText } from "../ui/hyper-text";
 export default function Footer() {
   return (
-    <div className="bg-amber-50 py-10 dark:bg-gray-900">
-      <div className="container mx-auto px-4">
+    <footer className="w-full relative bg-amber-50 dark:bg-gradient-to-b dark:from-[#000000] dark:to-[#020617] py-16 border-t border-black/5 dark:border-white/5 overflow-hidden">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Left Side */}
 
@@ -84,6 +85,6 @@ export default function Footer() {
           <FooterContact />
         </div>
       </div>
-    </div>
+    </footer>
   );
 }

@@ -7,8 +7,10 @@ import { TextAnimate } from "../ui/text-animate";
 
 export default function About() {
   return (
-    <div id="about" className="my-20 lg:flex items-center justify-center container mx-auto px-4">
-      <div className="lg:w-1/2 w-full space-y-6 text-foreground">
+    <section id="about" className="w-full py-24 relative bg-gradient-to-b from-white to-neutral-50 dark:from-[#000000] dark:to-[#0f172a] border-t border-black/5 dark:border-white/5 overflow-hidden">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+      <div className="lg:flex items-center justify-center container mx-auto px-4 relative z-10">
+        <div className="lg:w-1/2 w-full space-y-6 text-foreground">
         <TextAnimate animation="slideLeft" by="word" delay={0.1} once className="xl:text-3xl text-2xl font-bold text-primary uppercase">
           About Me
         </TextAnimate>
@@ -35,7 +37,7 @@ export default function About() {
           <AnimatedButton
             variant="leftToRight"
             text="My Resume"
-            href="https://drive.google.com/file/d/1t5FfFip6L1gjDRJNiaFnI2PF_4sHvBty/view"
+              href="https://drive.google.com/file/d/1JIU_ubgYXZYrIOR2pVUNnpBhknLcowLd/view?usp=sharing"
             target="_blank"
           />
         </div>
@@ -43,6 +45,7 @@ export default function About() {
       <ZoomOutMotion className="w-1/2 hidden lg:block">
         <Image src={aboutImage} alt="Mozammal Haq - Web Developer Portrait" width={800} height={500} />
       </ZoomOutMotion>
-    </div>
+      </div>
+    </section>
   );
 }
