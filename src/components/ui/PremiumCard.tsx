@@ -21,7 +21,7 @@ export default function PremiumCard({ children, className = "" }: PremiumCardPro
       <div className="absolute inset-0 rounded-2xl border border-white/10 dark:border-white/5 pointer-events-none" />
 
       {/* Inner card background */}
-      <div className="relative z-10 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm rounded-[14px] h-full overflow-hidden flex flex-col">
+      <div className="relative z-10 bg-white/90 dark:bg-slate-900/90 backdrop-blur-sm rounded-[14px] w-full h-full overflow-hidden flex flex-col">
         {/* Top linear gradient effect */}
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         
