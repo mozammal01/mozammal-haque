@@ -43,7 +43,7 @@ export default function About() {
         </div>
       </div>
       <ZoomOutMotion className="w-1/2 hidden lg:block">
-        <Image src={aboutImage} alt="Mozammal Haq - Web Developer Portrait" width={800} height={500} />
+        <Image src={aboutImage} alt="Mozammal Haque - Web Developer Portrait" width={800} height={500} />
       </ZoomOutMotion>
       </div>
     </section>

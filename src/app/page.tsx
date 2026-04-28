@@ -6,6 +6,7 @@ import Projects from "@/components/home/Projects";
 import Services from "@/components/home/Services";
 import Contact from "@/components/home/Contact";
 import Footer from "@/components/home/Footer";
+import SectionDivider from "@/components/home/SectionDivider";
 
 export default function Home() {
   const jsonLd = {
@@ -61,11 +62,17 @@ export default function Home() {
           <Banner />
         </div>
         <About />
+        <SectionDivider />
         <Skills />
+        <SectionDivider />
         <HireMe />
+        <SectionDivider />
         <Projects />
+        <SectionDivider />
         <Services />
+        <SectionDivider />
         <Contact />
+        <SectionDivider />
         <Footer />
       </div>
     </>

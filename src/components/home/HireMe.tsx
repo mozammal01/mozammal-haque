@@ -8,7 +8,8 @@ export default function HireMe() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   return (
-    <section id="hireme" className="w-full relative my-20 bg-gradient-to-r from-primary/90 via-primary to-primary/90 text-white p-10 lg:py-20 flex flex-col lg:flex-row items-center justify-center px-4 overflow-hidden shadow-[0_0_40px_rgba(255,193,7,0.15)] border-y border-white/20">
+    <section id="hireme" className="w-full relative my-20 bg-gradient-to-r from-primary/90 via-primary to-primary/90 dark:from-[#1e1b4b] dark:via-[#1e1b4b] dark:to-[#111827] text-white p-10 lg:py-20 flex flex-col lg:flex-row items-center justify-center px-4 overflow-hidden shadow-[0_0_40px_rgba(255,193,7,0.15)] border-y border-white/20 group">
+      <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-white/50 to-transparent opacity-50" />
       <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-transparent pointer-events-none"></div>
 
       <div

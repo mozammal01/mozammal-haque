@@ -6,56 +6,69 @@ import { TextAnimate } from "../ui/text-animate";
 
 export default function ContactInfo() {
   return (
-    <div className="relative xl:w-2/5 w-full rounded-md">
-      <Image src={contactBG} alt="Contact" className="h-[454px] object-cover dark:invert -pb-10" />
-      <div className="flex flex-col gap-8 justify-start absolute top-0 left-0 md:p-10 p-2">
-        <h3 className="text-xl font-bold text-primary uppercase">
-          <TextAnimate animation="slideLeft" by="line" delay={0.1} once>
-            Contact Information
-          </TextAnimate>
-        </h3>
-        <div className="text-lg text-gray-500">
-          <TextAnimate animation="slideLeft" by="word" delay={0.2} once>
-            You can get my contact information here and if you like.
-          </TextAnimate>
+    <div className="relative xl:w-2/5 w-full rounded-md overflow-hidden group/info">
+      <Image src={contactBG} alt="Contact" className="h-full w-full absolute inset-0 object-cover dark:invert opacity-80" />
+      <div className="absolute inset-0 bg-gradient-to-br from-white/90 via-white/80 to-transparent dark:from-slate-900/90 dark:via-slate-900/80 dark:to-transparent" />
+      
+      <div className="flex flex-col gap-8 justify-center relative z-10 md:p-10 p-6 h-full">
+        <div>
+          <h3 className="text-3xl font-bold text-primary uppercase mb-2">
+            <TextAnimate animation="slideLeft" by="line" delay={0.1} once>
+              Contact Information
+            </TextAnimate>
+          </h3>
+          <div className="text-lg text-slate-600 dark:text-slate-400 font-medium">
+            <TextAnimate animation="slideLeft" by="word" delay={0.2} once>
+              Ready to collaborate? Reach out to me directly.
+            </TextAnimate>
+          </div>
         </div>
-        <div className="mt-16 space-y-4">
-          <Link href="mailto:mozammalhaq01@gmail.com" target="_blank" className="text-lg flex items-center gap-2">
-            <div className="bg-primary rounded p-2">
-              <Mail size={20} className="text-white" />
+
+        <div className="mt-8 space-y-6">
+          <Link href="mailto:mozammalhaq01@gmail.com" target="_blank" className="flex items-center gap-4 group/item p-4 rounded-xl hover:bg-white/50 dark:hover:bg-white/5 transition-colors duration-300 border border-transparent hover:border-primary/20">
+            <div className="bg-primary/10 dark:bg-primary/20 rounded-full p-4 group-hover/item:bg-primary group-hover/item:scale-110 transition-all duration-300 group-hover/item:shadow-[0_0_20px_rgba(255,193,7,0.4)]">
+              <Mail size={24} className="text-primary group-hover/item:text-black transition-colors duration-300" />
             </div>
-            <span className="">Email: </span>
-            <span className="sm:font-bold font-semibold hover:text-primary hover:scale-105 duration-300">
-              <TextAnimate animation="slideLeft" by="word" delay={0.3} once>
-                mozammalhaq01@gmail.com
-              </TextAnimate>
-            </span>
-          </Link>
-          <Link href="tel:+8801846581810" target="_blank" className="text-lg flex items-center gap-2">
-            <div className="bg-primary rounded p-2">
-              <Phone size={20} className="text-white" />
+            <div className="flex flex-col">
+              <span className="text-sm text-slate-500 dark:text-slate-400 font-semibold uppercase tracking-wider">Email</span>
+              <span className="text-lg font-bold text-foreground">
+                <TextAnimate animation="slideLeft" by="word" delay={0.3} once>
+                  mozammalhaq01@gmail.com
+                </TextAnimate>
+              </span>
             </div>
-            <span>Phone: </span>
-            <span className="sm:font-bold font-semibold hover:text-primary hover:scale-105 duration-300">
-              <TextAnimate animation="slideLeft" by="word" delay={0.4} once>
-                +8801846581810
-              </TextAnimate>
-            </span>
           </Link>
+          
+          <Link href="tel:+8801846581810" target="_blank" className="flex items-center gap-4 group/item p-4 rounded-xl hover:bg-white/50 dark:hover:bg-white/5 transition-colors duration-300 border border-transparent hover:border-primary/20">
+            <div className="bg-primary/10 dark:bg-primary/20 rounded-full p-4 group-hover/item:bg-primary group-hover/item:scale-110 transition-all duration-300 group-hover/item:shadow-[0_0_20px_rgba(255,193,7,0.4)]">
+              <Phone size={24} className="text-primary group-hover/item:text-black transition-colors duration-300" />
+            </div>
+            <div className="flex flex-col">
+              <span className="text-sm text-slate-500 dark:text-slate-400 font-semibold uppercase tracking-wider">Phone</span>
+              <span className="text-lg font-bold text-foreground">
+                <TextAnimate animation="slideLeft" by="word" delay={0.4} once>
+                  +8801846581810
+                </TextAnimate>
+              </span>
+            </div>
+          </Link>
+          
           <Link
-            href="https://www.google.com/maps/place/Dhaka/@23.7809757,90.337288,12z/data=!3m1!4b1!4m6!3m5!1s0x3755b8b087026b81:0x8fa563bbdd5904c2!8m2!3d23.804093!4d90.4152376!16zL20vMGZuYjQ?entry=ttu&g_ep=EgoyMDI1MDkyOC4wIKXMDSoASAFQAw%3D%3D"
+            href="https://www.google.com/maps/place/Dhaka/@23.7809757,90.337288,12z"
             target="_blank"
-            className="text-lg flex items-center gap-2"
+            className="flex items-center gap-4 group/item p-4 rounded-xl hover:bg-white/50 dark:hover:bg-white/5 transition-colors duration-300 border border-transparent hover:border-primary/20"
           >
-            <div className="bg-primary rounded p-2">
-              <MapPin size={20} className="text-white" />
+            <div className="bg-primary/10 dark:bg-primary/20 rounded-full p-4 group-hover/item:bg-primary group-hover/item:scale-110 transition-all duration-300 group-hover/item:shadow-[0_0_20px_rgba(255,193,7,0.4)]">
+              <MapPin size={24} className="text-primary group-hover/item:text-black transition-colors duration-300" />
             </div>
-            <span>Address: </span>
-            <span className="sm:font-bold font-semibold hover:text-primary hover:scale-105 duration-300">
-              <TextAnimate animation="slideLeft" by="word" delay={0.5} once>
-                Dhaka, Bangladesh
-              </TextAnimate>
-            </span>
+            <div className="flex flex-col">
+              <span className="text-sm text-slate-500 dark:text-slate-400 font-semibold uppercase tracking-wider">Location</span>
+              <span className="text-lg font-bold text-foreground">
+                <TextAnimate animation="slideLeft" by="word" delay={0.5} once>
+                  Dhaka, Bangladesh
+                </TextAnimate>
+              </span>
+            </div>
           </Link>
         </div>
       </div>

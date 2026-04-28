@@ -3,50 +3,48 @@ import Image, { StaticImageData } from "next/image";
 import React, { useRef, useState } from "react";
 import { Skill } from "@/interfaces/shared-interfaces";
 import { motion, useInView } from "framer-motion";
+import PremiumCard from "../ui/PremiumCard";
 
 export default function SkillCard({ filteredSkills }: { filteredSkills: Skill[] }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const [hoveredId, setHoveredId] = useState(0);
-  const handleHover = (id: number) => {
-    setHoveredId(id);
-  };
+  
   return (
-    <div ref={ref} className="flex flex-wrap justify-center gap-10">
+    <div ref={ref} className="flex flex-wrap justify-center gap-8">
       {filteredSkills.map((skill) => (
         <motion.div
-          initial={{ opacity: 0, y: 100 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
           transition={{ duration: 0.5, delay: skill.id * 0.1 }}
-          onMouseEnter={() => handleHover(skill.id)}
-          onMouseLeave={() => handleHover(0)}
+          onMouseEnter={() => setHoveredId(skill.id)}
+          onMouseLeave={() => setHoveredId(0)}
           key={skill.id}
-          className="flex flex-col justify-center items-center mx-auto gap-2 bg-amber-50 dark:bg-gray-900 rounded p-10 w-[250px] h-[250px] transition-all hover:scale-105 hover:shadow-smooth duration-300 ease-in-out"
+          className="w-[220px]"
         >
-          <div className="flex flex-col justify-center items-center relative overflow-hidden h-[250px] w-[250px]">
-            <motion.div
-              animate={{
-                scale: hoveredId === skill.id ? 1.2 : 1,
-              }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
-            >
-              <Image src={skill.icon as StaticImageData} alt={skill.name} width={100} height={100} className={skill.className || ""} />
-            </motion.div>
+          <PremiumCard className="h-[220px] flex items-center justify-center text-center">
+            <div className="flex flex-col justify-center items-center gap-4">
+              <motion.div
+                animate={{
+                  scale: hoveredId === skill.id ? 1.1 : 1,
+                  rotate: hoveredId === skill.id ? [0, -5, 5, 0] : 0
+                }}
+                transition={{ duration: 0.3 }}
+              >
+                <Image 
+                  src={skill.icon as StaticImageData} 
+                  alt={skill.name} 
+                  width={80} 
+                  height={80} 
+                  className={`object-contain drop-shadow-[0_0_10px_rgba(255,193,7,0.3)] ${skill.className || ""}`} 
+                />
+              </motion.div>
 
-            <motion.span
-              initial={{ y: 0, opacity: 1 }}
-              animate={{
-                y: hoveredId === skill.id ? 20 : 0,
-                opacity: hoveredId === skill.id ? 0 : 1,
-              }}
-              transition={{
-                duration: 0.3,
-              }}
-              className="text-2xl font-bold text-black dark:text-white absolute bottom-0"
-            >
-              {skill.name}
-            </motion.span>
-          </div>
+              <span className="text-xl font-bold tracking-wide text-foreground group-hover:text-primary transition-colors duration-300">
+                {skill.name}
+              </span>
+            </div>
+          </PremiumCard>
         </motion.div>
       ))}
     </div>
