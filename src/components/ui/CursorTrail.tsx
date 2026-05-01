@@ -56,8 +56,6 @@ const CursorTrail = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       if (points.current.length > 0) {
-        const isDark = resolvedTheme === "dark";
-
         // Update positions
         let head = points.current[0];
         head.x += (mouse.current.x - head.x) * 0.3;
@@ -80,8 +78,8 @@ const CursorTrail = () => {
           const opacity = (1 - i / points.current.length) * 0.25;
           const hue = (Date.now() / 20 + i * 10) % 360;
 
-          const saturation = isDark ? 80 : 100;
-          const lightness = isDark ? 60 : 40; 
+          const saturation = 100;
+          const lightness = 40; 
 
           ctx.beginPath();
           ctx.moveTo(p1.x, p1.y);
@@ -98,8 +96,8 @@ const CursorTrail = () => {
           const opacity = (1 - i / points.current.length) * 0.7;
           const hue = (Date.now() / 20 + i * 10) % 360;
 
-          const saturation = isDark ? 80 : 100;
-          const lightness = isDark ? 75 : 35; 
+          const saturation = 100;
+          const lightness = 35; 
 
           ctx.beginPath();
           ctx.moveTo(p1.x, p1.y);
