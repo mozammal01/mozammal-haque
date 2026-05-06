@@ -89,7 +89,7 @@ export default function Banner() {
             >
               <InteractiveHoverButton 
                 href="#projects" 
-                className="w-[240px] h-[52px] bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:shadow-xl hover:shadow-primary/20 dark:hover:shadow-primary/20 border border-transparent flex items-center justify-center [&>a]:w-full [&>a]:flex [&>a]:justify-center [&>a]:items-center"
+                className="w-[240px] h-[52px] bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:shadow-xl hover:shadow-primary/20 dark:hover:shadow-primary/20 border border-transparent hover:border-primary dark:hover:border-primary flex items-center justify-center [&>a]:w-full [&>a]:flex [&>a]:justify-center [&>a]:items-center"
               >
                 View Projects
               </InteractiveHoverButton>
