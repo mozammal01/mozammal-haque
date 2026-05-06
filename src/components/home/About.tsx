@@ -146,8 +146,8 @@ export default function About() {
                     <Code2 className="text-white w-7 h-7" />
                   </div>
                   <div>
-                    <p className="text-white font-bold text-2xl">1+ Years</p>
-                    <p className="text-white/80 text-sm font-medium">Of coding experience</p>
+                    <p className="text-white font-bold text-2xl">10+ Projects</p>
+                    <p className="text-white/80 text-sm font-medium">Completed successfully</p>
                   </div>
                 </div>
               </motion.div>

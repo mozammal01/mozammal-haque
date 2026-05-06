@@ -131,16 +131,11 @@ export default function Banner() {
               <motion.div 
                 animate={{ y: [-5, 5, -5] }}
                 transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute bottom-8 -left-4 md:-left-12 z-20 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-white/40 dark:border-white/10 p-4 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex gap-6"
+                className="absolute bottom-8 -left-4 md:-left-12 z-20 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-white/40 dark:border-white/10 p-4 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] flex gap-4"
               >
-                <div>
+                <div className="flex flex-col items-center justify-center px-2">
                   <p className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-br from-primary to-blue-600">10+</p>
-                  <p className="text-[10px] font-bold uppercase tracking-wider text-slate-500">Projects</p>
-                </div>
-                <div className="w-px bg-slate-200 dark:bg-slate-700"></div>
-                <div>
-                  <p className="text-2xl font-black text-transparent bg-clip-text bg-gradient-to-br from-blue-500 to-purple-600">1+</p>
-                  <p className="text-[10px] font-bold uppercase tracking-wider text-slate-500">Years Exp</p>
+                  <p className="text-[10px] font-bold uppercase tracking-wider text-slate-500">Projects Completed</p>
                 </div>
               </motion.div>
 
@@ -162,7 +157,7 @@ export default function Banner() {
       <motion.div 
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center justify-center hidden lg:flex"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 flex-col items-center justify-center"
       >
         <div className="w-[30px] h-[50px] border-2 border-slate-300/80 dark:border-slate-600/80 rounded-full flex justify-center p-1 backdrop-blur-sm">
           <div className="w-1.5 h-1.5 bg-primary rounded-full animate-bounce mt-1"></div>
