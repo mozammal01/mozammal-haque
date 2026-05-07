@@ -4,6 +4,7 @@ import SkillCard from "../skillCard/SkillCard";
 import { InteractiveHoverButton } from "../ui/interactive-hover-button";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 export default function Skills() {
   const ref = useRef(null);
@@ -32,12 +33,25 @@ export default function Skills() {
         <div className="space-y-4">
           {!isSkillsPage && (
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-20">
-              <div className="space-y-2">
+              <motion.div 
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                className="space-y-2"
+              >
                 <span className="text-primary font-bold tracking-wider uppercase text-sm block">My Toolkit</span>
                 <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white">Skills & Expertise</h2>
                 <div className="w-20 h-1 bg-primary rounded-full mt-2" />
-              </div>
-              <InteractiveHoverButton href="/skills">View All Skills</InteractiveHoverButton>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <InteractiveHoverButton href="/skills">View All Skills</InteractiveHoverButton>
+              </motion.div>
             </div>
           )}
           <SkillCard filteredSkills={filteredSkills} />
