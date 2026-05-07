@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTheme } from "next-themes";
 
 const words = [
   "HELLO",            // English
@@ -29,6 +30,16 @@ export default function Loading({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(true);
   const [index, setIndex] = useState(0);
   const [progress, setProgress] = useState(0);
+  
+  // Theme integration with safe hydration mounting
+  const { resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const isDark = !mounted || resolvedTheme !== "light";
 
   // Smooth Percentage Counter
   useEffect(() => {
@@ -70,24 +81,32 @@ export default function Loading({ children }: { children: React.ReactNode }) {
               y: "-100vh",
               transition: { duration: 0.9, ease: [0.76, 0, 0.24, 1] } 
             }}
-            className="fixed inset-0 bg-[#020617] text-white z-[9999] flex flex-col items-center justify-between py-12 px-6 overflow-hidden select-none"
+            className={`fixed inset-0 z-[9999] flex flex-col items-center justify-between py-12 px-6 overflow-hidden select-none transition-colors duration-500 ${
+              isDark ? "bg-[#020617] text-white" : "bg-slate-50 text-slate-900"
+            }`}
           >
             {/* Shifting Premium Mesh Gradient Background */}
-            <div className="absolute inset-0 opacity-40 mix-blend-screen pointer-events-none">
+            <div className="absolute inset-0 opacity-40 mix-blend-screen dark:mix-blend-screen pointer-events-none">
               <div className="absolute top-[-10%] left-[-10%] w-[60%] h-[60%] rounded-full bg-amber-500/10 blur-[120px] animate-pulse" />
               <div className="absolute bottom-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full bg-blue-600/10 blur-[150px] animate-pulse" style={{ animationDelay: "1.5s" }} />
               <div className="absolute top-[40%] left-[30%] w-[40%] h-[40%] rounded-full bg-purple-600/5 blur-[100px] animate-pulse" style={{ animationDelay: "3s" }} />
             </div>
 
             {/* Subtle Grid overlay */}
-            <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808007_1px,transparent_1px),linear-gradient(to_bottom,#80808007_1px,transparent_1px)] bg-[size:2.5rem_2.5rem]" />
+            <div className={`absolute inset-0 ${
+              isDark 
+                ? "bg-[linear-gradient(to_right,#80808007_1px,transparent_1px),linear-gradient(to_bottom,#80808007_1px,transparent_1px)]" 
+                : "bg-[linear-gradient(to_right,#00000004_1px,transparent_1px),linear-gradient(to_bottom,#00000004_1px,transparent_1px)]"
+            } bg-[size:2.5rem_2.5rem]`} />
 
             {/* TOP WIDGET: Monospaced HUD style meta */}
             <motion.div 
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="relative z-10 flex items-center justify-between w-full max-w-6xl text-[10px] md:text-xs font-mono text-slate-500 tracking-[0.25em] uppercase px-4"
+              className={`relative z-10 flex items-center justify-between w-full max-w-6xl text-[10px] md:text-xs font-mono tracking-[0.25em] uppercase px-4 ${
+                isDark ? "text-slate-500" : "text-slate-400"
+              }`}
             >
               <span>[ PORTFOLIO v2.0 ]</span>
               <span className="animate-pulse text-amber-500/80">● CREATIVE DEV SYSTEM</span>
@@ -114,7 +133,9 @@ export default function Loading({ children }: { children: React.ReactNode }) {
                 <motion.div 
                   animate={{ rotate: 360 }}
                   transition={{ repeat: Infinity, duration: 3.5, ease: "linear" }}
-                  className="absolute inset-6 rounded-full border-t border-b border-white/5 border-r border-r-transparent border-l border-l-transparent"
+                  className={`absolute inset-6 rounded-full border-t border-b border-r border-r-transparent border-l border-l-transparent ${
+                    isDark ? "border-white/5" : "border-black/5"
+                  }`}
                 />
                 
                 <span className="text-3xl font-black tracking-tighter text-primary font-mono drop-shadow-[0_0_10px_rgba(245,158,11,0.2)]">
@@ -142,7 +163,7 @@ export default function Loading({ children }: { children: React.ReactNode }) {
                         } ${
                           index === words.length - 1 
                             ? "text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-600 drop-shadow-[0_0_20px_rgba(245,158,11,0.25)]" 
-                            : "text-white/95"
+                            : isDark ? "text-white/95" : "text-slate-900/95"
                         }`}
                       >
                         {char}
@@ -153,7 +174,9 @@ export default function Loading({ children }: { children: React.ReactNode }) {
               </div>
 
               {/* Progress Slider Track */}
-              <div className="w-80 h-[2px] bg-white/5 rounded-full overflow-hidden relative shadow-[0_1px_2px_rgba(0,0,0,0.3)]">
+              <div className={`w-80 h-[2px] rounded-full overflow-hidden relative shadow-[0_1px_2px_rgba(0,0,0,0.15)] ${
+                isDark ? "bg-white/5" : "bg-black/5"
+              }`}>
                 <motion.div
                   className="h-full bg-gradient-to-r from-amber-500 via-yellow-500 to-amber-600 shadow-[0_0_10px_rgba(245,158,11,0.6)]"
                   style={{ width: `${progress}%` }}
@@ -167,7 +190,9 @@ export default function Loading({ children }: { children: React.ReactNode }) {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="relative z-10 flex items-center justify-between w-full max-w-6xl text-[9px] md:text-[11px] font-mono text-slate-500 tracking-[0.2em] px-4"
+              className={`relative z-10 flex items-center justify-between w-full max-w-6xl text-[9px] md:text-[11px] font-mono tracking-[0.2em] px-4 ${
+                isDark ? "text-slate-500" : "text-slate-400"
+              }`}
             >
               <span>CRAFTING EXPERIENCES</span>
               <span>© {new Date().getFullYear()} ALL RIGHTS RESERVED</span>
