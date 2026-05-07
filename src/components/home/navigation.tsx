@@ -39,7 +39,7 @@ export default function Navigation() {
                   {navItem.icon}
                 </Link>
               </TooltipTrigger>
-              <TooltipContent>
+              <TooltipContent side="left" sideOffset={10}>
                 <TextAnimate animation="slideLeft" by="word">
                   {navItem.placeholder}
                 </TextAnimate>

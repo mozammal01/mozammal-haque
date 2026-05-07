@@ -1,4 +1,5 @@
 "use client";
+
 import Image, { StaticImageData } from "next/image";
 import React, { useRef, useState } from "react";
 import { Skill } from "@/interfaces/shared-interfaces";
@@ -20,7 +21,7 @@ export default function SkillCard({ filteredSkills }: { filteredSkills: Skill[] 
           onMouseEnter={() => setHoveredId(skill.id)}
           onMouseLeave={() => setHoveredId(0)}
           key={skill.id}
-          className="w-[200px] h-[200px] shrink-0 group/skill cursor-pointer"
+          className="w-[140px] h-[140px] sm:w-[160px] sm:h-[160px] md:w-[200px] md:h-[200px] shrink-0 group/skill cursor-pointer"
         >
           <PremiumCard className="w-full h-full">
             {/* Inner background glow orb */}
@@ -41,12 +42,12 @@ export default function SkillCard({ filteredSkills }: { filteredSkills: Skill[] 
                   alt={skill.name} 
                   width={72} 
                   height={72} 
-                  className={`object-contain relative z-10 drop-shadow-xl transition-all duration-300 ${skill.className || ""}`} 
+                  className={`object-contain relative z-10 drop-shadow-xl transition-all duration-300 w-12 sm:w-14 md:w-[72px] ${skill.className || ""}`} 
                 />
               </motion.div>
 
-              <div className="flex flex-col items-center">
-                <span className="text-xl font-bold tracking-wider text-foreground group-hover/skill:text-primary transition-colors duration-300">
+              <div className="flex flex-col items-center w-full px-2">
+                <span className="block w-full text-center text-lg md:text-xl font-bold tracking-wider text-foreground group-hover/skill:text-primary transition-colors duration-300 leading-tight">
                   {skill.name}
                 </span>
                 <span className="text-sm font-semibold text-slate-500 dark:text-slate-400 opacity-0 group-hover/skill:opacity-100 transition-all duration-300 -translate-y-2 group-hover/skill:translate-y-0">

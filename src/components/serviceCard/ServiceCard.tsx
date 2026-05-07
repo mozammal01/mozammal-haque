@@ -21,7 +21,6 @@ export default function ServiceCard({ service }: { service: Service }) {
         </div>
         
         <h2 className="text-2xl font-bold text-primary text-center mb-4 flex items-center justify-center gap-2">
-          <span className="text-3xl">{service.icon}</span>
           {service.name}
         </h2>
         

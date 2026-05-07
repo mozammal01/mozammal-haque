@@ -1,7 +1,6 @@
 import { IconCloud } from "@/components/ui/icon-cloud";
 import DetailsHeader from "@/components/detailsHeader/DetailsHeader";
 import Skills from "@/components/home/Skills";
-import { SmoothCursor } from "@/components/ui/smooth-cursor";
 import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Technical Skills & Expertise",
@@ -71,7 +70,6 @@ export default function SkillsPage() {
       <div className="-mt-20">
         <Skills />
       </div>
-      <SmoothCursor />
     </div>
   );
 }

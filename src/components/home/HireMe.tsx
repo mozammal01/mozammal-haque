@@ -15,7 +15,7 @@ export default function HireMe() {
       <div
         ref={ref}
         className="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-4 relative z-10">
-        <LeftSliderMotion className="xl:text-4xl lg:text-3xl md:text-2xl text-xl font-bold uppercase -pb-10">I am available for Remote Jobs</LeftSliderMotion>
+        <LeftSliderMotion className="text-2xl md:text-3xl lg:text-4xl font-black uppercase text-center lg:text-left leading-tight max-w-[600px]">I am available for Remote Jobs</LeftSliderMotion>
         <motion.div
           initial={{ opacity: 0, y: -500 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: -500 }}
