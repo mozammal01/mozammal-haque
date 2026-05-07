@@ -58,16 +58,39 @@ const images = [
   "https://res.cloudinary.com/mozammal01/image/upload/v1761631061/vercel_ioc7x3.png",
 ];
 
+import { TextAnimate } from "@/components/ui/text-animate";
+
 export default function SkillsPage() {
 
   return (
-    <div>
-      <DetailsHeader title="Skills" />
-      {/*  */}
-      <div className="bg-background relative flex size-full items-center justify-center overflow-hidden rounded-lg">
-        <IconCloud images={images} />
+    <div className="min-h-screen bg-slate-50 dark:bg-[#020817] pt-28">
+      {/* Hero Section */}
+      <div className="container mx-auto px-4 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center min-h-[400px] lg:min-h-[500px]">
+          {/* Text Content */}
+          <div className="flex flex-col justify-center items-center lg:items-start text-center lg:text-left space-y-6 pt-10 lg:pt-0">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-500 to-purple-600 pb-2">
+              <TextAnimate animation="slideUp" by="character" once>
+                My Skills
+              </TextAnimate>
+            </h1>
+            <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-xl font-medium leading-relaxed">
+              I specialize in full-stack web development, utilizing the latest technologies to build scalable, high-performance, and visually stunning applications.
+            </p>
+          </div>
+          
+          {/* Icon Cloud */}
+          <div className="relative flex items-center justify-center w-full h-[350px] sm:h-[450px] lg:h-[600px]">
+             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-primary/20 blur-[100px] rounded-full pointer-events-none" />
+             <div className="relative z-10 w-full h-full flex items-center justify-center">
+               <IconCloud images={images} />
+             </div>
+          </div>
+        </div>
       </div>
-      <div className="-mt-20">
+
+      {/* Main Skills Section */}
+      <div className="relative z-20">
         <Skills />
       </div>
     </div>
