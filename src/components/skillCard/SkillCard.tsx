@@ -1,7 +1,6 @@
 "use client";
-
 import Image, { StaticImageData } from "next/image";
-import React, { useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { Skill } from "@/interfaces/shared-interfaces";
 import { motion, useInView } from "framer-motion";
 import PremiumCard from "../ui/PremiumCard";
