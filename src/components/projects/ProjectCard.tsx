@@ -6,24 +6,27 @@ import { ArrowUpRight, Github } from "lucide-react";
 
 export default function ProjectCard({ project, index = 0 }: { project: Project, index?: number }) {
   const isEven = index % 2 === 0;
+  const imagePath = `/projects/${project.name.toLowerCase().replace(/\s+/g, "-")}.png`;
 
   return (
-    <div className="w-full max-w-6xl mx-auto group">
+    <div className="w-full max-w-6xl mx-auto group/project">
       <PremiumCard className="p-0 overflow-hidden bg-white/5 dark:bg-slate-900/50 backdrop-blur-xl border border-black/10 dark:border-white/10">
         <div className={`flex flex-col lg:flex-row ${isEven ? "" : "lg:flex-row-reverse"} h-auto lg:h-[450px]`}>
           
           {/* Project Image Section */}
-          <div className="w-full lg:w-[55%] relative h-[300px] lg:h-full overflow-hidden">
-            <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500 z-10 mix-blend-overlay" />
-            <Image 
-              src={project.image} 
-              alt={project.name} 
-              fill
-              className="object-cover object-top transition-transform duration-700 group-hover:scale-105" 
-              unoptimized 
-            />
+          <div className="w-full lg:w-[55%] relative h-[300px] lg:h-[450px] overflow-hidden">
+            <div className="absolute inset-0 bg-primary/20 group-hover/project:bg-transparent transition-colors duration-500 z-20 mix-blend-overlay pointer-events-none" />
+            
+            <div className="absolute top-0 left-0 w-full transition-transform duration-[8s] ease-linear group-hover/project:-translate-y-[calc(100%-300px)] lg:group-hover/project:-translate-y-[calc(100%-450px)]">
+              <img 
+                src={imagePath} 
+                alt={project.name} 
+                className="w-full h-auto object-cover" 
+              />
+            </div>
+
             {/* Overlay gradient to blend with content */}
-            <div className={`absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-${isEven ? 'r' : 'l'} from-transparent via-transparent to-black/50 opacity-60 z-10`} />
+            <div className={`absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-${isEven ? 'r' : 'l'} from-transparent via-transparent to-black/50 opacity-60 z-20 pointer-events-none`} />
           </div>
           
           {/* Content Section */}
