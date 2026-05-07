@@ -134,6 +134,10 @@
     &.custom-cursor-active * {
       cursor: none !important;
     }
+    &.custom-cursor-active .force-cursor,
+    &.custom-cursor-active .force-cursor * {
+      cursor: auto !important;
+    }
   }
 }
 

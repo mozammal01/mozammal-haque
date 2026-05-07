@@ -20,7 +20,7 @@ export default function MobileNavbar() {
     }
   }, [location]);
   return (
-    <div className="block md:hidden">
+    <div className="block md:hidden force-cursor">
     <nav className="fixed top-0 left-0 w-full bg-white/40 dark:bg-black/40 backdrop-blur-md shadow-sm z-50">
       <div className="flex flex-row-reverse items-center justify-between px-4 py-3">
         {/* Logo */}

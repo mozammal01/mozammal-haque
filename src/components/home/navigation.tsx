@@ -21,7 +21,7 @@ export default function Navigation() {
     }
   }, [location]);
   return (
-    <div className="relative">
+    <div className="relative force-cursor">
       <div
         className={`md:flex hidden flex-col gap-4 justify-between items-center h-screen px-4 top-0 right-0 py-10 fixed bg-black/40 dark:bg-white/70 z-50`}
       >

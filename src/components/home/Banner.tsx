@@ -63,7 +63,7 @@ export default function Banner() {
                   <span className="absolute -inset-1 bg-gradient-to-r from-primary via-blue-500 to-purple-600 blur-xl opacity-20 dark:opacity-40 rounded-lg"></span>
                   <WordRotate 
                     className="relative text-transparent bg-clip-text bg-gradient-to-r from-primary via-blue-500 to-purple-600 drop-shadow-sm pb-2"
-                    words={["Full Stack Developer", "MERN Stack Expert", "UI/UX Enthusiast", "Web Innovator"]} 
+                    words={["Web Developer", "Full Stack Developer", "MERN Stack Developer", "Front-End Developer", "Back-End Developer"]} 
                     duration={2500} 
                   />
                 </span>
