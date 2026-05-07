@@ -59,7 +59,7 @@ export default function AnimatedButton({ variant, text, href, className, target 
       <Link
         href={href}
         target={target}
-        className={`relative bg-white dark:bg-primary dark:text-white dark:hover:text-primary rounded border-2 hover:text-white duration-500 border-primary text-primary py-3 px-5 group/btn cursor-pointer ${className || ""}`}
+        className={`relative bg-white dark:bg-primary dark:text-white dark:hover:text-primary rounded border-2 hover:text-white duration-500 border-primary text-primary py-3 px-5 group/btn cursor-pointer inline-block text-center ${className || ""}`}
       >
         <span className="absolute w-0 h-full group-hover/btn:w-full transition-all ease-out duration-500 bg-primary dark:bg-white left-0 top-0"></span>
         <span className="relative">{text}</span>
@@ -72,7 +72,7 @@ export default function AnimatedButton({ variant, text, href, className, target 
       <Link
         href={href}
         target={target}
-        className={`relative bg-white dark:bg-primary dark:text-white dark:hover:text-primary rounded border-2 hover:text-white duration-500 border-primary text-primary py-3 px-5 group/btn cursor-pointer ${className || ""}`}
+        className={`relative bg-white dark:bg-primary dark:text-white dark:hover:text-primary rounded border-2 hover:text-white duration-500 border-primary text-primary py-3 px-5 group/btn cursor-pointer inline-block text-center ${className || ""}`}
       >
         <span className="absolute w-0 h-full group-hover/btn:w-full transition-all ease-out duration-500 bg-primary dark:bg-white right-0 top-0"></span>
         <span className="relative">{text}</span>
