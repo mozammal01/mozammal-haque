@@ -111,7 +111,7 @@ export default function About() {
               <AnimatedButton variant="rightToLeft" text="My Skills" href="#skills" />
               <AnimatedButton
                 variant="leftToRight"
-                text="Download Resume"
+                text="My Resume"
                 href="https://drive.google.com/file/d/1JIU_ubgYXZYrIOR2pVUNnpBhknLcowLd/view?usp=sharing"
                 target="_blank"
               />

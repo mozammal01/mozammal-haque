@@ -99,7 +99,7 @@ export default function Banner() {
                 target="_blank"
                 className="w-[240px] h-[52px] bg-white dark:bg-slate-900 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-800 hover:border-primary dark:hover:border-primary flex items-center justify-center [&>a]:w-full [&>a]:flex [&>a]:justify-center [&>a]:items-center"
               >
-                Download Resume
+                My Resume
               </InteractiveHoverButton>
             </motion.div>
           </div>
