@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 import { useTheme } from "next-themes";
 
 const words = [
@@ -15,13 +15,13 @@ const words = [
 ];
 
 // Framer motion variants for letter-by-letter stagger animations
-const letterVariants = {
+const letterVariants: Variants = {
   initial: { y: 40, opacity: 0 },
   animate: { y: 0, opacity: 1, transition: { type: "spring", stiffness: 150, damping: 15 } },
   exit: { y: -40, opacity: 0, transition: { ease: "easeIn", duration: 0.15 } }
 };
 
-const containerVariants = {
+const containerVariants: Variants = {
   animate: { transition: { staggerChildren: 0.03 } },
   exit: { transition: { staggerChildren: 0.02, staggerDirection: -1 } }
 };
