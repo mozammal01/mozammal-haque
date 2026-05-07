@@ -19,10 +19,10 @@ export default function Projects() {
           <InteractiveHoverButton href="/projects">View All</InteractiveHoverButton>
         </div>
       )}
-      <div className="grid grid-cols-1 2xl:grid-cols-2 justify-center items-center gap-10">
-        {filteredProjects.map((project) => (
+      <div className="flex flex-col gap-16 lg:gap-24">
+        {filteredProjects.map((project, index) => (
           <LeftSliderMotion key={project.id}>
-            <ProjectCard project={project} />
+            <ProjectCard project={project} index={index} />
           </LeftSliderMotion>
         ))}
       </div>
