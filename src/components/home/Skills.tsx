@@ -31,9 +31,13 @@ export default function Skills() {
       <div ref={ref} className="container mx-auto px-4 relative z-10">
         <div className="space-y-4">
           {!isSkillsPage && (
-            <div className="flex items-center justify-between mb-20">
-              <h2 className="text-3xl font-bold text-primary uppercase">Skills</h2>
-              <InteractiveHoverButton href="/skills">View All</InteractiveHoverButton>
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-20">
+              <div className="space-y-2">
+                <span className="text-primary font-bold tracking-wider uppercase text-sm block">My Toolkit</span>
+                <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 dark:text-white">Skills & Expertise</h2>
+                <div className="w-20 h-1 bg-primary rounded-full mt-2" />
+              </div>
+              <InteractiveHoverButton href="/skills">View All Skills</InteractiveHoverButton>
             </div>
           )}
           <SkillCard filteredSkills={filteredSkills} />

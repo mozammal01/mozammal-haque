@@ -44,10 +44,10 @@ export default function About() {
                 <br />a Passionate Web Developer
               </h3>
               <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
-                Hello! I am an 18-year-old enthusiastic developer from Bangladesh. My journey in web development began in 2023 when I decided to turn my passion into a career. Starting with HTML & CSS, I have rapidly expanded my skill set.
+                Hello! I am an 18-year-old enthusiastic developer from Bangladesh. My journey in web development began in 2023 when I decided to turn my passion into a career. Starting with <strong className="text-primary font-bold">HTML & CSS</strong>, I have rapidly expanded my skill set.
               </p>
               <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
-                Today, I am proficient in modern technologies including JavaScript, React, Next.js, Node.js, Express, and Prisma. I thrive on creating dynamic, responsive, and visually stunning web applications that deliver exceptional user experiences.
+                Today, I am proficient in modern technologies including <strong className="text-primary font-bold">JavaScript, React, Next.js, Node.js, Express, and Prisma</strong>. I thrive on creating dynamic, responsive, and visually stunning web applications that deliver exceptional user experiences.
               </p>
             </motion.div>
 
