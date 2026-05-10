@@ -28,7 +28,7 @@ export default function Footer() {
             </h4>
             <div>
               <TextAnimate animation="slideLeft" by="word" delay={0.3}>
-                © 2025 Mozammal Haque
+                {`© ${new Date().getFullYear()} Mozammal Haque`}
               </TextAnimate>
             </div>
           </LeftSliderMotion>

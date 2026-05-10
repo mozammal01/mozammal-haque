@@ -6,7 +6,6 @@ import { InteractiveHoverButton } from "../ui/interactive-hover-button";
 
 export default function ProjectCard({ project, index = 0 }: { project: Project, index?: number }) {
   const isEven = index % 2 === 0;
-  const imagePath = `/projects/${project.name.toLowerCase().replace(/\s+/g, "-")}.png`;
 
   return (
     <div className="w-full max-w-6xl mx-auto group/project">
@@ -18,9 +17,10 @@ export default function ProjectCard({ project, index = 0 }: { project: Project, 
             <div className="absolute inset-0 bg-primary/20 group-hover/project:bg-transparent transition-colors duration-500 z-20 mix-blend-overlay pointer-events-none" />
 
             <div className="absolute top-0 left-0 w-full transition-transform duration-[8s] ease-linear group-hover/project:-translate-y-[calc(100%-300px)] lg:group-hover/project:-translate-y-[calc(100%-450px)]">
-              <img
-                src={imagePath}
+              <Image
+                src={project.image}
                 alt={project.name}
+                placeholder="blur"
                 className="w-full h-auto object-cover"
               />
             </div>

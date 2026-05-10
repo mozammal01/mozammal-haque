@@ -49,12 +49,12 @@ export default function Loading({ children }: { children: React.ReactNode }) {
           const next = prev + Math.floor(Math.random() * 10) + 3;
           return next > 100 ? 100 : next;
         });
-      }, 90);
+      }, 70);
       return () => clearInterval(interval);
     } else {
       const delayTimer = setTimeout(() => {
         setLoading(false);
-      }, 1200); // Buffer for final branding name exposure
+      }, 900); // Buffer for final branding name exposure
       return () => clearTimeout(delayTimer);
     }
   }, [progress]);

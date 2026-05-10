@@ -118,109 +118,35 @@ import { Skill } from "@/interfaces/shared-interfaces";
 import { skills } from "./skillsData";
 
 //
-const carShopSkills: Skill[] = skills.filter(
-  (skill: Skill) =>
-    skill.name === "NextJS" ||
-    skill.name === "Typescript" ||
-    skill.name === "Shadcn" ||
-    skill.name === "Magic UI" ||
-    skill.name === "Vercel" ||
-    skill.name === "TailwindCSS" ||
-    skill.name === "Lucide React" ||
-    skill.name === "Framer Motion" ||
-    skill.name === "CSS3" ||
-    skill.name === "HTML5" ||
-    skill.name === "Swiper" ||
-    skill.name === "ESLint" ||
-    skill.name === "Icon8" ||
-    skill.name === "Git"
-);
-const tasteNestSkills: Skill[] = skills.filter(
-  (skill: Skill) =>
-    skill.name === "NextJS" ||
-    skill.name === "Typescript" ||
-    skill.name === "Shadcn" ||
-    skill.name === "Vercel" ||
-    skill.name === "TailwindCSS" ||
-    skill.name === "Lucide React" ||
-    skill.name === "Framer Motion" ||
-    skill.name === "Formik" ||
-    skill.name === "CSS3" ||
-    skill.name === "HTML5" ||
-    skill.name === "Swiper" ||
-    skill.name === "ESLint" ||
-    skill.name === "Icon8" ||
-    skill.name === "Git"
-);
+const getSkillsByName = (skillNames: string[]) => 
+  skills.filter((skill: Skill) => skillNames.includes(skill.name));
 
-const jahirTailorSkills: Skill[] = skills.filter(
-  (skill: Skill) =>
-    skill.name === "NextJS" ||
-    skill.name === "Typescript" ||
-    skill.name === "i18next" ||
-    skill.name === "Shadcn" ||
-    skill.name === "Vercel" ||
-    skill.name === "TailwindCSS" ||
-    skill.name === "Lucide React" ||
-    skill.name === "React Hook Form" ||
-    skill.name === "Framer Motion" ||
-    skill.name === "CSS3" ||
-    skill.name === "HTML5" ||
-    skill.name === "Swiper" ||
-    skill.name === "ESLint" ||
-    skill.name === "Icon8" ||
-    skill.name === "Git"
-);
+const carShopSkills = getSkillsByName([
+  "NextJS", "Typescript", "Shadcn", "Magic UI", "Vercel", "TailwindCSS", 
+  "Lucide React", "Framer Motion", "CSS3", "HTML5", "Swiper", "ESLint", "Icon8", "Git"
+]);
 
-const educationManagementSkills: Skill[] = skills.filter(
-  (skill: Skill) =>
-    skill.name === "React" ||
-    skill.name === "JavaScript" ||
-    skill.name === "Stripe" ||
-    skill.name === "SweetAlert" ||
-    skill.name === "React Dom" ||
-    skill.name === "NodeJS" ||
-    skill.name === "MongoDB" ||
-    skill.name === "Vercel" ||
-    skill.name === "TailwindCSS" ||
-    skill.name === "Vite" ||
-    skill.name === "DaisyUI" ||
-    skill.name === "Lucide React" ||
-    skill.name === "Framer Motion" ||
-    skill.name === "CSS3" ||
-    skill.name === "React Hook Form" ||
-    skill.name === "HTML5" ||
-    skill.name === "Swiper" ||
-    skill.name === "ESLint" ||
-    skill.name === "Icon8" ||
-    skill.name === "Git" ||
-    skill.name === "Firebase"
-);
+const tasteNestSkills = getSkillsByName([
+  "NextJS", "Typescript", "Shadcn", "Vercel", "TailwindCSS", "Lucide React", 
+  "Framer Motion", "Formik", "CSS3", "HTML5", "Swiper", "ESLint", "Icon8", "Git"
+]);
 
-const awesomeRestaurantSkills: Skill[] = skills.filter(
-  (skill: Skill) =>
-    skill.name === "React" ||
-    skill.name === "JavaScript" ||
-    skill.name === "Stripe" ||
-    skill.name === "SweetAlert" ||
-    skill.name === "React Dom" ||
-    skill.name === "NodeJS" ||
-    skill.name === "MongoDB" ||
-    skill.name === "Vercel" ||
-    skill.name === "TailwindCSS" ||
-    skill.name === "Vite" ||
-    skill.name === "React Hook Form" ||
-    skill.name === "DaisyUI" ||
-    skill.name === "Lucide React" ||
-    skill.name === "Framer Motion" ||
-    skill.name === "CSS3" ||
-    skill.name === "HTML5" ||
-    skill.name === "Swiper" ||
-    skill.name === "ESLint" ||
-    skill.name === "Icon8" ||
-    skill.name === "Git" ||
-    skill.name === "Firebase"
-);
+const jahirTailorSkills = getSkillsByName([
+  "NextJS", "Typescript", "i18next", "Shadcn", "Vercel", "TailwindCSS", 
+  "Lucide React", "React Hook Form", "Framer Motion", "CSS3", "HTML5", "Swiper", "ESLint", "Icon8", "Git"
+]);
+
+const educationManagementSkills = getSkillsByName([
+  "React", "JavaScript", "Stripe", "SweetAlert", "React Dom", "NodeJS", "MongoDB", 
+  "Vercel", "TailwindCSS", "Vite", "DaisyUI", "Lucide React", "Framer Motion", 
+  "CSS3", "React Hook Form", "HTML5", "Swiper", "ESLint", "Icon8", "Git", "Firebase"
+]);
+
+const awesomeRestaurantSkills = getSkillsByName([
+  "React", "JavaScript", "Stripe", "SweetAlert", "React Dom", "NodeJS", "MongoDB", 
+  "Vercel", "TailwindCSS", "Vite", "React Hook Form", "DaisyUI", "Lucide React", 
+  "Framer Motion", "CSS3", "HTML5", "Swiper", "ESLint", "Icon8", "Git", "Firebase"
+]);
 
 export const projects = [
   // Car Shop
@@ -296,31 +222,31 @@ export const projects = [
     sourceCode: "https://github.com/mozammal01/Taste-Nest",
     visitNow: "https://taste-nest-restaurent.vercel.app/",
     description:
-      "Taste Nest is a comprehensive movie discovery platform that helps users explore, search, and discover movies and TV shows. It features detailed movie information, ratings, reviews, and personalized recommendations.",
+      "Taste Nest is a dynamic restaurant and culinary platform offering a vibrant visual menu, real-time food ordering integration, and a simplified table reservation system designed for modern fine dining experiences.",
     features: [
       {
         id: 1,
-        content: "Browse movies by genre, year, rating, and popularity with advanced filtering options.",
+        content: "Explore multi-cuisine menus, seasonal specialties, and dynamic price listings.",
       },
       {
         id: 2,
-        content: "Detailed movie pages with cast information, plot summaries, and user reviews.",
+        content: "Detailed dish showcases including chef recommendations, ingredient breakdowns, and allergens.",
       },
       {
         id: 3,
-        content: "Search functionality to find specific movies, actors, or directors.",
+        content: "Effortless online booking system enabling users to reserve their dining spots easily.",
       },
       {
         id: 4,
-        content: "Personalized recommendations based on viewing history and preferences.",
+        content: "Fully responsive checkout flow with intuitive user interface for seamless orders.",
       },
       {
         id: 5,
-        content: "User ratings and reviews system for community engagement.",
+        content: "Integrated customer feedback widgets and rating tools to drive engagement.",
       },
       {
         id: 6,
-        content: "Responsive design optimized for all devices and screen sizes.",
+        content: "Advanced styling with dark mode and fully consistent cross-device layouts.",
       },
     ],
     images1: [nestBanner, nestAbout, nestCategories, nestCheif, nestDishes, nestFeedback],
@@ -405,7 +331,7 @@ export const projects = [
     sourceCode: "https://github.com/mozammal01/Jahir-Tailor",
     visitNow: "https://jahir-tailor.vercel.app/",
     description:
-      "Jahir Tailor is a modern and intuitive tailor shop website that helps users explore, search, and discover tailor services. It features detailed tailor information, ratings, reviews, and personalized recommendations.",
+      "Jahir Tailor is a dedicated premium tailoring management and portfolio system designed to highlight high-fashion stitching capabilities, manage customer bookings, and exhibit localized multilinguality for broader outreach.",
     features: [
       {
         id: 1,
@@ -473,7 +399,7 @@ export const projects = [
     sourceCode: "https://github.com/mozammal01/awesome-restaurent-client",
     visitNow: "https://awesome-retaurent.web.app/",
     description:
-      "Awesome Restaurant is a modern and intuitive restaurant website that helps users explore, search, and discover restaurant services. It features detailed restaurant information, ratings, reviews, and personalized recommendations.",
+      "Awesome Restaurant is a performance-tuned eatery application supporting digital catalog manipulation, robust authentication flows for client orders, and a feature-dense administrative dashboard.",
     features: [
       {
         id: 1,
