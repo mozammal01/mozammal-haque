@@ -11,7 +11,7 @@ import { InteractiveHoverButton } from "../ui/interactive-hover-button";
 
 const slugs = [
   "typescript", "javascript", "react", "nextdotjs", "nodedotjs", 
-  "express", "mongodb", "prisma", "tailwindcss", "html5", "css3", 
+  "express", "mongodb", "prisma", "tailwindcss", "html5", "css", 
   "framer", "git", "github", "vercel", "figma"
 ];
 const iconUrls = slugs.map((slug) => `https://cdn.simpleicons.org/${slug}`);
@@ -56,7 +56,7 @@ export default function Banner() {
               </h3>
               <h1 className="text-[2.75rem] sm:text-6xl lg:text-[5rem] font-black tracking-tighter text-slate-900 dark:text-white leading-[1.05]">
                 <TextAnimate animation="slideUp" by="character" once>
-                  I'm Mozammal
+                  I&apos;m Mozammal
                 </TextAnimate>
                 <div className="h-3 lg:h-1" />
                 <span className="relative inline-block mt-2">

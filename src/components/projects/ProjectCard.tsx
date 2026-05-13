@@ -26,7 +26,7 @@ export default function ProjectCard({ project, index = 0 }: { project: Project, 
             </div>
 
             {/* Overlay gradient to blend with content */}
-            <div className={`absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-${isEven ? 'r' : 'l'} from-transparent via-transparent to-black/50 opacity-60 z-20 pointer-events-none`} />
+            <div className={`absolute inset-0 bg-gradient-to-t ${isEven ? 'lg:bg-gradient-to-r' : 'lg:bg-gradient-to-l'} from-transparent via-transparent to-black/50 opacity-60 z-20 pointer-events-none`} />
           </div>
 
           {/* Content Section */}

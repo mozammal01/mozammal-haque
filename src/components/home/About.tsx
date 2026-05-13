@@ -36,7 +36,7 @@ export default function About() {
               viewport={{ once: true, margin: "-100px" }}
             >
               <h3 className="text-3xl lg:text-4xl font-bold text-slate-800 dark:text-slate-100 mb-6 leading-tight">
-                I'm <span className="text-primary relative inline-block">Mozammal Haque
+                I&apos;m <span className="text-primary relative inline-block">Mozammal Haque
                   <svg className="absolute w-full h-3 -bottom-1 left-0 text-primary/30" viewBox="0 0 100 10" preserveAspectRatio="none">
                     <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="4" fill="transparent" />
                   </svg>

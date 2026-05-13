@@ -1,5 +1,4 @@
 import { IconCloud } from "@/components/ui/icon-cloud";
-import DetailsHeader from "@/components/detailsHeader/DetailsHeader";
 import Skills from "@/components/home/Skills";
 import { Metadata } from "next";
 export const metadata: Metadata = {
@@ -40,7 +39,6 @@ const images = [
   "https://res.cloudinary.com/mozammal01/image/upload/v1759567661/skills/firebase_u4aiia.png",
   "https://res.cloudinary.com/mozammal01/image/upload/v1759568451/swiper-logo_hfijfk.svg",
   "https://res.cloudinary.com/mozammal01/image/upload/v1759568452/vite_jkaj6z.svg",
-  "https://res.cloudinary.com/mozammal01/image/upload/v1759568452/vercel_sl8pcw.svg",
   "https://res.cloudinary.com/mozammal01/image/upload/v1761630850/eslint_fjvqow.png",
   "https://res.cloudinary.com/mozammal01/image/upload/v1761630850/framerMotion_j2cmja.png",
   "https://res.cloudinary.com/mozammal01/image/upload/v1761630851/vite_s16wvp.png",

@@ -57,7 +57,7 @@ const CursorTrail = () => {
 
       if (points.current.length > 0) {
         // Update positions
-        let head = points.current[0];
+        const head = points.current[0];
         head.x += (mouse.current.x - head.x) * 0.3;
         head.y += (mouse.current.y - head.y) * 0.3;
 

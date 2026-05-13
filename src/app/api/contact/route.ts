@@ -73,7 +73,7 @@ export async function POST(request: Request) {
     await transporter.sendMail(mailOptions);
 
     return NextResponse.json({ success: true, message: "Email sent successfully to Gmail!" });
-  } catch (error: any) {
+  } catch (error) {
     console.error("Nodemailer API Error:", error);
     return NextResponse.json(
       { error: "Failed to send email through server-side SMTP." },

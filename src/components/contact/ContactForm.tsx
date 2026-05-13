@@ -69,7 +69,7 @@ export default function ContactForm() {
         setStatus("error");
         setErrorMessage(data.error || "Failed to send message.");
       }
-    } catch (err) {
+    } catch {
       setStatus("error");
       setErrorMessage("Could not connect to the mail server. Please try again.");
     }

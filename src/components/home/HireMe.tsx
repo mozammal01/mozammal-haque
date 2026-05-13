@@ -41,11 +41,11 @@ export default function HireMe() {
             </div>
 
             <h3 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-800 dark:text-white leading-tight">
-              Let's Build Something <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-amber-500">Extraordinary</span> Together
+              Let&apos;s Build Something <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-amber-500">Extraordinary</span> Together
             </h3>
             
             <p className="text-lg text-slate-600 dark:text-slate-400 max-w-xl leading-relaxed">
-              I am available for **Full-time Remote Jobs**, freelancing contracts, and interesting collaborations. Let's combine modern UI aesthetics with flawless performance!
+              I am available for **Full-time Remote Jobs**, freelancing contracts, and interesting collaborations. Let&apos;s combine modern UI aesthetics with flawless performance!
             </p>
 
             {/* Quick Benefits/Points Grid */}
