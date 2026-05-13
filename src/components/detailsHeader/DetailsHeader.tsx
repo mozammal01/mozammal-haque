@@ -15,7 +15,7 @@ export default function DetailsHeader({ title, subtitle }: { title: string; subt
       <div className="container mx-auto px-4 relative z-10">
         {/* Navigation / Back Button */}
         <div className="flex justify-start mb-10 md:mb-12">
-          <Link href="/#projects" className="group flex items-center gap-2 text-slate-400 hover:text-primary transition-all duration-300 bg-white/[0.03] border border-white/10 hover:border-primary/30 px-5 py-2 md:py-2.5 rounded-full backdrop-blur-md hover:shadow-[0_0_20px_rgba(255,193,7,0.15)]">
+          <Link href="/#projects" className="group flex items-center gap-2 text-slate-300 hover:text-primary transition-all duration-300 bg-white/[0.03] border border-white/10 hover:border-primary/30 px-5 py-2 md:py-2.5 rounded-full backdrop-blur-md hover:shadow-[0_0_20px_rgba(255,193,7,0.15)]">
             <ArrowLeft className="w-4 h-4 transition-transform duration-300 group-hover:-translate-x-1" />
             <span className="text-sm font-semibold">Back to Projects</span>
           </Link>
