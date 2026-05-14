@@ -33,7 +33,12 @@ export default function Projects() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <InteractiveHoverButton href="/projects">View All Projects</InteractiveHoverButton>
+              <InteractiveHoverButton 
+                href="/projects" 
+                className="border-primary/50 text-primary bg-primary/5 shadow-[0_0_20px_rgba(var(--primary-rgb,255,193,7),0.3)] hover:shadow-[0_0_30px_rgba(var(--primary-rgb,255,193,7),0.6)] px-8 py-3 text-lg transition-all duration-300"
+              >
+                View All Projects
+              </InteractiveHoverButton>
             </motion.div>
           </div>
         )}
