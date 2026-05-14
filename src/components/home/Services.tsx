@@ -39,56 +39,71 @@ export default function Services() {
                 zIndex: index
               }}
             >
-              <div className="relative bg-white/90 dark:bg-[#0f1115]/90 backdrop-blur-2xl border border-black/5 dark:border-white/10 rounded-[2.5rem] p-6 md:p-8 shadow-[0_20px_80px_rgba(0,0,0,0.08)] dark:shadow-[0_20px_80px_rgba(0,0,0,0.5)] w-full flex flex-col md:flex-row items-center gap-8 md:gap-16 overflow-hidden group">
+              <div className="relative bg-[#0f0e17]/95 backdrop-blur-2xl border border-white/5 rounded-[2rem] p-6 md:p-10 shadow-[0_30px_100px_rgba(0,0,0,0.8)] w-full max-w-[1000px] flex flex-col md:flex-row items-center gap-10 md:gap-16 overflow-hidden group">
                 
                 {/* Subtle Background Glow on Hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/5 via-transparent to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
 
-                {/* Left Side: Glowing Icon / Graphic */}
-                <div className="w-full md:w-5/12 h-64 md:h-80 relative flex items-center justify-center bg-gradient-to-br from-neutral-100 to-neutral-200 dark:from-neutral-800/50 dark:to-neutral-900/50 rounded-[2rem] border border-black/5 dark:border-white/5 overflow-hidden">
-                  {/* Animated Glow Elements */}
-                  <div className="absolute w-48 h-48 bg-primary/20 rounded-full blur-3xl group-hover:scale-150 transition-transform duration-1000 ease-in-out" />
-                  <div className="absolute w-32 h-32 bg-primary/30 rounded-full blur-2xl group-hover:scale-125 transition-transform duration-700 delay-100 ease-in-out" />
+                {/* Left Side: Graphic Area */}
+                <div className="w-full md:w-1/2 h-64 md:h-[380px] relative flex items-center justify-center bg-[#13111c] rounded-2xl border border-white/5 overflow-hidden group-hover:border-indigo-500/20 transition-colors duration-500">
+                  {/* Decorative Circles */}
+                  <div className="absolute top-8 right-8 w-16 h-16 rounded-full border border-white/10" />
+                  <div className="absolute bottom-8 left-8 w-12 h-12 rounded-full border border-white/10" />
                   
-                  <div className="relative z-10 w-28 h-28 md:w-36 md:h-36 drop-shadow-[0_0_20px_rgba(255,193,7,0.3)] group-hover:scale-110 group-hover:-translate-y-2 transition-all duration-500">
+                  {/* Glowing Icon Frame */}
+                  <div className="relative z-10 w-32 h-32 md:w-48 md:h-48 drop-shadow-[0_0_30px_rgba(99,102,241,0.15)] group-hover:scale-105 group-hover:-translate-y-2 transition-all duration-700">
                     <Image
                       src={service.iconImage}
                       alt={service.name}
-                      width={144}
-                      height={144}
-                      className="object-contain filter dark:brightness-110"
+                      width={192}
+                      height={192}
+                      className="object-contain filter brightness-90 group-hover:brightness-110 transition-all duration-500"
                       unoptimized
                     />
                   </div>
                 </div>
                 
-                {/* Right Side: Content */}
-                <div className="w-full md:w-7/12 flex flex-col text-center md:text-left py-4 pr-0 md:pr-8">
+                {/* Right Side: Content Area */}
+                <div className="w-full md:w-1/2 flex flex-col text-center md:text-left py-4">
+                  
+                  {/* Icon/Badge at the top */}
                   <div className="mb-6 flex justify-center md:justify-start">
-                    <span className="px-5 py-2 text-xs font-bold tracking-widest uppercase bg-primary/10 text-primary rounded-full border border-primary/20 shadow-sm backdrop-blur-sm">
-                      {service.category}
-                    </span>
+                    <div className="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-xl shadow-[0_0_15px_rgba(99,102,241,0.2)]">
+                      {service.icon}
+                    </div>
                   </div>
 
-                  <h3 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-slate-800 dark:text-white mb-6 leading-tight tracking-tight group-hover:text-primary transition-colors duration-300">
+                  <h3 className="text-3xl md:text-4xl lg:text-[40px] font-extrabold text-[#e0ff32] mb-6 leading-[1.1] tracking-tight">
                     {service.name}
                   </h3>
                   
-                  <p className="text-lg md:text-xl text-slate-600 dark:text-slate-300 font-medium leading-relaxed mb-8">
+                  <p className="text-sm md:text-base text-slate-300 font-medium leading-relaxed mb-8 opacity-90 max-w-md mx-auto md:mx-0">
                     {service.description}
                   </p>
 
                   {/* Features / Details */}
-                  <ul className="space-y-4">
-                    {["Scalable Architecture", "Modern & Interactive UI", "High Performance"].map((feature, i) => (
-                      <li key={i} className="flex items-center justify-center md:justify-start text-sm md:text-base text-slate-700 dark:text-slate-400 font-semibold group-hover:text-slate-900 dark:group-hover:text-slate-200 transition-colors duration-300">
-                        <span className="flex items-center justify-center w-6 h-6 rounded-full bg-primary/10 text-primary mr-4 shrink-0 shadow-[0_0_10px_rgba(245,158,11,0.2)] group-hover:bg-primary/20 transition-colors duration-300">
-                          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" /></svg>
-                        </span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                  {service.features && (
+                    <ul className="space-y-3.5 mb-6">
+                      {service.features.map((feature: string, i: number) => (
+                        <li key={i} className="flex items-center justify-center md:justify-start text-sm text-slate-200 font-semibold group-hover:text-white transition-colors duration-300">
+                          <span className="flex items-center justify-center text-indigo-400 mr-4 shrink-0">
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                          </span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+
+                  {/* Bottom Footer Link */}
+                  <div className="mt-auto flex items-center justify-center md:justify-start text-xs text-slate-400 font-medium pt-4 border-t border-white/5 group-hover:text-[#e0ff32] transition-colors duration-300">
+                    <svg className="w-4 h-4 mr-2 text-[#e0ff32]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                    </svg>
+                    Continuously improving and learning
+                  </div>
                 </div>
               </div>
             </motion.div>
