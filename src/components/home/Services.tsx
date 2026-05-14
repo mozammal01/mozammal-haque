@@ -3,6 +3,7 @@ import { useRef } from "react";
 import { services } from "@/data/services";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
+import AnimatedButton from "../animatedButton/AnimatedButton";
 
 export default function Services() {
   const endingCardRef = useRef<HTMLDivElement>(null);
@@ -185,13 +186,19 @@ function EndingCard({ endingCardRef, index }: { endingCardRef: React.RefObject<H
             Whether you need a full-stack web application, a stunning frontend, or secure backend architecture, I am here to bring your vision to life with modern technologies.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6">
-            <a href="#contact" className="px-8 py-4 bg-primary text-slate-900 font-bold rounded-xl text-lg hover:bg-white hover:scale-105 transition-all duration-300 shadow-[0_10px_30px_rgba(var(--primary-rgb,255,193,7),0.3)]">
-              Let's Work Together
-            </a>
-            <a href="#projects" className="px-8 py-4 bg-transparent text-slate-800 dark:text-white font-bold rounded-xl text-lg border border-slate-300 dark:border-white/20 hover:bg-slate-100 dark:hover:bg-white/10 hover:border-primary/40 transition-all duration-300">
-              View My Work
-            </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 mt-4">
+            <AnimatedButton 
+              variant="primary" 
+              text="Let's Work Together" 
+              href="#contact" 
+              className="font-bold py-3 px-8 text-lg !text-slate-900 shadow-[0_10px_30px_rgba(var(--primary-rgb,255,193,7),0.3)]"
+            />
+            <AnimatedButton 
+              variant="outline" 
+              text="View My Work" 
+              href="#projects" 
+              className="font-bold py-3 px-8 text-lg dark:text-white"
+            />
           </div>
         </div>
       </div>
