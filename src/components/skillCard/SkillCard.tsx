@@ -35,7 +35,7 @@ export default function SkillCard({ filteredSkills }: { filteredSkills: Skill[] 
                 }}
                 transition={{ type: "spring", stiffness: 300, damping: 15 }}
               >
-                <div className="absolute inset-0 bg-white/20 dark:bg-white/10 rounded-full blur-md opacity-0 group-hover/skill:opacity-100 transition-opacity duration-300 scale-150" />
+                <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl opacity-0 group-hover/skill:opacity-100 transition-opacity duration-500 scale-[2.0]" />
                 <Image 
                   src={skill.icon as StaticImageData} 
                   alt={skill.name} 
@@ -46,10 +46,10 @@ export default function SkillCard({ filteredSkills }: { filteredSkills: Skill[] 
               </motion.div>
 
               <div className="flex flex-col items-center w-full px-2">
-                <span className="block w-full text-center text-lg md:text-xl font-bold tracking-wider text-foreground group-hover/skill:text-primary transition-colors duration-300 leading-tight">
+                <span className="block w-full text-center text-lg md:text-xl font-extrabold tracking-wider text-slate-800 dark:text-white group-hover/skill:text-primary transition-colors duration-300 leading-tight drop-shadow-md">
                   {skill.name}
                 </span>
-                <span className="text-sm font-semibold text-slate-500 dark:text-slate-400 opacity-0 group-hover/skill:opacity-100 transition-all duration-300 -translate-y-2 group-hover/skill:translate-y-0">
+                <span className="text-xs md:text-sm font-bold text-primary/90 dark:text-primary/80 opacity-0 group-hover/skill:opacity-100 transition-all duration-300 -translate-y-2 group-hover/skill:translate-y-0 uppercase tracking-widest mt-1">
                   Proficient
                 </span>
               </div>
