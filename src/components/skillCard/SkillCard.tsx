@@ -9,7 +9,7 @@ export default function SkillCard({ filteredSkills }: { filteredSkills: Skill[] 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const [hoveredId, setHoveredId] = useState(0);
-  
+
   return (
     <div ref={ref} className="flex flex-wrap justify-center gap-8 md:gap-12">
       {filteredSkills.map((skill, index) => (
@@ -25,7 +25,7 @@ export default function SkillCard({ filteredSkills }: { filteredSkills: Skill[] 
           <PremiumCard className="w-full h-full">
             {/* Inner background glow orb */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-primary/20 rounded-full blur-2xl opacity-0 group-hover/skill:opacity-100 transition-opacity duration-500" />
-            
+
             <div className="flex flex-col justify-center items-center gap-6 relative z-10 h-full w-full">
               <motion.div
                 className="relative"
@@ -36,12 +36,12 @@ export default function SkillCard({ filteredSkills }: { filteredSkills: Skill[] 
                 transition={{ type: "spring", stiffness: 300, damping: 15 }}
               >
                 <div className="absolute inset-0 bg-primary/20 rounded-full blur-xl opacity-0 group-hover/skill:opacity-100 transition-opacity duration-500 scale-[2.0]" />
-                <Image 
-                  src={skill.icon as StaticImageData} 
-                  alt={skill.name} 
-                  width={72} 
-                  height={72} 
-                  className={`object-contain relative z-10 drop-shadow-xl transition-all duration-300 w-12 sm:w-14 md:w-[72px] ${skill.className || ""}`} 
+                <Image
+                  src={skill.icon as StaticImageData}
+                  alt={skill.name}
+                  width={72}
+                  height={72}
+                  className={`object-contain relative z-10 drop-shadow-xl transition-all duration-300 w-12 sm:w-14 md:w-[72px] ${skill.className || ""}`}
                 />
               </motion.div>
 

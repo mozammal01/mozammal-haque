@@ -29,7 +29,7 @@ export default function Skills() {
   return (
     <section id="skills" className="w-full py-24 relative bg-gradient-to-b from-neutral-50 to-white dark:from-[#0a0a0a] dark:to-[#030712] border-t border-black/5 dark:border-white/5 overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
-      
+
       {/* Premium Ambient Background Orbs */}
       <div className="absolute top-1/4 -left-32 w-[500px] h-[500px] bg-primary/10 dark:bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
       <div className="absolute bottom-1/4 -right-32 w-[500px] h-[500px] bg-primary/10 dark:bg-primary/5 blur-[120px] rounded-full pointer-events-none" />
@@ -38,7 +38,7 @@ export default function Skills() {
         <div className="space-y-4">
           {!isSkillsPage && (
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-20">
-              <motion.div 
+              <motion.div
                 initial={{ opacity: 0, x: -30 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
@@ -57,7 +57,7 @@ export default function Skills() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <InteractiveHoverButton 
+                <InteractiveHoverButton
                   href="/skills"
                   className="border-primary/50 text-primary bg-primary/5 shadow-[0_0_20px_rgba(var(--primary-rgb,255,193,7),0.3)] hover:shadow-[0_0_30px_rgba(var(--primary-rgb,255,193,7),0.6)] px-8 py-3 text-lg transition-all duration-300"
                 >
