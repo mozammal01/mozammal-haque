@@ -1,5 +1,6 @@
 import carShop from "@/../public/projects/car-shop.png";
 import tasteNest from "@/../public/projects/taste-nest.png";
+import educationBridge from "@/../public/projects/education-bridge.png";
 import educationManagement from "@/../public/projects/education-management.png";
 import jahirTailor from "@/../public/projects/jahir-tailor.png";
 import awesomeRestaurant from "@/../public/projects/awesome-restaurant.png";
@@ -149,6 +150,111 @@ const awesomeRestaurantSkills = getSkillsByName([
 ]);
 
 export const projects = [
+  // Taste Nest
+  {
+    id: 1,
+    name: "Taste Nest",
+    image: tasteNest,
+    sourceCode: "https://docs.google.com/document/d/1ONxvRQ2_R83TJ-bnaXeZBl_sZS0oSV2ltnluj14RgLY/edit?usp=sharing",
+    visitNow: "https://taste-nest-restaurent.vercel.app/",
+    description:
+      "Taste Nest is a dynamic restaurant and culinary platform offering a vibrant visual menu, real-time food ordering integration, and a simplified table reservation system designed for modern fine dining experiences.",
+    features: [
+      {
+        id: 1,
+        content: "Explore multi-cuisine menus, seasonal specialties, and dynamic price listings.",
+      },
+      {
+        id: 2,
+        content: "Detailed dish showcases including chef recommendations, ingredient breakdowns, and allergens.",
+      },
+      {
+        id: 3,
+        content: "Effortless online booking system enabling users to reserve their dining spots easily.",
+      },
+      {
+        id: 4,
+        content: "Fully responsive checkout flow with intuitive user interface for seamless orders.",
+      },
+      {
+        id: 5,
+        content: "Integrated customer feedback widgets and rating tools to drive engagement.",
+      },
+      {
+        id: 6,
+        content: "Advanced styling with dark mode and fully consistent cross-device layouts.",
+      },
+    ],
+    images1: [nestBanner, nestAbout, nestCategories, nestCheif, nestDishes, nestFeedback],
+    images2: [nestMenu, nestNews, nestNewsEnding, nestOrderFood, nestReserveTable],
+    filteredSkills: tasteNestSkills,
+  },
+  {
+    id: 2,
+    name: "Education Bridge",
+    image: educationBridge,
+    sourceCode: "https://docs.google.com/document/d/1QKSqyIkokxhZF7PxZylMArH3PhiwuYtVWKqgwKQaB84/edit?usp=sharing",
+    visitNow: "https://education-bridge-client.vercel.app/",
+    description:
+      "Education Bridge is a comprehensive educational platform designed to connect students with expert teachers, facilitate seamless course enrollment, and provide tools for academic success.",
+    features: [
+      {
+        id: 1,
+        content: "Explore multi-cuisine menus, seasonal specialties, and dynamic price listings.",
+      },
+      {
+        id: 2,
+        content: "Detailed dish showcases including chef recommendations, ingredient breakdowns, and allergens.",
+      },
+      {
+        id: 3,
+        content: "Effortless online booking system enabling users to reserve their dining spots easily.",
+      },
+      {
+        id: 4,
+        content: "Browse and search thousands of courses across multiple categories.",
+      },
+      {
+        id: 2,
+        content: "Detailed course pages with full curriculum, duration, and skill outcomes.",
+      },
+      {
+        id: 3,
+        content: "Simple and secure checkout process with Stripe integration.",
+      },
+      {
+        id: 4,
+        content: "Admin dashboard to manage courses, instructors, students, and reviews.",
+      },
+      {
+        id: 5,
+        content: "User authentication and profile management for students and instructors.",
+      },
+      {
+        id: 6,
+        content: "Advanced filtering and sorting options to find courses by category, level, and rating.",
+      },
+      {
+        id: 7,
+        content: "Responsive design optimized for all devices.",
+      },
+      {
+        id: 8,
+        content: "Real-time feedback system for course ratings and reviews.",
+      },
+      {
+        id: 9,
+        content: "Secure payment gateway integration for smooth transactions.",
+      },
+      {
+        id: 10,
+        content: "Modern UI with smooth animations and intuitive navigation.",
+      },
+    ],
+    images1: [nestBanner, nestAbout, nestCategories, nestCheif, nestDishes, nestFeedback],
+    images2: [nestMenu, nestNews, nestNewsEnding, nestOrderFood, nestReserveTable],
+    filteredSkills: tasteNestSkills,
+  },
   // Car Shop
   {
     id: 1,
@@ -213,45 +319,6 @@ export const projects = [
     ],
     images2: [carDetailsHeader, carFinder, carContact, carFeedback, carPopularCar, carSellCar, carServices],
     filteredSkills: carShopSkills,
-  },
-  // Taste Nest
-  {
-    id: 2,
-    name: "Taste Nest",
-    image: tasteNest,
-    sourceCode: "https://github.com/mozammal01/Taste-Nest",
-    visitNow: "https://taste-nest-restaurent.vercel.app/",
-    description:
-      "Taste Nest is a dynamic restaurant and culinary platform offering a vibrant visual menu, real-time food ordering integration, and a simplified table reservation system designed for modern fine dining experiences.",
-    features: [
-      {
-        id: 1,
-        content: "Explore multi-cuisine menus, seasonal specialties, and dynamic price listings.",
-      },
-      {
-        id: 2,
-        content: "Detailed dish showcases including chef recommendations, ingredient breakdowns, and allergens.",
-      },
-      {
-        id: 3,
-        content: "Effortless online booking system enabling users to reserve their dining spots easily.",
-      },
-      {
-        id: 4,
-        content: "Fully responsive checkout flow with intuitive user interface for seamless orders.",
-      },
-      {
-        id: 5,
-        content: "Integrated customer feedback widgets and rating tools to drive engagement.",
-      },
-      {
-        id: 6,
-        content: "Advanced styling with dark mode and fully consistent cross-device layouts.",
-      },
-    ],
-    images1: [nestBanner, nestAbout, nestCategories, nestCheif, nestDishes, nestFeedback],
-    images2: [nestMenu, nestNews, nestNewsEnding, nestOrderFood, nestReserveTable],
-    filteredSkills: tasteNestSkills,
   },
   // Education Management
   {
