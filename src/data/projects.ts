@@ -1,9 +1,20 @@
 import carShop from "@/../public/projects/car-shop.png";
 import tasteNest from "@/../public/projects/taste-nest.png";
 import educationBridge from "@/../public/projects/education-bridge.png";
+import homePilot from "@/../public/projects/home-pilot.png";
 import educationManagement from "@/../public/projects/education-management.png";
 import jahirTailor from "@/../public/projects/jahir-tailor.png";
 import awesomeRestaurant from "@/../public/projects/awesome-restaurant.png";
+//
+import homePilotBanner from "@/../public/projects/home-pilot/banner.png";
+import homePilotStats from "@/../public/projects/home-pilot/stats.png";
+import homePilotWhyChoose from "@/../public/projects/home-pilot/whyChoose.png";
+import homePilotFeatures from "@/../public/projects/home-pilot/features.png";
+import homePilotDashboard from "@/../public/projects/home-pilot/dashboard.png";
+import homePilotImpact from "@/../public/projects/home-pilot/impact.png";
+import homePilotHowItWorks from "@/../public/projects/home-pilot/howItWorks.png";
+import homePilotPricing from "@/../public/projects/home-pilot/pricing.png";
+import homePilotTestimonials from "@/../public/projects/home-pilot/testimonials.png";
 //
 import carBanner from "@/../public/projects/car-shop/banner.png";
 import carFooter from "@/../public/projects/car-shop/Footer.png";
@@ -132,6 +143,16 @@ const tasteNestSkills = getSkillsByName([
   "Framer Motion", "Formik", "CSS3", "HTML5", "Swiper", "ESLint", "Icon8", "Git"
 ]);
 
+const educationBridgeSkills = getSkillsByName([
+  "NextJS", "React", "Typescript", "TailwindCSS", "Shadcn", "Framer Motion", 
+  "Lucide React", "CSS3", "HTML5", "Git", "Vercel", "ESLint"
+]);
+
+const homePilotSkills = getSkillsByName([
+  "NextJS", "React", "Typescript", "TailwindCSS", "Shadcn", "Framer Motion", 
+  "React Hook Form", "Lucide React", "Vercel", "Git", "ESLint", "CSS3", "HTML5"
+]);
+
 const jahirTailorSkills = getSkillsByName([
   "NextJS", "Typescript", "i18next", "Shadcn", "Vercel", "TailwindCSS", 
   "Lucide React", "React Hook Form", "Framer Motion", "CSS3", "HTML5", "Swiper", "ESLint", "Icon8", "Git"
@@ -253,11 +274,77 @@ export const projects = [
     ],
     images1: [nestBanner, nestAbout, nestCategories, nestCheif, nestDishes, nestFeedback],
     images2: [nestMenu, nestNews, nestNewsEnding, nestOrderFood, nestReserveTable],
-    filteredSkills: tasteNestSkills,
+    filteredSkills: educationBridgeSkills,
+  },
+  // HomePilot
+  {
+    id: 3,
+    name: "HomePilot",
+    image: homePilot,
+    sourceCode: "https://github.com/mozammal01/HomePilot",
+    visitNow: "https://home-pilot-lime.vercel.app/",
+    description:
+      "HomePilot is an all-in-one modern property management platform that empowers landlords, property managers, and real estate teams to manage properties, tenant communications, automated rent collection, and maintenance tracking from one intelligent dashboard.",
+    features: [
+      {
+        id: 1,
+        content: "Unified portfolio dashboard providing real-time occupancy, revenue metrics, and active lease tracking.",
+      },
+      {
+        id: 2,
+        content: "Automated online rent collection with recurring schedules, late-fee management, and instant payouts.",
+      },
+      {
+        id: 3,
+        content: "Centralized tenant portal featuring digital lease records, tenant profiles, and real-time communication.",
+      },
+      {
+        id: 4,
+        content: "Full-cycle maintenance request tracking from work order creation to technician assignment and resolution.",
+      },
+      {
+        id: 5,
+        content: "Financial reports & analytics with revenue-by-month charts and occupancy trend forecasting.",
+      },
+      {
+        id: 6,
+        content: "Smart automated workflows for rent reminders, lease renewal alerts, and maintenance status updates.",
+      },
+      {
+        id: 7,
+        content: "Transparent tiered pricing structure with monthly/yearly billing toggle and custom enterprise plans.",
+      },
+      {
+        id: 8,
+        content: "Interactive testimonials showcasing verified feedback from leading property management teams.",
+      },
+      {
+        id: 9,
+        content: "Integrated FAQ accordion answering key platform, payment, security, and onboarding questions.",
+      },
+      {
+        id: 10,
+        content: "Responsive modern UI with fluid Lenis smooth scrolling, Framer Motion animations, and dark/light themes.",
+      },
+    ],
+    images1: [
+      homePilotBanner,
+      homePilotStats,
+      homePilotWhyChoose,
+      homePilotFeatures,
+      homePilotDashboard,
+    ],
+    images2: [
+      homePilotImpact,
+      homePilotHowItWorks,
+      homePilotPricing,
+      homePilotTestimonials,
+    ],
+    filteredSkills: homePilotSkills,
   },
   // Car Shop
   {
-    id: 1,
+    id: 4,
     name: "Car Shop",
     image: carShop,
     sourceCode: "https://github.com/mozammal01/Car-Shop",
@@ -322,7 +409,7 @@ export const projects = [
   },
   // Education Management
   {
-    id: 3,
+    id: 5,
     name: "Education Management",
     image: educationManagement,
     sourceCode: "https://github.com/mozammal01/education-management-client  ",
@@ -392,7 +479,7 @@ export const projects = [
   },
   // Jahir Tailor
   {
-    id: 4,
+    id: 6,
     name: "Jahir Tailor",
     image: jahirTailor,
     sourceCode: "https://github.com/mozammal01/Jahir-Tailor",
@@ -460,7 +547,7 @@ export const projects = [
   },
   // AweSome Restaurant
   {
-    id: 5,
+    id: 7,
     name: "Awesome Restaurant",
     image: awesomeRestaurant,
     sourceCode: "https://github.com/mozammal01/awesome-restaurent-client",
